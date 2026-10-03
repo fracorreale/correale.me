@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Travel — Francesco Correale</title>
+<meta name="description" content="A map of a year of flying — routes, distances and the places behind them.">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{--ink:#10283b;--muted:#71808d;--blue:#247fb7;--green:#168a5b;--orange:#ef8737;--purple:#8056b5;--line:#e1e8ec;--serif:Georgia,'Times New Roman',serif;--sans:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);font-family:var(--sans)}a{color:inherit;text-decoration:none}
+header{height:68px;position:fixed;z-index:999;top:0;width:100%;display:flex;align-items:center;padding:0 clamp(22px,4vw,64px);background:#ffffffd9;backdrop-filter:blur(18px);border-bottom:1px solid #10283b12}
+.brand{font-size:13px;font-weight:700;letter-spacing:.24em}.nav{margin-left:auto;display:flex;gap:26px;font-size:13px;color:#52616d}.nav .language{display:flex;gap:6px;align-items:center}.language button{border:0;background:none;padding:0;color:#82909a;font:700 13px var(--sans);cursor:pointer}.language button.active{color:var(--blue)}.language b{font-weight:400;color:#bcc5cb}
+.hero{height:490px;margin-top:68px;position:relative;overflow:hidden;background:#dfeef5}.hero img{width:100%;height:100%;object-fit:cover;filter:saturate(.82) contrast(.94)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fffffff2 0,#ffffffbd 37%,#ffffff10 73%),linear-gradient(0deg,#ffffffa8,transparent 30%)}
+.hero-copy{position:absolute;z-index:2;left:clamp(24px,7vw,110px);top:50%;transform:translateY(-50%);max-width:750px}.kicker{font-size:11px;letter-spacing:.2em;font-weight:700;color:var(--blue);margin-bottom:20px}.hero h1{font:normal clamp(58px,6vw,96px)/.96 var(--serif);letter-spacing:-.05em;margin:0 0 22px}.hero p{font:normal clamp(18px,1.6vw,25px)/1.45 var(--serif);margin:0;color:#53636f;max-width:590px}
+main{padding:32px clamp(20px,4vw,64px) 85px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:26px}.stat{border:1px solid var(--line);border-radius:17px;padding:19px 21px;background:#f7f9fa}.stat b{display:block;font:normal 34px var(--serif);letter-spacing:-.02em}.stat span{font-size:11px;letter-spacing:.14em;font-weight:700;color:var(--muted)}
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:26px}.filter{border:1px solid var(--line);background:#f7f9fa;border-radius:999px;padding:10px 17px;cursor:pointer;font:inherit;font-size:14px;color:inherit}.filter.active{background:var(--ink);color:white;border-color:var(--ink)}
+.layout{display:grid;grid-template-columns:minmax(0,61%) minmax(310px,39%);gap:27px;align-items:start}
+.mapshell{overflow:hidden;border-radius:23px;border:1px solid var(--line);box-shadow:0 14px 42px #10283b16;position:sticky;top:90px}.maphead{padding:18px 21px;background:#fff}.maphead h2{font:normal 27px var(--serif);margin:0}.maphead p{font-size:12px;color:var(--muted);margin:4px 0 0}#map{height:590px;background:#eef4f7}
+.legend{display:flex;gap:18px;flex-wrap:wrap;padding:14px 21px;border-top:1px solid var(--line);background:#fff;font-size:12px;color:var(--muted)}.legend i{display:inline-block;width:18px;height:3px;border-radius:2px;margin-right:7px;vertical-align:middle}
+.group h2{font:normal 28px var(--serif);margin:0 0 13px}.group{margin-bottom:27px}
+.routes{display:flex;flex-direction:column;gap:9px}
+.route{border:1px solid #e7ecef;border-radius:15px;padding:13px 15px;background:white;box-shadow:0 6px 20px #10283b0b;cursor:pointer;transition:.2s;display:flex;align-items:center;gap:13px}.route:hover{transform:translateY(-2px)}.route:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.route .pair{font-size:14px;font-weight:600;letter-spacing:.02em;white-space:nowrap}.route .meta{font-size:12px;color:#82909a;margin-left:auto;text-align:right;white-space:nowrap}
+.route .bar{width:4px;align-self:stretch;border-radius:3px;background:var(--blue)}.route.long .bar{background:var(--orange)}
+.note{margin-top:48px;padding:40px;border-radius:24px;background:radial-gradient(circle at 80% 20%,#dceefa,#f7fbfd 62%,#fff);display:grid;grid-template-columns:1fr 1fr;gap:55px}.note h2{font:normal 40px/1.05 var(--serif);margin:0}.note p{font:normal 18px/1.6 var(--serif);color:#5e6f7b;margin:0}
+footer{padding:44px clamp(20px,4vw,64px);border-top:1px solid #eef1f3;color:#84909a;font-size:12px;display:flex;justify-content:space-between}.footer-links{display:flex;gap:22px;font-size:13px}.footer-links a:hover{color:var(--blue)}
+.apdot{width:9px;height:9px;border-radius:50%;background:var(--ink);border:2px solid #fff;box-shadow:0 1px 4px #0003}.apdot.home{width:14px;height:14px;background:var(--orange)}
+.popup h3{margin:0 0 4px;font-size:14px}.popup p{margin:0;color:#71808d;font-size:12px}
+@media(max-width:900px){.nav a:not(:first-child){display:none}.layout{grid-template-columns:1fr}.mapshell{position:static;order:-1}#map{height:430px}.stats{grid-template-columns:1fr 1fr}.note{grid-template-columns:1fr;gap:18px}}
+@media(max-width:560px){header{height:62px;padding:0 18px}.hero{height:470px;margin-top:62px}.hero-copy{left:22px;right:22px}.hero h1{font-size:57px}.hero:after{background:linear-gradient(90deg,#fffffff0,#ffffff88),linear-gradient(0deg,#fff,transparent 35%)}main{padding:25px 18px 60px}#map{height:360px}.note{padding:27px}.note h2{font-size:34px}footer{flex-direction:column;gap:8px}.stat b{font-size:28px}}
+</style></head>
+<body>
+<header><a class="brand" href="index.html">F. CORREALE</a><nav class="nav"><a href="index.html">Home</a><a href="index.html#about">About</a><a href="index.html#notes">Notes</a><a href="index.html#contact">Contact</a><span class="language"><button type="button" data-lang="it">IT</button><b>|</b><button type="button" data-lang="en">EN</button></span></nav></header>
+<section class="hero"><img src="assets/travel.webp" alt="View from an airplane window"><div class="hero-copy"><div class="kicker"><span data-i18n="kicker">PLACES · TRAVEL</span></div><h1><span data-i18n="title">On the value<br>of travel.</span></h1><p><span data-i18n="intro">A year of boarding passes, drawn on a map. Mostly short hops across Europe, a handful of long ones — and always the same airport on the way home.</span></p></div></section>
+<main>
+<div class="stats">
+<div class="stat"><b id="sFlights">32</b><span data-i18n="sFlights">FLIGHTS</span></div>
+<div class="stat"><b id="sKm">—</b><span data-i18n="sKm">KILOMETRES</span></div>
+<div class="stat"><b id="sAirports">17</b><span data-i18n="sAirports">AIRPORTS</span></div>
+<div class="stat"><b id="sLaps">—</b><span data-i18n="sLaps">TIMES AROUND THE EARTH</span></div>
+</div>
+<div class="filters">
+<button class="filter active" data-f="all"><span data-i18n="fAll">All routes</span></button>
+<button class="filter" data-f="eu"><span data-i18n="fEu">Europe</span></button>
+<button class="filter" data-f="long"><span data-i18n="fLong">Long haul</span></button>
+</div>
+<div class="layout">
+<aside class="mapshell"><div class="maphead"><h2 data-i18n="mapTitle">A year in the air</h2><p data-i18n="tap">Tap a route to zoom in on it.</p></div><div id="map"></div>
+<div class="legend"><span><i style="background:#247fb7"></i><span data-i18n="legEu">Europe</span></span><span><i style="background:#ef8737"></i><span data-i18n="legLong">Long haul</span></span><span><i style="background:#ef8737;width:9px;height:9px;border-radius:50%"></i><span data-i18n="legHome">Milan, home base</span></span></div>
+</aside>
+<div>
+<section class="group"><h2 data-i18n="gLong">The long ones</h2><div class="routes" id="longRoutes"></div></section>
+<section class="group"><h2 data-i18n="gEu">Around Europe</h2><div class="routes" id="euRoutes"></div></section>
+</div>
+</div>
+<section class="note"><h2 data-i18n="noteTitle">Most of it is the same hour, over and over.</h2><p data-i18n="noteBody">Seen one at a time, a boarding pass is just a morning that started early. Put a year of them on a map and a shape appears: a few cities I keep returning to, a handful of journeys that were genuinely far, and one airport that every line eventually comes back to. The long trips are the ones I remember. The short ones are the ones that made the year.</p></section>
+</main>
+<footer><strong>F. CORREALE</strong><span class="footer-links"><a href="mailto:fra@correale.me">Email ↗</a><a href="https://www.linkedin.com/in/fcorreale" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://www.instagram.com/flurred" target="_blank" rel="noopener">Instagram ↗</a></span><span><span data-i18n="footer">© 2026 Francesco Correale · Milan, Italy</span><img src="https://hits.sh/correale.me/travel.html.svg?label=views&amp;color=84909a&amp;labelColor=a0a9af&amp;style=flat-square" alt="Page views" height="20" referrerpolicy="no-referrer" style="display:block;margin-top:8px;max-width:100%" onerror="this.hidden=true;this.style.display='none'"></span></footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const AP={
+LIN:["Milan Linate",45.4451,9.2767],MXP:["Milan Malpensa",45.6306,8.7231],BGY:["Milan Bergamo",45.6739,9.7042],
+VIE:["Vienna",48.1103,16.5697],CPH:["Copenhagen",55.6181,12.6561],BRU:["Brussels",50.9014,4.4844],
+FCO:["Rome Fiumicino",41.8003,12.2389],MUC:["Munich",48.3538,11.7861],NAP:["Naples",40.8860,14.2908],
+FRA:["Frankfurt",50.0341,8.5622],IBZ:["Ibiza",38.8729,1.3731],DUB:["Dublin",53.4213,-6.2701],
+DXB:["Dubai",25.2532,55.3657],MLE:["Malé",4.1918,73.5291],PEK:["Beijing",40.0799,116.5846],
+SIN:["Singapore",1.3644,103.9915],DPS:["Bali Denpasar",-8.7482,115.1675]};
+const R=[
+["LIN","VIE",4,"eu"],["LIN","MUC",4,"eu"],["MXP","CPH",2,"eu"],["LIN","CPH",2,"eu"],["LIN","BRU",2,"eu"],
+["BGY","IBZ",2,"eu"],["LIN","FRA",2,"eu"],["MUC","MXP",1,"eu"],["FRA","MUC",1,"eu"],["LIN","NAP",1,"eu"],
+["FCO","LIN",1,"eu"],["LIN","DUB",1,"eu"],
+["MXP","DXB",1,"long"],["DXB","MLE",1,"long"],["MLE","FCO",1,"long"],["MUC","PEK",2,"long"],
+["FRA","SIN",2,"long"],["SIN","DPS",2,"long"]];
+const rad=d=>d*Math.PI/180, deg=r=>r*180/Math.PI;
+function toVec(la,lo){la=rad(la);lo=rad(lo);return[Math.cos(la)*Math.cos(lo),Math.cos(la)*Math.sin(lo),Math.sin(la)]}
+function gc(a,b,n){const v1=toVec(a[1],a[2]),v2=toVec(b[1],b[2]);
+let d=Math.acos(Math.max(-1,Math.min(1,v1[0]*v2[0]+v1[1]*v2[1]+v1[2]*v2[2])));
+const out=[];if(d<1e-9)return[[a[1],a[2]],[b[1],b[2]]];
+for(let i=0;i<=n;i++){const f=i/n,s1=Math.sin((1-f)*d)/Math.sin(d),s2=Math.sin(f*d)/Math.sin(d);
+const x=s1*v1[0]+s2*v2[0],y=s1*v1[1]+s2*v2[1],z=s1*v1[2]+s2*v2[2];
+out.push([deg(Math.atan2(z,Math.sqrt(x*x+y*y))),deg(Math.atan2(y,x))])}
+return out}
+function km(a,b){const v1=toVec(a[1],a[2]),v2=toVec(b[1],b[2]);
+return 6371*Math.acos(Math.max(-1,Math.min(1,v1[0]*v2[0]+v1[1]*v2[1]+v1[2]*v2[2])))}
+const map=L.map("map",{zoomControl:false,scrollWheelZoom:false,worldCopyJump:true}).setView([35,45],2);
+L.control.zoom({position:"bottomright"}).addTo(map);
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>'}).addTo(map);
+const lines=L.layerGroup().addTo(map), pts=L.layerGroup().addTo(map);
+let total=0;const LN=[];
+R.forEach(r=>{const a=AP[r[0]],b=AP[r[1]],d=km(a,b);total+=d*r[2];
+const l=L.polyline(gc(a,b,64),{color:r[3]==="long"?"#ef8737":"#247fb7",weight:r[2]>=3?4:2,opacity:.8,lineCap:"round"})
+.bindPopup(`<div class="popup"><h3>${r[0]} — ${r[1]}</h3><p>${a[0]} · ${b[0]}<br>${Math.round(d).toLocaleString("en-GB")} km</p></div>`);
+l.addTo(lines);LN.push([l,r,d])});
+Object.entries(AP).forEach(([c,a])=>{
+L.marker([a[1],a[2]],{icon:L.divIcon({className:"",html:`<div class="apdot${c==="LIN"?" home":""}"></div>`,iconSize:[c==="LIN"?14:9,c==="LIN"?14:9]})})
+.bindPopup(`<div class="popup"><h3>${c}</h3><p>${a[0]}</p></div>`).addTo(pts)});
+document.getElementById("sKm").textContent=Math.round(total).toLocaleString("en-GB");
+document.getElementById("sLaps").textContent=(total/40075).toFixed(1);
+function card(l,r,d){const e=document.createElement("article");e.className="route"+(r[3]==="long"?" long":"");e.tabIndex=0;
+e.innerHTML=`<i class="bar"></i><span class="pair">${r[0]} → ${r[1]}</span><span class="meta">${r[2]}× · ${Math.round(d).toLocaleString("en-GB")} km</span>`;
+const go=()=>{map.fitBounds(l.getBounds(),{padding:[45,45]});l.openPopup()};
+e.onclick=go;e.onkeydown=ev=>{if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();go()}};
+document.getElementById(r[3]==="long"?"longRoutes":"euRoutes").appendChild(e)}
+LN.slice().sort((x,y)=>y[2]-x[2]).forEach(([l,r,d])=>card(l,r,d));
+const world=L.featureGroup(LN.map(x=>x[0])).getBounds();
+map.fitBounds(world,{padding:[20,20]});
+document.querySelectorAll(".filter").forEach(b=>b.onclick=()=>{const f=b.dataset.f;
+document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));
+lines.clearLayers();const keep=[];
+LN.forEach(([l,r])=>{if(f==="all"||r[3]===f){l.addTo(lines);keep.push(l)}});
+document.querySelectorAll(".group").forEach(g=>{const id=g.querySelector(".routes").id;
+g.style.display=(f==="all"||(f==="long")===(id==="longRoutes"))?"":"none"});
+map.fitBounds(L.featureGroup(keep).getBounds(),{padding:[25,25]})});
+const I18N={
+ en:{kicker:"PLACES · TRAVEL",title:"On the value<br>of travel.",intro:"A year of boarding passes, drawn on a map. Mostly short hops across Europe, a handful of long ones — and always the same airport on the way home.",sFlights:"FLIGHTS",sKm:"KILOMETRES",sAirports:"AIRPORTS",sLaps:"TIMES AROUND THE EARTH",fAll:"All routes",fEu:"Europe",fLong:"Long haul",mapTitle:"A year in the air",tap:"Tap a route to zoom in on it.",legEu:"Europe",legLong:"Long haul",legHome:"Milan, home base",gLong:"The long ones",gEu:"Around Europe",noteTitle:"Most of it is the same hour, over and over.",noteBody:"Seen one at a time, a boarding pass is just a morning that started early. Put a year of them on a map and a shape appears: a few cities I keep returning to, a handful of journeys that were genuinely far, and one airport that every line eventually comes back to. The long trips are the ones I remember. The short ones are the ones that made the year.",footer:"© 2026 Francesco Correale · Milan, Italy"},
+ it:{kicker:"LUOGHI · VIAGGI",title:"Sul valore<br>del viaggio.",intro:"Un anno di carte d'imbarco, disegnato su una mappa. Soprattutto salti brevi in Europa, qualche rotta lunga — e sempre lo stesso aeroporto al ritorno.",sFlights:"VOLI",sKm:"CHILOMETRI",sAirports:"AEROPORTI",sLaps:"GIRI DELLA TERRA",fAll:"Tutte le rotte",fEu:"Europa",fLong:"Lungo raggio",mapTitle:"Un anno in volo",tap:"Tocca una rotta per ingrandirla.",legEu:"Europa",legLong:"Lungo raggio",legHome:"Milano, base",gLong:"Le rotte lunghe",gEu:"In giro per l'Europa",noteTitle:"Per lo più è sempre la stessa ora, ripetuta.",noteBody:"Presa una alla volta, una carta d'imbarco è solo una mattina iniziata presto. Mettine un anno su una mappa e compare una forma: poche città in cui torno di continuo, qualche viaggio davvero lontano e un aeroporto a cui ogni linea prima o poi ritorna. I viaggi lunghi sono quelli che ricordo. Quelli brevi sono quelli che hanno fatto l'anno.",footer:"© 2026 Francesco Correale · Milano, Italia"}
+};
+function setLanguage(lang){
+ if(!I18N[lang]) lang="en";
+ document.documentElement.lang=lang;
+ document.querySelectorAll("[data-i18n]").forEach(el=>{const v=I18N[lang][el.dataset.i18n];if(v!==undefined)el.innerHTML=v});
+ document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
+ localStorage.setItem("correale-lang",lang);
+}
+document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>setLanguage(b.dataset.lang)));
+setLanguage(localStorage.getItem("correale-lang")||"en");
+</script></body></html>
