@@ -1,4 +1,3 @@
-/* Homepage mobile navigation; desktop styles remain in the existing stylesheet. */
 @media (max-width:850px){
   .site-header,.site-header.scrolled{
     top:calc(env(safe-area-inset-top,0px) + 12px);left:12px;width:calc(100% - 24px);
@@ -10,7 +9,7 @@
     transition:height .25s,border-radius .25s;
   }
   .site-header.scrolled{height:58px;border-radius:24px}
-  .site-header .brand-signature{width:clamp(110px,34vw,160px);max-height:48px}
+  
   .header-actions{gap:0;flex-shrink:0}
   .header-actions .lang{min-width:36px;min-height:44px;padding:0;font-size:12px}
   .header-actions>span{margin:0 2px}

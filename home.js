@@ -1,4 +1,3 @@
-// Homepage desktop navigation only; shared scripts and mobile menu stay intact.
 (() => {
   const desktop = matchMedia('(min-width:851px)');
   const links = [...document.querySelectorAll('.desktop-nav a')];
