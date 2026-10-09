@@ -34,7 +34,7 @@ a{color:inherit;text-decoration:none}
 .card:hover .media img{transform:scale(1.025);filter:saturate(.9) contrast(.98)}
 .card:hover h3{color:var(--blue)}
 .card:hover .card-copy i{opacity:1;transform:none}
-.travel .media img{object-position:center}
+.travel .media img{object-position:35% center}
 .quote{min-height:480px;padding:95px clamp(28px,8vw,135px);display:grid;grid-template-columns:1.1fr .7fr;align-items:center;gap:12vw;background:radial-gradient(circle at 75% 45%,#dbeefa 0,#eef7fc 28%,#f8fbfd 60%,#fff 100%)}
 .quote blockquote{font:normal clamp(48px,5vw,82px)/1.05 var(--serif);letter-spacing:-.04em;margin:0}
 .quote p{font-size:19px;line-height:1.65;color:#667580;max-width:430px}
