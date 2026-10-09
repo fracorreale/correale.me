@@ -15,4 +15,5 @@ Shared
                       menu labels follow the page language (<html lang>)
   site-signature.css  handwritten "F. Correale" mark in the header
   assets/             images (WebP) and app icons
+  assets/fonts/       Caveat (digits only, OFL licence alongside) for the Travel stats
   favicon.ico, favicon-32.png, apple-touch-icon.png, site.webmanifest
