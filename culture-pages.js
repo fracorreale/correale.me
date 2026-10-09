@@ -1,0 +1,1 @@
+document.querySelectorAll(".lang").forEach(a=>{a.classList.toggle("active",a.dataset.lang===document.documentElement.lang);a.addEventListener("click",()=>localStorage.setItem("correale-lang",a.dataset.lang))});
