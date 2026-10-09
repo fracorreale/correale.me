@@ -66,6 +66,17 @@ body{background:#f7f9fc}
 .hero:after{clip-path:none!important;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,transparent 42%,rgba(0,0,0,.08) 48%,rgba(0,0,0,.55) 56%,#000 65%,#000 88%,rgba(0,0,0,.82) 100%);mask-image:linear-gradient(to bottom,transparent 0%,transparent 42%,rgba(0,0,0,.08) 48%,rgba(0,0,0,.55) 56%,#000 65%,#000 88%,rgba(0,0,0,.82) 100%)}
 .hero-visual{filter:none!important;box-shadow:none!important}
 }
+</style><style>
+/* Single-image mobile hero: reset earlier layered treatments */
+@media(max-width:850px){
+.hero{display:block!important;position:relative!important;isolation:isolate!important;overflow:hidden!important;background:#e4f1ff!important;min-height:0!important;box-shadow:none!important}
+.hero:before{display:none!important}
+.hero:after{content:""!important;display:block!important;position:absolute!important;z-index:0!important;inset:0!important;clip-path:none!important;mask-image:none!important;-webkit-mask-image:none!important;background-image:url('assets/correale-naples-hero.png')!important;background-size:100% 100%!important;background-position:center!important;background-repeat:no-repeat!important;opacity:1!important;filter:none!important;pointer-events:none!important}
+.hero-copy{position:relative!important;z-index:2!important;padding:42px 26px 0!important}
+.hero-visual{position:relative!important;z-index:1!important;height:440px!important;min-height:440px!important;margin:0!important;background:none!important;filter:none!important;box-shadow:none!important}
+.hero-visual:before,.hero-visual img{display:none!important}
+.hero-links{position:relative!important;z-index:3!important}
+}
 </style></head><body>
 <header class="site-header" id="header"><a class="brand" href="#top">F. CORREALE</a><nav class="desktop-nav"><a href="#top" data-i18n="home">Home</a><a href="#about" data-i18n="aboutNav">About</a><a href="#notes" data-i18n="notesNav">Notes</a><a href="#things" data-i18n="thingsNav">Things I Like</a><a href="#contact" data-i18n="contactNav">Contact</a></nav><div class="header-actions"><button class="lang" data-lang="it">IT</button><span>|</span><button class="lang active" data-lang="en">EN</button><button class="menu-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span></button></div></header>
 <div class="mobile-menu" aria-hidden="true"><nav><a href="#top" data-i18n="home">Home</a><a href="#about" data-i18n="aboutNav">About</a><a href="#notes" data-i18n="notesNav">Notes</a><a href="#things" data-i18n="thingsNav">Things I Like</a><a href="#contact" data-i18n="contactNav">Contact</a></nav></div>
