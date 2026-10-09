@@ -1,6 +1,0 @@
-.brand-signature{display:none}
-@media(min-width:851px){
-  .site-header .brand{display:flex;align-items:center;flex-shrink:0;line-height:0}
-  .site-header .brand-text{display:none}
-  .site-header .brand-signature{display:block;width:210px;height:auto;max-height:64px;object-fit:contain}
-}
