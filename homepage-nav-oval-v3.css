@@ -189,11 +189,10 @@ body{background:#f7f9fc}
 .hero{background-color:#89bae8;background-image:url('assets/hero-naples-day.webp');background-size:auto 100%;background-position:right bottom}
 @media(min-width:851px){.hero-visual img{visibility:hidden;aspect-ratio:1050/1400;object-fit:contain}}
 @media(max-width:850px){.hero{background-image:none}.hero-visual img{width:100%;max-width:none;margin:0;aspect-ratio:auto;height:auto;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 22%);mask-image:linear-gradient(to bottom,transparent 0%,#000 22%)}}
-/* Use only the photograph's upper sky behind the mobile introduction. */
+/* Keep one continuous desktop photograph, without a second sky panel. */
 @media(min-width:851px){
   .hero::before{background:linear-gradient(90deg,rgba(12,38,59,.82),rgba(12,38,59,.72) 40%,rgba(12,38,59,.12) 65%,transparent 80%),linear-gradient(90deg,#89bae8 0%,#89bae8 24%,transparent 45%)}
-  .hero-copy{isolation:isolate}
-  .hero-copy::before{content:"";position:absolute;z-index:-1;pointer-events:none;top:0;left:0;width:100%;aspect-ratio:5/1;background:url('assets/hero-naples-day.webp') center top/100% auto no-repeat;opacity:.45;-webkit-mask-image:radial-gradient(ellipse at center,#000 0%,transparent 72%);mask-image:radial-gradient(ellipse at center,#000 0%,transparent 72%)}
+  .hero-copy::before{content:none}
 }
 @media(max-width:850px){
   .hero-copy{isolation:isolate}
