@@ -1,7 +1,16 @@
-CORREALE.ME — v0.2
+CORREALE.ME
 
-Open index.html in Safari.
-Desktop + responsive mobile layout included.
-Language defaults to English and persists IT/EN choice in the browser.
-LinkedIn and Instagram link to the real profiles.
-Notes are marked Coming Soon.
+Personal website of Francesco Correale, served by GitHub Pages (see CNAME).
+Static HTML/CSS/JS, no build step. Every page has an IT/EN switch.
+
+Pages
+  index.html          Home          home.css, home.js, mobile-glass.css/.js, script.js
+  tennis.html         Tennis        style.css, tennis.css, tennis.js
+  naples.html         Naples guide  inline styles and script, Leaflet map
+  around-naples.html  Around Naples inline styles and script, Leaflet map
+  travel.html         Travel        inline styles and script, Leaflet map
+
+Shared
+  site-signature.css  handwritten "F. Correale" mark in the header
+  assets/             images (WebP) and app icons
+  favicon.ico, favicon-32.png, apple-touch-icon.png, site.webmanifest

@@ -1,7 +1,0 @@
-.site-header .brand{display:flex;align-items:center;flex-shrink:0;line-height:0}
-.site-header .brand-text{display:none}
-.site-header .brand-signature{display:block;width:210px;height:auto;max-height:64px;object-fit:contain}
-@media(max-width:850px){
-  .site-header{gap:12px}
-  .site-header .brand-signature{width:clamp(120px,38vw,160px);max-height:50px}
-}
