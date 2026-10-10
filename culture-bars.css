@@ -1,0 +1,17 @@
+.culture-bars .section{padding-top:55px;padding-bottom:80px}
+.culture-bars .editorial-grid{display:flex;flex-direction:column;gap:24px}
+.culture-bars .editorial-grid>.card{display:grid;grid-template-columns:260px minmax(0,1fr);min-height:225px;border-radius:28px;position:relative;transform:none}
+.culture-bars .editorial-grid>.card .media{height:100%;min-height:225px;max-height:none}
+.culture-bars .editorial-grid>.card .media img{width:100%;height:100%;object-fit:cover}
+.culture-bars .editorial-grid>.card .card-copy{padding:34px 90px 34px 40px;justify-content:center}
+.culture-bars .editorial-grid>.card .category{margin-bottom:12px}
+.culture-bars .editorial-grid>.card h3{font-size:40px;margin-bottom:14px}
+.culture-bars .editorial-grid>.card p:not(.category){font-size:16px;max-width:650px}
+.culture-bars .editorial-grid>.card .card-copy i{display:grid;right:30px;bottom:auto;top:50%;transform:translateY(-50%);width:44px;height:44px;font-size:21px;opacity:1}
+.culture-bars .editorial-grid>.card:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(29,60,91,.12)}
+.culture-bars .music-card-art span{width:140px;height:140px;font-size:44px}
+.culture-bars .editorial-grid>.card .headphones-media{background:#fff}
+.culture-bars .editorial-grid>.card .headphones-media img{object-fit:contain;padding:12px;filter:none}
+@media(max-width:850px){.culture-bars .section{padding:35px 20px 55px}.culture-bars .editorial-grid{gap:18px}.culture-bars .editorial-grid>.card{grid-template-columns:130px minmax(0,1fr);border-radius:22px;min-height:190px}.culture-bars .editorial-grid>.card .media{min-height:190px}.culture-bars .editorial-grid>.card .card-copy{padding:22px 34px 22px 20px}.culture-bars .editorial-grid>.card h3{font-size:28px;margin-bottom:10px}.culture-bars .editorial-grid>.card p:not(.category){font-size:13px}.culture-bars .editorial-grid>.card .category{font-size:9px}.culture-bars .editorial-grid>.card .card-copy i{width:24px;height:24px;right:9px;font-size:16px}.culture-bars .music-card-art span{width:95px;height:95px;font-size:34px}}
+@media(max-width:420px){.culture-bars .editorial-grid>.card{grid-template-columns:95px minmax(0,1fr)}.culture-bars .editorial-grid>.card .card-copy{padding-left:16px}.culture-bars .editorial-grid>.card h3{font-size:25px}.culture-bars .music-card-art span{width:72px;height:72px;font-size:27px}}
+@media(prefers-reduced-motion:reduce){.culture-bars .editorial-grid>.card:hover{transform:none}}
