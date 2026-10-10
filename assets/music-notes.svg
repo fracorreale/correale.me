@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650" fill="none">
+  <g stroke="#247fb7" stroke-width="2" opacity=".08">
+    <path d="M-80 120 Q220 15 570 110 T980 90 M-80 139 Q220 34 570 129 T980 109 M-80 158 Q220 53 570 148 T980 128 M-80 177 Q220 72 570 167 T980 147 M-80 196 Q220 91 570 186 T980 166"/>
+    <path d="M-60 495 Q260 365 580 475 T980 440 M-60 514 Q260 384 580 494 T980 459 M-60 533 Q260 403 580 513 T980 478 M-60 552 Q260 422 580 532 T980 497 M-60 571 Q260 441 580 551 T980 516"/>
+  </g>
+  <g fill="#247fb7" opacity=".14">
+    <g transform="translate(62 50) rotate(-14)"><ellipse cx="0" cy="60" rx="13" ry="9" transform="rotate(-20 0 60)"/><path d="M10 60V0h4v60zM14 0q34 11 18 35q5-21-18-22z"/></g>
+    <g transform="translate(340 25) rotate(12)"><ellipse cx="0" cy="75" rx="12" ry="8"/><ellipse cx="54" cy="63" rx="12" ry="8"/><path d="M9 75V10l56-12v65h-4V11l-48 10v54z"/></g>
+    <g transform="translate(530 255) rotate(-12)"><ellipse cx="0" cy="70" rx="15" ry="10"/><path d="M11 70V0h5v70zM16 0q38 13 18 41q8-25-18-26z"/></g>
+    <g transform="translate(35 365) rotate(15)"><ellipse cx="0" cy="70" rx="13" ry="9"/><path d="M10 70V0h4v70z"/></g>
+    <g transform="translate(255 535) rotate(-10)"><ellipse cx="0" cy="55" rx="11" ry="8"/><ellipse cx="45" cy="45" rx="11" ry="8"/><path d="M8 55V3l48-10v52h-4V8L12 17v38z"/></g>
+    <g transform="translate(725 40) rotate(18)"><ellipse cx="0" cy="70" rx="13" ry="9"/><path d="M10 70V0h4v70z"/></g>
+  </g>
+</svg>
