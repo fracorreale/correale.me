@@ -26,3 +26,5 @@ body.music-dark::before{content:"";position:fixed;inset:0;pointer-events:none;z-
 .music-dark footer{border-color:#ffffff18;color:#b6cce0;background:#081b3033}
 .music-dark footer strong{color:#eef6ff}
 .music-dark footer small{color:#91abc2}
+
+.music-dark footer .footer-credit-signature{filter:brightness(0) invert(1)}
