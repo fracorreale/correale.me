@@ -7,7 +7,9 @@ body.music-dark::before{content:"";position:fixed;inset:0;pointer-events:none;z-
 .music-dark .desktop-nav a:hover,.music-dark .lang.active{color:#fff}
 .music-dark .site-header .desktop-nav a[data-nav="notes"]{background:#b6dcf8;color:#0b2843}
 .music-dark .menu-btn span{background:#ecf4fc}
-.music-dark .mobile-menu{background:rgba(8,27,48,.98)}
+.music-dark .mobile-menu{background:rgba(8,27,48,.98);--ink:#fff;color:#fff}
+.music-dark .mobile-menu a,.music-dark .mobile-menu a:hover,.music-dark .mobile-menu a:focus-visible{color:#fff}
+.music-dark .mobile-menu a:hover,.music-dark .mobile-menu a:focus-visible{background:rgba(255,255,255,.10)}
 .music-dark .music-intro{background:radial-gradient(ellipse at 8% 0%,#315d85 0%,transparent 53%),radial-gradient(ellipse at 48% 90%,#19456c 0%,transparent 58%),linear-gradient(135deg,#163b5d,#0c263f);border-color:#ffffff24;box-shadow:0 20px 60px #0002}
 .music-dark .music-intro::before{filter:brightness(3);opacity:.7}
 .music-dark .breadcrumb,.music-dark .update-note{color:#b9cee1}
