@@ -1,0 +1,28 @@
+body.music-dark{--ink:#ecf4fc;--muted:#b4c8dc;--blue:#9ad5ff;--line:#41607c;background:#081b30;background-image:radial-gradient(ellipse at 10% 4%,#214b73 0%,transparent 42%),radial-gradient(ellipse at 90% 40%,#123551 0%,transparent 48%);color:var(--ink)}
+body.music-dark::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:url('assets/music-notes.svg') center top/900px 650px repeat;filter:brightness(2.5);opacity:.55}
+.music-dark .site-header{background:rgba(8,27,48,.85);--signature-ink:#ecf4fc;border-color:#ffffff18}
+.music-dark .site-header.scrolled{background:rgba(8,27,48,.94)}
+.music-dark .desktop-nav-shell{background:linear-gradient(135deg,#315575aa,#183b5caa);border-color:#ffffff26;box-shadow:inset 0 1px 0 #ffffff20,0 8px 26px #0003}
+.music-dark .desktop-nav,.music-dark .header-actions,.music-dark .lang{color:#c2d5e6}
+.music-dark .desktop-nav a:hover,.music-dark .lang.active{color:#fff}
+.music-dark .site-header .desktop-nav a[data-nav="notes"]{background:#b6dcf8;color:#0b2843}
+.music-dark .menu-btn span{background:#ecf4fc}
+.music-dark .mobile-menu{background:rgba(8,27,48,.98)}
+.music-dark .music-intro{background:radial-gradient(ellipse at 8% 0%,#315d85 0%,transparent 53%),radial-gradient(ellipse at 48% 90%,#19456c 0%,transparent 58%),linear-gradient(135deg,#163b5d,#0c263f);border-color:#ffffff24;box-shadow:0 20px 60px #0002}
+.music-dark .music-intro::before{filter:brightness(3);opacity:.7}
+.music-dark .breadcrumb,.music-dark .update-note{color:#b9cee1}
+.music-dark .intro{color:#dae8f5}
+.music-dark .section-kicker{color:#9fc9e7}
+.music-dark .music-jumps .jump{color:#ecf4fc;background:linear-gradient(135deg,#749ab740,#365e813b);border-color:#ffffff36;box-shadow:inset 0 1px 0 #ffffff1c,0 8px 22px #0002}
+.music-dark .music-section-head>p:last-child{color:#b8ccdf}
+.music-dark .song-list,.music-dark .concert-card{background:linear-gradient(135deg,#1b3b58ee,#112e48ee);border-color:#ffffff20;box-shadow:0 12px 30px #0002}
+.music-dark .song-list li+li,.music-dark .song-list summary{border-color:#ffffff16}
+.music-dark a.song:hover{background:#2b537477}
+.music-dark .song-title,.music-dark .concert-copy h3{color:#eef6ff}
+.music-dark .rank,.music-dark .artist,.music-dark .plays small,.music-dark .added,.music-dark .concert-copy>p:last-child{color:#b6cce0}
+.music-dark .plays,.music-dark .song-arrow,.music-dark .song-list summary,.music-dark .category{color:#9dd6ff}
+.music-dark .cover{background:#2a4a68}
+.music-dark .cover-placeholder{color:#b5d4ec}
+.music-dark footer{border-color:#ffffff18;color:#b6cce0;background:#081b3033}
+.music-dark footer strong{color:#eef6ff}
+.music-dark footer small{color:#91abc2}
