@@ -34,3 +34,15 @@
  .shots .shot-video{margin-top:auto}
  .shots article>p{padding-bottom:22px}
 }
+
+.kit-gallery{display:block;padding-top:36px}
+.kit-gallery .section-kicker{font:700 10px var(--sans);letter-spacing:.21em;margin:0 0 26px}
+.kit-products{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.kit-products figure{margin:0;min-width:0}
+.kit-image{height:320px;display:flex;align-items:center;justify-content:center}
+.kit-image img{display:block;width:100%;height:100%;object-fit:contain}
+.kit-products figcaption{font:normal 24px/1.3 var(--serif);text-align:center;color:var(--ink);margin-top:20px}
+.kit-gallery .kit-grip{font-size:13px;line-height:1.6;color:var(--muted);margin:32px 0 0}
+@media(max-width:600px){.kit-products{grid-template-columns:1fr;gap:36px}.kit-image{height:280px}.kit-products figcaption{font-size:22px}}
+
+#the-kit{scroll-margin-top:100px}
