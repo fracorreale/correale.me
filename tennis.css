@@ -27,3 +27,10 @@
  color:#fff;background:#1b4939;border-color:rgba(255,255,255,.2);
 }
 .tennis-page .site-header :focus-visible,.tennis-page .mobile-menu a:focus-visible{outline-color:#d8e5a1}
+
+/* Keep shot videos aligned beneath descriptions of different lengths. */
+@media(min-width:851px){
+ .shots article{display:flex;flex-direction:column;min-width:0}
+ .shots .shot-video{margin-top:auto}
+ .shots article>p{padding-bottom:22px}
+}
