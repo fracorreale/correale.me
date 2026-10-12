@@ -4,7 +4,6 @@ Sport IT/EN pages contain Tennis, Football and Chess cards and preserve the shar
 
 ## Outstanding before publication
 
-- IMG_1162.jpeg is not present in the accessible attachments, project mirror or repository. Football currently displays an explicit pending-photo panel; replace it with the user's original Maradona Stadium photo on both Sport and Football pages before publishing.
 - The approved conversation's mockup attachment was not accessible. The layout follows its written specification; visual equivalence to that image cannot be certified.
 - The live Chess.com endpoint returned a Cloudflare challenge during verification from this environment. Verify successful live retrieval from the intended browser before publication. Failures display unavailable, never a made-up rating.
 
@@ -18,3 +17,7 @@ The widget reads chess_rapid.last.rating from https://api.chess.com/pub/player/f
 
 Built-in imagegen output, converted to WebP: assets/sport-background.webp.
 Prompt: photographic lush green football pitch with white field markings, yellow tennis balls and elegant stylized ivory and dark chess pieces along the lower and outer edges; natural evening light, uncluttered center for website cards; no people, text, interface, logos or watermark.
+
+## Maradona Stadium photo
+
+User-provided IMG_1162.jpeg is now used on both Sport cards and Football pages in IT/EN. EXIF orientation applied and an optimized 2048-pixel WebP created as assets/stadio-maradona.webp. Original source remains unchanged.
