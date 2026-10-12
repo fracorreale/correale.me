@@ -38,3 +38,7 @@
 
 /* Header uses the same azzurro background as the page. */
 .napoli-page .site-header,.napoli-page .site-header.scrolled{background-color:#087fb9;background-image:url('assets/napoli-pattern.svg'),linear-gradient(125deg,#075e9b 0%,#119bd0 48%,#0874b5 100%);background-size:240px 240px,100% 100%;border-color:#c5e8ff40}
+
+/* Napoli-only navigation blends into the header. */
+.napoli-page .desktop-nav-shell{background:transparent;box-shadow:none;border-color:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}.napoli-page .desktop-nav-shell .header-actions{border-left-color:#ffffff30}.napoli-page .desktop-nav-shell .lang.active{color:#fff}
+.napoli-hero-copy{right:5vw;max-width:none;padding-right:0}.napoli-hero h1{max-width:none;white-space:nowrap;font-size:clamp(30px,6.6vw,108px)}.napoli-hero-copy>p{max-width:none;white-space:nowrap;font-size:clamp(10px,1.8vw,25px)}@media(max-width:700px){.napoli-hero-copy{left:24px;right:24px}.napoli-hero h1{max-width:none;font-size:7.4vw;letter-spacing:-.045em}.napoli-hero-copy>p{max-width:none;font-size:2.45vw;line-height:1.7}}
