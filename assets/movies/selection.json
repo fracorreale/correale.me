@@ -133,105 +133,131 @@
       "type": "portrait",
       "selection": "Classic portrait, option 1",
       "localPath": "assets/movies/christopher-nolan.webp",
-      "status": "approved-selection-awaiting-licensed-file",
-      "license": null,
-      "source": null
+      "status": "licensed-file-published",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:ChristopherNolan-byPhilipRomano_(cropped).jpg",
+      "author": "PhilipRomano",
+      "changes": "Converted to grayscale, resized and encoded as WebP. Displayed with a vertical crop."
     },
     "Paolo Sorrentino": {
       "type": "portrait",
       "selection": "Classic portrait, option 1",
       "localPath": "assets/movies/paolo-sorrentino.webp",
-      "status": "approved-selection-awaiting-licensed-file",
-      "license": null,
-      "source": null
+      "status": "licensed-file-published",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Paolo_Sorrentino_2018.jpg",
+      "author": "Pietro Luca Cassarino",
+      "changes": "Converted to grayscale, resized and encoded as WebP. Displayed with a vertical crop."
     },
     "Stanley Kubrick": {
       "type": "portrait",
       "selection": "Classic portrait with beard and glasses, option 1",
       "localPath": "assets/movies/stanley-kubrick.webp",
-      "status": "approved-selection-awaiting-licensed-file",
-      "license": null,
-      "source": null
+      "status": "licensed-file-published",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Todd_Field_%26_Stanley_Kubrick_Highclere_28_Jan_1998.tif",
+      "author": "M. Harlan",
+      "changes": "Converted to grayscale, resized and encoded as WebP. Displayed with a vertical crop."
     },
     "Steven Spielberg": {
       "type": "portrait",
       "selection": "Classic portrait, option 1",
       "localPath": "assets/movies/steven-spielberg.webp",
-      "status": "approved-selection-awaiting-licensed-file",
-      "license": null,
-      "source": null
+      "status": "licensed-file-published",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:MKr25402_Steven_Spielberg_(Berlinale_2023)_(3x4_cropped).jpg",
+      "author": "Martin Kraft",
+      "changes": "Converted to grayscale, resized and encoded as WebP. Displayed with a vertical crop."
     },
     "Quentin Tarantino": {
       "type": "portrait",
       "selection": "Classic portrait, option 1",
       "localPath": "assets/movies/quentin-tarantino.webp",
-      "status": "approved-selection-awaiting-licensed-file",
-      "license": null,
-      "source": null
+      "status": "licensed-file-published",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Quentin_Tarantino_by_Gage_Skidmore.jpg",
+      "author": "Gage Skidmore",
+      "changes": "Converted to grayscale, resized and encoded as WebP. Displayed with a vertical crop."
     },
     "Robert De Niro": {
       "type": "portrait",
       "selection": "Contemporary portrait, option 2",
       "localPath": "assets/movies/robert-de-niro.webp",
-      "status": "approved-selection-awaiting-licensed-file",
-      "license": null,
-      "source": null
+      "status": "licensed-file-published",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Robert_de_Niro_Cannes_Film_Festival_(3x4_cropped).jpg",
+      "author": "Harald Krichel",
+      "changes": "Converted to grayscale, resized and encoded as WebP. Displayed with a vertical crop."
     },
     "Al Pacino": {
       "type": "portrait",
       "selection": "Contemporary portrait, option 1",
       "localPath": "assets/movies/al-pacino.webp",
-      "status": "approved-selection-awaiting-licensed-file",
-      "license": null,
-      "source": null
+      "status": "licensed-file-published",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Al_Pacino_2016_(30401544240).jpg",
+      "author": "Embajada de EEUU en la Argentina (US Embassy of Argentina)",
+      "changes": "Converted to grayscale, resized and encoded as WebP. Displayed with a vertical crop."
     },
     "Sean Penn": {
       "type": "portrait",
       "selection": "Contemporary portrait, option 1",
       "localPath": "assets/movies/sean-penn.webp",
-      "status": "approved-selection-awaiting-licensed-file",
-      "license": null,
-      "source": null
+      "status": "licensed-file-published",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Superpower_(2023)-60523_(cropped).jpg",
+      "author": "Harald Krichel",
+      "changes": "Converted to grayscale, resized and encoded as WebP. Displayed with a vertical crop."
     },
     "Leonardo DiCaprio": {
       "type": "portrait",
       "selection": "Contemporary portrait, option 1",
       "localPath": "assets/movies/leonardo-dicaprio.webp",
-      "status": "approved-selection-awaiting-licensed-file",
-      "license": null,
-      "source": null
+      "status": "licensed-file-published",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:LeoPTABFI191125-28_(cropped).jpg",
+      "author": "Raph_PH",
+      "changes": "Converted to grayscale, resized and encoded as WebP. Displayed with a vertical crop."
     },
     "Diane Keaton": {
       "type": "portrait",
       "selection": "Young 1970s Annie Hall-era portrait, option 2",
       "localPath": "assets/movies/diane-keaton.webp",
-      "status": "approved-selection-awaiting-licensed-file",
-      "license": null,
-      "source": null
+      "status": "licensed-file-published",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Diane_Keaton_2012-1_(cropped)_(cropped).jpg",
+      "author": "es:Ruven Afanador",
+      "changes": "Converted to grayscale, resized and encoded as WebP. Displayed with a vertical crop."
     },
     "Helen Mirren": {
       "type": "portrait",
       "selection": "Contemporary portrait, option 1",
       "localPath": "assets/movies/helen-mirren.webp",
-      "status": "approved-selection-awaiting-licensed-file",
-      "license": null,
-      "source": null
+      "status": "licensed-file-published",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Helen_Mirren_-_Tribute_Awards_-_TIFF_2026-2.jpg",
+      "author": "Sarran Hamilton",
+      "changes": "Converted to grayscale, resized and encoded as WebP. Displayed with a vertical crop."
     },
     "Julia Roberts": {
       "type": "portrait",
       "selection": "Cinematic dramatic-light portrait, option 3",
       "localPath": "assets/movies/julia-roberts.webp",
-      "status": "approved-selection-awaiting-licensed-file",
-      "license": null,
-      "source": null
+      "status": "licensed-file-published",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Julia_Roberts_2025.jpg",
+      "author": "Colleen Sturtevant",
+      "changes": "Converted to grayscale, resized and encoded as WebP. Displayed with a vertical crop."
     },
     "Jennifer Lawrence": {
       "type": "portrait",
       "selection": "Cinematic dramatic close-up, option 3",
       "localPath": "assets/movies/jennifer-lawrence.webp",
-      "status": "approved-selection-awaiting-licensed-file",
-      "license": null,
-      "source": null
+      "status": "licensed-file-published",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Jennifer_Lawrence_in_2016.jpg",
+      "author": "Joel Kowsky",
+      "changes": "Converted to grayscale, resized and encoded as WebP. Displayed with a vertical crop."
     }
   }
 }

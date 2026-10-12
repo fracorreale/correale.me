@@ -16,3 +16,5 @@
 
 /* Inspectable Wikimedia Commons portrait source searches. */
 .photo-source-link{display:inline-block;margin-top:9px;font-size:12px;color:#c4e5ff;text-decoration:underline;text-underline-offset:3px}.photo-source-link:hover{color:white}
+
+.photo-credits{font-size:.85rem;line-height:1.6}.photo-credits summary{cursor:pointer}.photo-credits li{margin-bottom:.8rem}.photo-credits a{color:inherit;text-decoration:underline}.art.portrait img{object-position:center 25%}
