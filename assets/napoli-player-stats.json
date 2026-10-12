@@ -1,0 +1,103 @@
+{
+  "as_of": "2026-10-10",
+  "scope": "Napoli first-team official matches, all competitions; friendlies excluded",
+  "source": "https://it.wikipedia.org/wiki/Calciatori_della_Societ%C3%A0_Sportiva_Calcio_Napoli",
+  "additional_sources": {
+    "Taglialatela": "https://en.wikipedia.org/wiki/List_of_SSC_Napoli_players",
+    "McTominay": "https://it.wikipedia.org/wiki/Scott_McTominay",
+    "Pecchia": "https://www.transfermarkt.it/ssc-napoli/rekordspieler/verein/6195/page/3",
+    "Maggio": "https://www.transfermarkt.com/ssc-neapel/rekordspieler/verein/6195"
+  },
+  "players": [
+    {
+      "name": "Aglietti",
+      "appearances": 34,
+      "goals": 9
+    },
+    {
+      "name": "Albiol",
+      "appearances": 236,
+      "goals": 6
+    },
+    {
+      "name": "Callejón",
+      "appearances": 349,
+      "goals": 82
+    },
+    {
+      "name": "Carbone",
+      "appearances": 40,
+      "goals": 10
+    },
+    {
+      "name": "Cavani",
+      "appearances": 138,
+      "goals": 104
+    },
+    {
+      "name": "Cruz",
+      "appearances": 98,
+      "goals": 14
+    },
+    {
+      "name": "Di Lorenzo",
+      "appearances": 312,
+      "goals": 20
+    },
+    {
+      "name": "Hamšík",
+      "appearances": 520,
+      "goals": 121
+    },
+    {
+      "name": "Kim",
+      "appearances": 45,
+      "goals": 2
+    },
+    {
+      "name": "Kvaratskhelia",
+      "appearances": 107,
+      "goals": 30
+    },
+    {
+      "name": "Lavezzi",
+      "appearances": 188,
+      "goals": 48
+    },
+    {
+      "name": "Maggio",
+      "appearances": 308,
+      "goals": 23
+    },
+    {
+      "name": "McTominay",
+      "appearances": 83,
+      "goals": 27
+    },
+    {
+      "name": "Mertens",
+      "appearances": 397,
+      "goals": 148
+    },
+    {
+      "name": "Pecchia",
+      "appearances": 172,
+      "goals": 24
+    },
+    {
+      "name": "Schwoch",
+      "appearances": 66,
+      "goals": 32
+    },
+    {
+      "name": "Taglialatela",
+      "appearances": 203,
+      "goals": 0
+    },
+    {
+      "name": "Zola",
+      "appearances": 136,
+      "goals": 36
+    }
+  ]
+}

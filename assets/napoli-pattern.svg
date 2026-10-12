@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+<defs><pattern id="fabric" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 0L4 4M-1 3L1 5M3-1L5 1" stroke="#fff" stroke-opacity=".055" stroke-width=".6"/></pattern><g id="badge"><circle r="27" fill="#065491" fill-opacity=".12" stroke="#fff" stroke-opacity=".16" stroke-width="2"/><circle r="23" fill="none" stroke="#fff" stroke-opacity=".1"/><text x="0" y="13" text-anchor="middle" font-family="Georgia,serif" font-size="38" font-style="italic" fill="#fff" fill-opacity=".14">N</text></g></defs>
+<path fill="url(#fabric)" d="M0 0h240v240H0z"/><use href="#badge" x="60" y="60"/><use href="#badge" x="180" y="180"/>
+</svg>
