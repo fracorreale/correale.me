@@ -1,6 +1,6 @@
 (() => {
   const desktop = matchMedia('(min-width:851px)');
-  const links = [...document.querySelectorAll('.desktop-nav a')];
+  const links = [...document.querySelectorAll('.desktop-nav [data-nav]')];
   const sections = links.map(link => document.querySelector(link.getAttribute('href')));
   let frame = 0;
   function select(id) {
