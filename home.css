@@ -149,3 +149,7 @@ footer small{grid-column:auto}}
 
 /* Sport and Culture above the three Places cards. */
 @media(min-width:851px){.editorial-grid>.card:nth-child(n+3){grid-column:span 2}}
+
+/* Use the same typography throughout the hero introduction. */
+.hero .lead,.hero .sublead{font:normal clamp(22px,2vw,29px)/1.38 var(--serif)}
+@media(max-width:850px){.hero .lead,.hero .sublead{font-size:22px}}
