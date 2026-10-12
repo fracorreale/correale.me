@@ -32,3 +32,6 @@
 #maradona:before{background:#015999}
 
 .napoli-story-text>p{margin:0}.napoli-story-text>p+p{margin-top:24px}
+
+/* Napoli page only: gold badge beside the header signature. */
+.napoli-page header .brand.site-signature{gap:12px}.napoli-page .napoli-gold-badge{display:block;flex:0 0 auto;width:44px;height:44px;filter:drop-shadow(0 1px 3px #002a4c40)}@media(max-width:850px){.napoli-page header .brand.site-signature{gap:7px}.napoli-page .napoli-gold-badge{width:34px;height:34px}.napoli-page header .site-signature .signature-mark{width:clamp(100px,31vw,145px)}}@media(max-width:360px){.napoli-page .napoli-gold-badge{width:29px;height:29px}.napoli-page header .brand.site-signature{gap:5px}}
