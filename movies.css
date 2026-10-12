@@ -13,3 +13,6 @@
 
 /* Discreet direct IMDb links on film cards. */
 .imdb-card{position:relative}.imdb-link{display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:7px 12px;border:1px solid rgba(245,248,252,.35);border-radius:999px;background:rgba(255,255,255,.09);color:#fff;font-size:12px;font-weight:650;letter-spacing:.02em;text-decoration:none;transition:background .2s,border-color .2s}.imdb-link:hover,.imdb-link:focus-visible{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.8)}.imdb-link:focus-visible{outline:2px solid #d5ecff;outline-offset:2px}
+
+/* Inspectable Wikimedia Commons portrait source searches. */
+.photo-source-link{display:inline-block;margin-top:9px;font-size:12px;color:#c4e5ff;text-decoration:underline;text-underline-offset:3px}.photo-source-link:hover{color:white}
