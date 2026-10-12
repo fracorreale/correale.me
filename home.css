@@ -146,3 +146,6 @@ footer small{grid-column:auto}}
 
 /* Keep the player and ball visible in the homepage Sport photo. */
 [data-sport-link] .media img{object-position:center 30%}
+
+/* Sport and Culture above the three Places cards. */
+@media(min-width:851px){.editorial-grid>.card:nth-child(n+3){grid-column:span 2}}
