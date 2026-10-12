@@ -4,7 +4,6 @@
 .shot-video{display:block;width:100%;height:auto;max-height:360px;margin-top:22px;border:1px solid var(--line);border-radius:4px;background:#0b281f;object-fit:contain}
 #forehand-title,#backhand-title,#serve-title{scroll-margin-top:90px}
 
-/* Tennis header palette, retaining the shared navigation layout. */
 .tennis-page .site-header,.tennis-page .site-header.scrolled,.tennis-page .mobile-menu{
  --ink:#fff;--blue:#d8e5a1;--signature-ink:#fff;
  color:#fff;background:rgba(18,60,48,.96);border-color:rgba(255,255,255,.18);
@@ -28,7 +27,6 @@
 }
 .tennis-page .site-header :focus-visible,.tennis-page .mobile-menu a:focus-visible{outline-color:#d8e5a1}
 
-/* Keep shot videos aligned beneath descriptions of different lengths. */
 @media(min-width:851px){
  .shots article{display:flex;flex-direction:column;min-width:0}
  .shots .shot-video{margin-top:auto}

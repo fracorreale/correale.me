@@ -5,8 +5,8 @@
     "method": "Built-in image generation",
     "prompt": "Use case: stylized-concept. Asset type: square illustrated face portrait for a personal cinema website. Create ONE portrait of Christopher Nolan, recognizably his mature face, swept back slightly wavy hair, clean shaven, composed expression. The two supplied images are STYLE REFERENCES ONLY: do not depict Federer or Carlsen. Match their fine black pen and pencil linework on pure white paper, delicate hand drawn contours, fine hair strokes and restrained hatching, plenty of unfilled white facial areas, elegant lifelike stylization. Head and upper neck only, centered, near frontal with a subtle three-quarter turn, complete hair and chin visible, ample small white margin all around. Same head scale as references, unified series. No shoulders, clothing, props, lettering, signature, watermark, frames or color. White opaque background. Avoid photorealistic rendering, dense shaded charcoal, cartoon exaggeration. Save as a standalone illustration of only this director.",
     "styleReferences": [
-      "assets/players/federer.png",
-      "assets/chess/magnus-carlsen.png"
+      "assets/players/federer.webp",
+      "assets/chess/magnus-carlsen.webp"
     ]
   },
   {
@@ -15,8 +15,8 @@
     "method": "Built-in image generation",
     "prompt": "Use case: stylized-concept. Asset type: square illustrated face portrait for a personal cinema website. Create ONE portrait of Paolo Sorrentino, recognizably his mature face, unruly curly hair, slight stubble, distinctive long nose and thoughtful expression. The two supplied images are STYLE REFERENCES ONLY: do not depict Federer or Carlsen. Match their fine black pen and pencil linework on pure white paper, delicate hand drawn contours, fine hair strokes and restrained hatching, plenty of unfilled white facial areas, elegant lifelike stylization. Head and upper neck only, centered, near frontal with a subtle three-quarter turn, complete hair and chin visible, ample small white margin all around. Same head scale as references, unified series. No shoulders, clothing, props, lettering, signature, watermark, frames or color. White opaque background. Avoid photorealistic rendering, dense shaded charcoal, cartoon exaggeration. Save as a standalone illustration of only this director.",
     "styleReferences": [
-      "assets/players/federer.png",
-      "assets/chess/magnus-carlsen.png"
+      "assets/players/federer.webp",
+      "assets/chess/magnus-carlsen.webp"
     ]
   },
   {
@@ -25,8 +25,8 @@
     "method": "Built-in image generation",
     "prompt": "Use case: stylized-concept. Asset type: square illustrated face portrait for a personal cinema website. Create ONE portrait of Stanley Kubrick, recognizably his mature face with full beard, receding curly hair and round spectacles, thoughtful expression. The two supplied images are STYLE REFERENCES ONLY: do not depict Federer or Carlsen. Match their fine black pen and pencil linework on pure white paper, delicate hand drawn contours, fine hair strokes and restrained hatching, plenty of unfilled white facial areas, elegant lifelike stylization. Head and upper neck only, centered, near frontal with a subtle three-quarter turn, complete hair and chin visible, ample small white margin all around. Same head scale as references, unified series. No shoulders, clothing, props, lettering, signature, watermark, frames or color. White opaque background. Avoid photorealistic rendering, dense shaded charcoal, cartoon exaggeration. Save as a standalone illustration of only this director.",
     "styleReferences": [
-      "assets/players/federer.png",
-      "assets/chess/magnus-carlsen.png"
+      "assets/players/federer.webp",
+      "assets/chess/magnus-carlsen.webp"
     ]
   },
   {
@@ -35,8 +35,8 @@
     "method": "Built-in image generation",
     "prompt": "Use case: stylized-concept. Asset type: square illustrated face portrait for a personal cinema website. Create ONE portrait of Steven Spielberg, recognizably his mature face, round glasses, receding hair, short gray beard, gentle expression. The two supplied images are STYLE REFERENCES ONLY: do not depict Federer or Carlsen. Match their fine black pen and pencil linework on pure white paper, delicate hand drawn contours, fine hair strokes and restrained hatching, plenty of unfilled white facial areas, elegant lifelike stylization. Head and upper neck only, centered, near frontal with a subtle three-quarter turn, complete hair and chin visible, ample small white margin all around. Same head scale as references, unified series. No shoulders, clothing, props, lettering, signature, watermark, frames or color. White opaque background. Avoid photorealistic rendering, dense shaded charcoal, cartoon exaggeration. Save as a standalone illustration of only this director.",
     "styleReferences": [
-      "assets/players/federer.png",
-      "assets/chess/magnus-carlsen.png"
+      "assets/players/federer.webp",
+      "assets/chess/magnus-carlsen.webp"
     ]
   },
   {
@@ -45,8 +45,8 @@
     "method": "Built-in image generation",
     "prompt": "Use case: stylized-concept. Asset type: square illustrated face portrait for a personal cinema website. Create ONE portrait of Quentin Tarantino, recognizably his mature face, distinctive broad jaw and forehead, short dark hair, clean shaven, slight smile. The two supplied images are STYLE REFERENCES ONLY: do not depict Federer or Carlsen. Match their fine black pen and pencil linework on pure white paper, delicate hand drawn contours, fine hair strokes and restrained hatching, plenty of unfilled white facial areas, elegant lifelike stylization. Head and upper neck only, centered, near frontal with a subtle three-quarter turn, complete hair and chin visible, ample small white margin all around. Same head scale as references, unified series. No shoulders, clothing, props, lettering, signature, watermark, frames or color. White opaque background. Avoid photorealistic rendering, dense shaded charcoal, cartoon exaggeration. Save as a standalone illustration of only this director.",
     "styleReferences": [
-      "assets/players/federer.png",
-      "assets/chess/magnus-carlsen.png"
+      "assets/players/federer.webp",
+      "assets/chess/magnus-carlsen.webp"
     ]
   }
 ]

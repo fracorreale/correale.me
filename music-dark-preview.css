@@ -24,7 +24,7 @@ body.music-dark::before{content:"";position:fixed;inset:0;pointer-events:none;z-
 .music-dark .rank,.music-dark .artist,.music-dark .plays small,.music-dark .added,.music-dark .concert-copy>p:last-child{color:#b6cce0}
 .music-dark .plays,.music-dark .song-arrow,.music-dark .song-list summary,.music-dark .category{color:#9dd6ff}
 .music-dark .cover{background:#2a4a68}
-.music-dark .cover-placeholder{color:#b5d4ec}
+
 .music-dark footer{border-color:#ffffff18;color:#b6cce0;background:#081b3033}
 .music-dark footer strong{color:#eef6ff}
 .music-dark footer small{color:#91abc2}
