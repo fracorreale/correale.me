@@ -45,8 +45,7 @@ a{color:inherit;text-decoration:none}
 footer{padding:54px clamp(28px,8vw,135px);display:grid;grid-template-columns:1fr auto;gap:24px;border-top:1px solid #eef1f3;color:#7a8790;font-size:13px}
 footer strong{color:var(--ink);letter-spacing:.18em;font-size:11px}
 footer p{margin:9px 0}
-.footer-links{display:flex;gap:25px;align-self:center}
-.footer-links a:hover{color:var(--blue)}
+
 footer small{grid-column:1/-1;color:#a0a9af;margin-top:20px}
 @media (max-width:850px){.eyebrow{font-size:9px}
 .lead{font-size:22px}
@@ -66,7 +65,7 @@ footer small{grid-column:1/-1;color:#a0a9af;margin-top:20px}
 .contact{align-items:flex-start;flex-direction:column}
 
 footer{padding:45px 24px;grid-template-columns:1fr}
-.footer-links{align-self:start}
+
 footer small{grid-column:auto}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 .notes{padding-top:55px}
