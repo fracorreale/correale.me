@@ -1,0 +1,237 @@
+{
+  "note": "Selection brief only. Do not publish poster/portrait files without verified rights and exact source.",
+  "images": {
+    "The Godfather Part II": {
+      "type": "poster",
+      "selection": "Al Pacino / Michael Corleone close-up poster",
+      "localPath": "assets/movies/the-godfather-part-ii.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Once Upon a Time in America": {
+      "type": "poster",
+      "selection": "Original theatrical poster",
+      "localPath": "assets/movies/once-upon-a-time-in-america.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Fantozzi": {
+      "type": "poster",
+      "selection": "Fantozzi in office, option 3",
+      "localPath": "assets/movies/fantozzi.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Back to the Future": {
+      "type": "poster",
+      "selection": "Original Marty McFly and DeLorean poster",
+      "localPath": "assets/movies/back-to-the-future.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "The Dark Knight": {
+      "type": "poster",
+      "selection": "Batman with burning bat symbol, option 1",
+      "localPath": "assets/movies/the-dark-knight.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Pulp Fiction": {
+      "type": "poster",
+      "selection": "Original Uma Thurman poster",
+      "localPath": "assets/movies/pulp-fiction.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Robin Hood": {
+      "type": "poster",
+      "selection": "Original Italian theatrical poster, option 4",
+      "localPath": "assets/movies/robin-hood.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Finding Nemo": {
+      "type": "poster",
+      "selection": "Italian theatrical poster, option 2",
+      "localPath": "assets/movies/finding-nemo.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Gordon Gekko": {
+      "type": "poster",
+      "selection": "Michael Douglas as Gordon Gekko, option 2",
+      "localPath": "assets/movies/gordon-gekko.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Trainspotting": {
+      "type": "poster",
+      "selection": "Original orange theatrical poster",
+      "localPath": "assets/movies/trainspotting.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Parthenope": {
+      "type": "poster",
+      "selection": "Parthenope and the sea, option 2",
+      "localPath": "assets/movies/parthenope.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "The Pursuit of Happyness": {
+      "type": "poster",
+      "selection": "Original Will Smith and son poster",
+      "localPath": "assets/movies/the-pursuit-of-happyness.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "The Lord of the Rings": {
+      "type": "poster",
+      "selection": "The Fellowship of the Ring original theatrical poster",
+      "localPath": "assets/movies/the-lord-of-the-rings.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Gladiator": {
+      "type": "poster",
+      "selection": "Original Russell Crowe theatrical poster",
+      "localPath": "assets/movies/gladiator.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "The Naked Gun": {
+      "type": "poster",
+      "selection": "Original Italian theatrical poster",
+      "localPath": "assets/movies/the-naked-gun.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "The Odyssey": {
+      "type": "poster",
+      "selection": "Official theatrical poster",
+      "localPath": "assets/movies/the-odyssey.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Christopher Nolan": {
+      "type": "portrait",
+      "selection": "Classic portrait, option 1",
+      "localPath": "assets/movies/christopher-nolan.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Paolo Sorrentino": {
+      "type": "portrait",
+      "selection": "Classic portrait, option 1",
+      "localPath": "assets/movies/paolo-sorrentino.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Stanley Kubrick": {
+      "type": "portrait",
+      "selection": "Classic portrait with beard and glasses, option 1",
+      "localPath": "assets/movies/stanley-kubrick.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Steven Spielberg": {
+      "type": "portrait",
+      "selection": "Classic portrait, option 1",
+      "localPath": "assets/movies/steven-spielberg.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Quentin Tarantino": {
+      "type": "portrait",
+      "selection": "Classic portrait, option 1",
+      "localPath": "assets/movies/quentin-tarantino.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Robert De Niro": {
+      "type": "portrait",
+      "selection": "Contemporary portrait, option 2",
+      "localPath": "assets/movies/robert-de-niro.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Al Pacino": {
+      "type": "portrait",
+      "selection": "Contemporary portrait, option 1",
+      "localPath": "assets/movies/al-pacino.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Sean Penn": {
+      "type": "portrait",
+      "selection": "Contemporary portrait, option 1",
+      "localPath": "assets/movies/sean-penn.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Leonardo DiCaprio": {
+      "type": "portrait",
+      "selection": "Contemporary portrait, option 1",
+      "localPath": "assets/movies/leonardo-dicaprio.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Diane Keaton": {
+      "type": "portrait",
+      "selection": "Young 1970s Annie Hall-era portrait, option 2",
+      "localPath": "assets/movies/diane-keaton.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Helen Mirren": {
+      "type": "portrait",
+      "selection": "Contemporary portrait, option 1",
+      "localPath": "assets/movies/helen-mirren.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Julia Roberts": {
+      "type": "portrait",
+      "selection": "Cinematic dramatic-light portrait, option 3",
+      "localPath": "assets/movies/julia-roberts.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    },
+    "Jennifer Lawrence": {
+      "type": "portrait",
+      "selection": "Cinematic dramatic close-up, option 3",
+      "localPath": "assets/movies/jennifer-lawrence.webp",
+      "status": "approved-selection-awaiting-licensed-file",
+      "license": null,
+      "source": null
+    }
+  }
+}
