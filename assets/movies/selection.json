@@ -146,54 +146,54 @@
       "permissionBasis": "User instructed publication assuming their own authorization; permission document not independently verified"
     },
     "Christopher Nolan": {
-      "type": "portrait",
+      "type": "illustration",
       "selection": "Classic portrait, option 1",
-      "localPath": "assets/movies/christopher-nolan.webp",
-      "status": "licensed-file-published",
-      "license": "CC BY-SA 4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:ChristopherNolan-byPhilipRomano_(cropped).jpg",
-      "author": "PhilipRomano",
-      "changes": "Converted to grayscale, resized and encoded as WebP. Displayed with a vertical crop."
+      "localPath": "assets/movies/christopher-nolan-illustration-v1.webp",
+      "status": "generated-illustration-published",
+      "license": null,
+      "source": null,
+      "author": "AI-generated illustration",
+      "changes": "Generated in the pen line portrait style of the existing tennis and chess illustrations"
     },
     "Paolo Sorrentino": {
-      "type": "portrait",
+      "type": "illustration",
       "selection": "Classic portrait, option 1",
-      "localPath": "assets/movies/paolo-sorrentino.webp",
-      "status": "licensed-file-published",
-      "license": "CC BY-SA 4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Paolo_Sorrentino_2018.jpg",
-      "author": "Pietro Luca Cassarino",
-      "changes": "Converted to grayscale, resized and encoded as WebP. Displayed with a vertical crop."
+      "localPath": "assets/movies/paolo-sorrentino-illustration-v1.webp",
+      "status": "generated-illustration-published",
+      "license": null,
+      "source": null,
+      "author": "AI-generated illustration",
+      "changes": "Generated in the pen line portrait style of the existing tennis and chess illustrations"
     },
     "Stanley Kubrick": {
-      "type": "portrait",
+      "type": "illustration",
       "selection": "Classic portrait with beard and glasses, option 1",
-      "localPath": "assets/movies/stanley-kubrick.webp",
-      "status": "licensed-file-published",
-      "license": "CC0",
-      "source": "https://commons.wikimedia.org/wiki/File:Todd_Field_%26_Stanley_Kubrick_Highclere_28_Jan_1998.tif",
-      "author": "M. Harlan",
-      "changes": "Converted to grayscale, resized and encoded as WebP. Displayed with a vertical crop."
+      "localPath": "assets/movies/stanley-kubrick-illustration-v1.webp",
+      "status": "generated-illustration-published",
+      "license": null,
+      "source": null,
+      "author": "AI-generated illustration",
+      "changes": "Generated in the pen line portrait style of the existing tennis and chess illustrations"
     },
     "Steven Spielberg": {
-      "type": "portrait",
+      "type": "illustration",
       "selection": "Classic portrait, option 1",
-      "localPath": "assets/movies/steven-spielberg.webp",
-      "status": "licensed-file-published",
-      "license": "CC BY-SA 4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:MKr25402_Steven_Spielberg_(Berlinale_2023)_(3x4_cropped).jpg",
-      "author": "Martin Kraft",
-      "changes": "Converted to grayscale, resized and encoded as WebP. Displayed with a vertical crop."
+      "localPath": "assets/movies/steven-spielberg-illustration-v1.webp",
+      "status": "generated-illustration-published",
+      "license": null,
+      "source": null,
+      "author": "AI-generated illustration",
+      "changes": "Generated in the pen line portrait style of the existing tennis and chess illustrations"
     },
     "Quentin Tarantino": {
-      "type": "portrait",
+      "type": "illustration",
       "selection": "Classic portrait, option 1",
-      "localPath": "assets/movies/quentin-tarantino.webp",
-      "status": "licensed-file-published",
-      "license": "CC BY-SA 3.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Quentin_Tarantino_by_Gage_Skidmore.jpg",
-      "author": "Gage Skidmore",
-      "changes": "Converted to grayscale, resized and encoded as WebP. Displayed with a vertical crop."
+      "localPath": "assets/movies/quentin-tarantino-illustration-v1.webp",
+      "status": "generated-illustration-published",
+      "license": null,
+      "source": null,
+      "author": "AI-generated illustration",
+      "changes": "Generated in the pen line portrait style of the existing tennis and chess illustrations"
     },
     "Robert De Niro": {
       "type": "portrait",

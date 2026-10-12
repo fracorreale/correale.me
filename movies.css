@@ -20,3 +20,5 @@
 .photo-credits{font-size:.85rem;line-height:1.6}.photo-credits summary{cursor:pointer}.photo-credits li{margin-bottom:.8rem}.photo-credits a{color:inherit;text-decoration:underline}.art.portrait img{object-position:center 25%}
 
 .photo-credits{overflow-wrap:anywhere}.art.has-photo:not(.portrait) img{object-fit:contain;background:#0e2236}
+
+#directors .art.portrait.has-photo{background:#fff;filter:none}#directors .art.portrait.has-photo img.director-illustration{object-fit:contain;object-position:center;padding:8%;box-sizing:border-box;background:#fff}.director-illustration-credit{font-size:.8rem;opacity:.75}
