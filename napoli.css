@@ -35,3 +35,6 @@
 
 /* Napoli page only: gold badge beside the header signature. */
 .napoli-page header .brand.site-signature{gap:12px}.napoli-page .napoli-gold-badge{display:block;flex:0 0 auto;width:44px;height:44px;filter:drop-shadow(0 1px 3px #002a4c40)}@media(max-width:850px){.napoli-page header .brand.site-signature{gap:7px}.napoli-page .napoli-gold-badge{width:34px;height:34px}.napoli-page header .site-signature .signature-mark{width:clamp(100px,31vw,145px)}}@media(max-width:360px){.napoli-page .napoli-gold-badge{width:29px;height:29px}.napoli-page header .brand.site-signature{gap:5px}}
+
+/* Header uses the same azzurro background as the page. */
+.napoli-page .site-header,.napoli-page .site-header.scrolled{background-color:#087fb9;background-image:url('assets/napoli-pattern.svg'),linear-gradient(125deg,#075e9b 0%,#119bd0 48%,#0874b5 100%);background-size:240px 240px,100% 100%;border-color:#c5e8ff40}
