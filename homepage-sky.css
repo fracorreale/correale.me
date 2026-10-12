@@ -1,0 +1,5 @@
+/* Pale sky and softly scattered clouds on the homepage. */
+body{background-color:#f2f8fc;background-image:url('assets/homepage-clouds.svg'),linear-gradient(180deg,#f5faff 0%,#eef7fd 48%,#f6faff 100%);background-size:1440px 1000px,100% 100%;background-position:center 700px,0 0;background-repeat:repeat-y,no-repeat}
+.about,.quote{background:transparent}
+.contact-glass-section{background:radial-gradient(ellipse at 50% 55%,rgba(216,237,252,.55),transparent 65%)}
+@media(max-width:850px){body{background-size:800px 950px,100% 100%;background-position:center 720px,0 0}}
