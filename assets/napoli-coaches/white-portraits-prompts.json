@@ -1,0 +1,9 @@
+{
+  "method": "Built-in Imagegen",
+  "prompt": "Edit portrait ONLY by changing ink and background colors. Preserve exact face, likeness, contours, fine hatching, pose, composition and proportions. Replace black/gray strokes with white strokes and white paper with uniform solid deep Napoli blue #015999. No changes to drawing, no extra details, lettering or frame.",
+  "portraits": [
+    "spalletti",
+    "sarri",
+    "mazzarri"
+  ]
+}
