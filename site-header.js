@@ -78,7 +78,7 @@
       const lang = italian ? 'it' : 'en';
       submenu.innerHTML = '<a href="sport-' + lang + '.html">Sport</a>' +
         '<a href="culture-' + lang + '.html">' + (italian ? 'Cultura' : 'Culture') + '</a>' +
-        '<a href="index.html#places">' + (italian ? 'Luoghi' : 'Places') + '</a>';
+        '<a href="places-' + lang + '.html">' + (italian ? 'Luoghi' : 'Places') + '</a>';
     });
     button.setAttribute('aria-label', italian ? 'Menu di navigazione' : 'Navigation menu');
     panel.querySelector('nav').setAttribute('aria-label', italian ? 'Navigazione mobile' : 'Mobile navigation');
