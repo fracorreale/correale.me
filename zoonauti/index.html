@@ -339,7 +339,7 @@ h2{margin:0; font-size:1.1rem; font-weight:800; letter-spacing:-.01em}
     <p class="inset mini" id="margOn"></p>
   </section>
 
-  <p class="sign">by flurred</p>
+  <p class="sign">by flurred<span id="viewsWrap" hidden> · <span id="views" aria-live="polite"></span> visite</span></p>
   <p class="sr" id="live" aria-live="polite"></p>
 </main>
 
@@ -568,6 +568,30 @@ h2{margin:0; font-size:1.1rem; font-weight:800; letter-spacing:-.01em}
 })();
 </script>
 
+<script>
+/* Contatore di visite (GoatCounter). Finche' GC_CODE e' vuoto non parte nessuna richiesta e il numero resta nascosto. */
+(function () {
+  var GC_CODE = '';
+  if (!GC_CODE || !/^https?:$/.test(location.protocol)) return;
+  var base = 'https://' + GC_CODE + '.goatcounter.com';
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://gc.zgo.at/count.js';
+  s.setAttribute('data-goatcounter', base + '/count');
+  s.onload = function () { setTimeout(showCount, 1200); };
+  document.head.appendChild(s);
+  function showCount() {
+    fetch(base + '/counter/' + encodeURIComponent(location.pathname) + '.json')
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d || !d.count) return;
+        document.getElementById('views').textContent = d.count;
+        document.getElementById('viewsWrap').hidden = false;
+      })
+      .catch(function () {});
+  }
+})();
+</script>
 <script>
 if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
   window.addEventListener('load', function(){ navigator.serviceWorker.register('sw.js').catch(function(){}); });
