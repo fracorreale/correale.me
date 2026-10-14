@@ -255,7 +255,11 @@ h2{margin:0; font-size:1.1rem; font-weight:800; letter-spacing:-.01em}
 }
 .note b{font-size:.82rem; letter-spacing:.04em; text-transform:uppercase; color:var(--accent)}
 .sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
-.sign{margin:0; text-align:center; font-size:.85rem; font-weight:700; color:var(--muted); letter-spacing:.02em}
+.sign{margin:0;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;font-size:.85rem;font-weight:700;color:var(--muted);letter-spacing:.02em}
+.sign-credit{display:inline-flex;align-items:center;gap:8px;max-width:100%}
+.sign-credit img{display:block;width:140px;height:auto;object-fit:contain}
+.sign-counter{display:block;height:20px;max-width:100%}
+@media(max-width:560px){.sign-credit img{width:120px}}
 
 @media (prefers-reduced-motion: reduce){
   .emo, .shade, .stars{animation:none}
@@ -339,7 +343,7 @@ h2{margin:0; font-size:1.1rem; font-weight:800; letter-spacing:-.01em}
     <p class="inset mini" id="margOn"></p>
   </section>
 
-  <p class="sign">by flurred<span id="viewsWrap" hidden> · <span id="views" aria-live="polite"></span> visite</span></p>
+  <p class="sign"><span class="sign-credit"><span>by</span><img src="/assets/flurred-footer-signature-transparent-v2.webp" alt="Flurred" width="140" height="47" loading="lazy"></span><img class="sign-counter" src="https://hits.sh/correale.me/zoonauti.svg?label=views&amp;color=84909a&amp;labelColor=a0a9af&amp;style=flat-square" alt="Visualizzazioni di Zoonauti" height="20" referrerpolicy="no-referrer" onerror="this.hidden=true"></p>
   <p class="sr" id="live" aria-live="polite"></p>
 </main>
 
@@ -568,30 +572,6 @@ h2{margin:0; font-size:1.1rem; font-weight:800; letter-spacing:-.01em}
 })();
 </script>
 
-<script>
-/* Contatore di visite (GoatCounter). Finche' GC_CODE e' vuoto non parte nessuna richiesta e il numero resta nascosto. */
-(function () {
-  var GC_CODE = '';
-  if (!GC_CODE || !/^https?:$/.test(location.protocol)) return;
-  var base = 'https://' + GC_CODE + '.goatcounter.com';
-  var s = document.createElement('script');
-  s.async = true;
-  s.src = 'https://gc.zgo.at/count.js';
-  s.setAttribute('data-goatcounter', base + '/count');
-  s.onload = function () { setTimeout(showCount, 1200); };
-  document.head.appendChild(s);
-  function showCount() {
-    fetch(base + '/counter/' + encodeURIComponent(location.pathname) + '.json')
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (d) {
-        if (!d || !d.count) return;
-        document.getElementById('views').textContent = d.count;
-        document.getElementById('viewsWrap').hidden = false;
-      })
-      .catch(function () {});
-  }
-})();
-</script>
 <script>
 if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
   window.addEventListener('load', function(){ navigator.serviceWorker.register('sw.js').catch(function(){}); });
