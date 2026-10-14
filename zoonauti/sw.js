@@ -1,4 +1,4 @@
-var CACHE = 'zoonauti-v2';
+var CACHE = 'zoonauti-v3';
 var FILES = ['./', 'index.html', 'manifest.webmanifest', 'favicon.png', 'apple-touch-icon.png', 'icon-192.png', 'icon-512.png'];
 
 self.addEventListener('install', function(e){
