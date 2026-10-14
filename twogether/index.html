@@ -140,6 +140,14 @@ ul.items { list-style: none; margin: 0; padding: 0; display: flex; flex-directio
 
 .sync p { margin: 0; color: var(--muted); font-size: 14px; }
 .sync .acts2 { display: flex; gap: 10px; flex-wrap: wrap; }
+.cloudbox { margin: 4px 0 18px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.cloudbox p { margin: 6px 0 12px; }
+.cloudbox input { width: 100%; box-sizing: border-box; margin: 0 0 12px; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--glass-border); background: var(--surface-2); color: var(--fg); font: 13px ui-monospace, SFMono-Regular, Menlo, monospace; }
+.clrow { display: flex; align-items: center; gap: 8px; font-size: 15px; margin: 6px 0 4px; }
+.cldot { width: 9px; height: 9px; border-radius: 50%; background: #34c759; flex: none; }
+.cldot.conn { background: #ff9f0a; }
+.cldot.err { background: #ff453a; }
+.label.manual { margin-top: 4px; }
 .status { font-size: 14px; min-height: 18px; color: var(--accent); }
 .status.bad { color: var(--danger); }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
@@ -461,6 +469,23 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
 
   <section class="card sync" aria-labelledby="syncTitle">
     <h2 id="syncTitle" data-i18n="syncTitle">Tenere allineati i due telefoni</h2>
+    <div class="cloudbox">
+      <div class="label" data-i18n="clLbl">Sincronizzazione automatica</div>
+      <div id="clOff">
+        <p data-i18n="clOffP">Crea un link da mandare all'altra persona: aprendolo, le spese si aggiornano da sole su entrambi i telefoni.</p>
+        <div class="acts2"><button type="button" class="btn" id="clOnBtn" data-i18n="clOnBtn">Attiva la sincronizzazione automatica</button></div>
+      </div>
+      <div id="clOn" hidden>
+        <div class="clrow"><span class="cldot conn" id="clDot"></span><span id="clStTxt"></span></div>
+        <p data-i18n="clOnP">Per collegare l'altro telefono, mandagli questo link e fallo aprire una volta sola.</p>
+        <input type="text" id="clLink" readonly aria-label="Link">
+        <div class="acts2">
+          <button type="button" class="btn" id="clCopy" data-i18n="clCopy">Copia il link da mandare</button>
+          <button type="button" class="btn ghost" id="clOffBtn" data-i18n="clOffBtn">Disattiva su questo dispositivo</button>
+        </div>
+      </div>
+    </div>
+    <div class="label manual" data-i18n="clManual">Alternativa manuale</div>
     <p data-i18n="syncP">Ogni dispositivo salva le spese nel proprio browser. Per allinearle, copia il tuo codice, mandalo all'altro su WhatsApp e fatti mandare il suo. Incollalo qui sotto e premi Unisci: le spese di entrambi finiscono nello stesso elenco, senza doppioni.</p>
     <div class="acts2">
       <button type="button" class="btn" id="copyBtn" data-i18n="copyBtn">Copia il mio codice</button>
@@ -518,7 +543,7 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
       inLbl: "Codice ricevuto dall'altro", inPh: "Incolla qui il codice", mergeBtn: "Unisci",
       stCopied: "Codice copiato. Incollalo in un messaggio all'altro.", stCopyManual: "Copia il testo selezionato qui sopra e mandalo all'altro.",
       stPasteFirst: "Incolla prima il codice ricevuto.", stDone: "Fatto: {x}.", stSame: "Eravate già allineati.",
-      stBad: "Codice non valido. Controlla di averlo copiato per intero.",
+      clLbl: "Sincronizzazione automatica", clOffP: "Crea un link da mandare all'altra persona: aprendolo, le spese si aggiornano da sole su entrambi i telefoni.", clOnBtn: "Attiva la sincronizzazione automatica", clOnP: "Per collegare l'altro telefono, mandagli questo link e fallo aprire una volta sola.", clCopy: "Copia il link da mandare", clLinkDone: "Link copiato: mandalo su WhatsApp", clOffBtn: "Disattiva su questo dispositivo", clOffAsk: "Disattivare la sincronizzazione su questo dispositivo? Le spese restano qui.", clJoinAsk: "Collegare questo dispositivo a un altro archivio condiviso? Le spese attuali verranno unite.", clJoined: "Sincronizzazione automatica attivata", clStOn: "Sincronizzazione attiva", clStConn: "Connessione in corso...", clStErr: "Server non raggiungibile: riprovo", clManual: "Alternativa manuale", stBad: "Codice non valido. Controlla di averlo copiato per intero.",
       mAdded1: "{n} spesa aggiunta", mAddedN: "{n} spese aggiunte", mUpd1: "{n} aggiornata", mUpdN: "{n} aggiornate", mDel1: "{n} eliminata", mDelN: "{n} eliminate",
       uAdded: "Spesa aggiunta", uEdited: "Spesa modificata", uDeleted: "Spesa eliminata", uSettled: "Saldo registrato", uMerged: "Spese unite", xlBtn: "Esporta in Excel", pdfBtn: "Esporta in PDF", pdfFile: "TwoGether-riepilogo", pdfSub: "Riepilogo spese", pdfGen: "Generato il {d}", pdfDone: "PDF pronto", xlFile: "TwoGether-spese", xlSheet1: "Spese", xlSheet2: "Consuntivi", xlDate: "Data", xlMonth: "Mese", xlDesc: "Descrizione", xlAmt: "Importo (€)", xlPaidBy: "Pagato da", xlShare: "Quota {n} (€)", xlType: "Tipo", xlStatus: "Stato", xlExp: "Spesa", xlSet: "Saldo", xlPaid: "Pagato", xlOpenSet: "Saldo registrato", xlToSettle: "Da saldare", xlEven: "In pari", xlMonthTot: "Totale mese (€)", xlWho: "Chi deve", xlToWhom: "A chi", xlDone: "File Excel pronto", xlErr: "Esportazione non riuscita", sumTitle: "Consuntivi mensili", sumSub: "Quanto è stato dato a fine mese", sumEmpty: "Qui compariranno i mesi, con quanto è stato dato a fine mese.", sumGave: "{a} ha dato a {b}", sumOpen: "Da saldare: {a} deve a {b}", sumToGive: "Saldo registrato: {a} deve ancora dare a {b}", markPaid: "Segna come pagato", uPaid: "Pagamento segnato", sumEven: "In pari, niente da saldare", sumSpent: "Totale mese: {x}", uExamples: "Esempi rimossi", uWiped: "Tutte le spese cancellate",
       restored1: "Ripristinata {n} spesa di ottobre", restoredN: "Ripristinate {n} spese di ottobre", toastUndone: "Annullato: {x}", toastRedone: "Ripristinato: {x}", btnUndo: "Annulla", btnRedo: "Ripristina",
@@ -549,7 +574,7 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
       inLbl: "Code received from the other", inPh: "Paste the code here", mergeBtn: "Merge",
       stCopied: "Code copied. Paste it into a message to the other person.", stCopyManual: "Copy the selected text above and send it to the other person.",
       stPasteFirst: "Paste the received code first.", stDone: "Done: {x}.", stSame: "You were already in sync.",
-      stBad: "Invalid code. Check that you copied all of it.",
+      clLbl: "Automatic sync", clOffP: "Create a link to send to the other person: once they open it, expenses update by themselves on both phones.", clOnBtn: "Turn on automatic sync", clOnP: "To connect the other phone, send it this link and have them open it once.", clCopy: "Copy the link to send", clLinkDone: "Link copied: send it on WhatsApp", clOffBtn: "Turn off on this device", clOffAsk: "Turn off sync on this device? Your expenses stay here.", clJoinAsk: "Connect this device to a different shared archive? Current expenses will be merged.", clJoined: "Automatic sync turned on", clStOn: "Sync active", clStConn: "Connecting...", clStErr: "Server unreachable: retrying", clManual: "Manual alternative", stBad: "Invalid code. Check that you copied all of it.",
       mAdded1: "{n} expense added", mAddedN: "{n} expenses added", mUpd1: "{n} updated", mUpdN: "{n} updated", mDel1: "{n} deleted", mDelN: "{n} deleted",
       uAdded: "Expense added", uEdited: "Expense edited", uDeleted: "Expense deleted", uSettled: "Settlement recorded", uMerged: "Expenses merged", xlBtn: "Export to Excel", pdfBtn: "Export to PDF", pdfFile: "TwoGether-summary", pdfSub: "Expense summary", pdfGen: "Generated on {d}", pdfDone: "PDF ready", xlFile: "TwoGether-expenses", xlSheet1: "Expenses", xlSheet2: "Summaries", xlDate: "Date", xlMonth: "Month", xlDesc: "Description", xlAmt: "Amount (€)", xlPaidBy: "Paid by", xlShare: "{n}'s share (€)", xlType: "Type", xlStatus: "Status", xlExp: "Expense", xlSet: "Settlement", xlPaid: "Paid", xlOpenSet: "Recorded", xlToSettle: "To settle", xlEven: "Even", xlMonthTot: "Month total (€)", xlWho: "Who owes", xlToWhom: "To whom", xlDone: "Excel file ready", xlErr: "Export failed", sumTitle: "Monthly summaries", sumSub: "What was handed over at month end", sumEmpty: "Months will appear here, with what was handed over at month end.", sumGave: "{a} gave {b}", sumOpen: "To settle: {a} owes {b}", sumToGive: "Settlement recorded: {a} still has to pay {b}", markPaid: "Mark as paid", uPaid: "Payment marked", sumEven: "All even, nothing to settle", sumSpent: "Month total: {x}", uExamples: "Examples removed", uWiped: "All expenses deleted",
       restored1: "Restored {n} October expense", restoredN: "Restored {n} October expenses", toastUndone: "Undone: {x}", toastRedone: "Redone: {x}", btnUndo: "Undo", btnRedo: "Redo",
@@ -584,6 +609,7 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
     renderFormTexts();
     renderAll();
     renderUndo();
+    renderCloud();
   }
   function setLang(l) {
     LANG = l;
@@ -668,6 +694,7 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
   }
   function save() {
     try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { canStore = false; $("nostore").hidden = false; }
+    if (cloud.ref && !cloud.inRemote) cloudPush();
   }
 
   function shares(it) {
@@ -1351,6 +1378,101 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
     return n;
   }
   /* Eventi */
+  /* ===== Sincronizzazione automatica (Firebase Firestore). Le spese viaggiano in un unico documento "households/<id segreto>", fuso con la stessa logica del codice di sincronizzazione ===== */
+  var FBCFG = { apiKey: "AIzaSyCfeJH1awBdY8q65UEkmfzaHUXyTMT7T_4", authDomain: "twogether-8913e.firebaseapp.com", projectId: "twogether-8913e", storageBucket: "twogether-8913e.firebasestorage.app", messagingSenderId: "888586452267", appId: "1:888586452267:web:6ab1a3536b87cd053fd96e" };
+  var HKEY = "twogether-hid", FBV = "11.0.2";
+  var cloud = { hid: "", F: null, db: null, ref: null, unsub: null, timer: null, st: "off", inRemote: false };
+  function readHid() { try { return localStorage.getItem(HKEY) || ""; } catch (e) { return ""; } }
+  function writeHid(h) { try { if (h) localStorage.setItem(HKEY, h); else localStorage.removeItem(HKEY); } catch (e) {} }
+  function newHid() {
+    var a = new Uint8Array(24), abc = "abcdefghijklmnopqrstuvwxyz0123456789";
+    crypto.getRandomValues(a);
+    return Array.prototype.map.call(a, function (b) { return abc.charAt(b % 36); }).join("");
+  }
+  function sig(st) {
+    return (st.items || []).map(function (it) { return it.id + ":" + (it.u || 0); }).sort().join(",") + "|" +
+      Object.keys(st.deleted || {}).map(function (k) { return k + ":" + st.deleted[k]; }).sort().join(",") + "|" + (st.namesUpd || 0);
+  }
+  function saveLocalOnly() { cloud.inRemote = true; try { save(); } finally { cloud.inRemote = false; } }
+  function setCloud(st) { cloud.st = st; renderCloud(); }
+  function renderCloud() {
+    var on = !!cloud.hid;
+    $("clOff").hidden = on; $("clOn").hidden = !on;
+    if (!on) return;
+    $("clStTxt").textContent = tr(cloud.st === "on" ? "clStOn" : cloud.st === "err" ? "clStErr" : "clStConn");
+    $("clDot").className = "cldot" + (cloud.st === "on" ? "" : cloud.st === "err" ? " err" : " conn");
+    $("clLink").value = location.origin + location.pathname + "#k=" + cloud.hid;
+  }
+  function applyRemote(d) {
+    var R;
+    try { R = JSON.parse(d.state); mergeIn(R); } catch (e) { return; }
+    saveLocalOnly(); renderAll();
+    if (sig(S) !== sig(R)) cloudPush();
+  }
+  function cloudPush() {
+    if (!cloud.ref) return;
+    clearTimeout(cloud.timer);
+    cloud.timer = setTimeout(doPush, 500);
+  }
+  async function doPush() {
+    if (!cloud.ref) return;
+    try {
+      await cloud.F.runTransaction(cloud.db, async function (tx) {
+        var s = await tx.get(cloud.ref);
+        if (s.exists()) { try { mergeIn(JSON.parse(s.data().state)); } catch (e) {} }
+        tx.set(cloud.ref, { v: 1, t: Date.now(), state: JSON.stringify(S) });
+      });
+      saveLocalOnly(); renderAll(); setCloud("on");
+    } catch (e) {
+      setCloud("err");
+      clearTimeout(cloud.timer); cloud.timer = setTimeout(doPush, 15000);
+    }
+  }
+  async function cloudStart() {
+    if (!cloud.hid || cloud.unsub || cloud.starting) return;
+    cloud.starting = true; setCloud("conn");
+    try {
+      var base = "https://www.gstatic.com/firebasejs/" + FBV + "/";
+      var A = await import(base + "firebase-app.js"), F = await import(base + "firebase-firestore.js");
+      var db = F.getFirestore(A.initializeApp(FBCFG));
+      cloud.F = F; cloud.db = db; cloud.ref = F.doc(db, "households", cloud.hid);
+      cloud.unsub = F.onSnapshot(cloud.ref, function (snap) {
+        if (snap.metadata && snap.metadata.hasPendingWrites) return;
+        setCloud("on");
+        if (!snap.exists()) { cloudPush(); return; }
+        applyRemote(snap.data());
+      }, function () { setCloud("err"); });
+      cloudPush();
+    } catch (e) { setCloud("err"); }
+    cloud.starting = false;
+  }
+  function cloudActivate(h) { cloud.hid = h; writeHid(h); renderCloud(); cloudStart(); }
+  function cloudStop() {
+    if (cloud.unsub) { try { cloud.unsub(); } catch (e) {} }
+    clearTimeout(cloud.timer);
+    cloud.unsub = null; cloud.ref = null; cloud.hid = ""; cloud.st = "off"; writeHid("");
+    renderCloud();
+  }
+  function initCloud() {
+    $("clOnBtn").addEventListener("click", function () { cloudActivate(newHid()); });
+    $("clOffBtn").addEventListener("click", function () { if (confirm(tr("clOffAsk"))) cloudStop(); });
+    $("clCopy").addEventListener("click", async function () {
+      var box = $("clLink");
+      try { await navigator.clipboard.writeText(box.value); showToast(tr("clLinkDone")); }
+      catch (e) { box.focus(); box.select(); }
+    });
+    var m = /[#&]k=([a-z0-9]{16,64})/i.exec(location.hash || ""), cur = readHid();
+    if (m) {
+      try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {}
+      if (!cur) { cloud.hid = m[1]; writeHid(m[1]); showToast(tr("clJoined")); }
+      else if (cur !== m[1] && confirm(tr("clJoinAsk"))) { cloud.hid = m[1]; writeHid(m[1]); }
+      else cloud.hid = cur;
+    } else cloud.hid = cur;
+    renderCloud();
+    if (cloud.hid) cloudStart();
+    window.addEventListener("online", cloudPush);
+    document.addEventListener("visibilitychange", function () { if (!document.hidden) cloudPush(); });
+  }
   function init() {
     loadLang();
     load();
@@ -1422,9 +1544,11 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
     $("langEn").addEventListener("click", function () { setLang("en"); });
     applyLang();
     var had = S.items.length;
+    try { localStorage.setItem(WIPEKEY, "1"); localStorage.setItem(SEEDKEY, "1"); } catch (e) {}
     wipeAll();
     var added = seedOct();
     if (had || added) { monthFilter = curMonth(); $("fDate").value = defaultDate(); renderAll(); renderUndo(); }
+    initCloud();
   }
   init();
 })();
