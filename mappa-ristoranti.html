@@ -138,7 +138,7 @@ function ranked(origin,kind,sub){
     .map(function(v){return {v:v,d:hav(origin,v)}})
     .sort(function(x,y){return x.d-y.d});
 }
-function fmt(d){return {n:Math.round(d).toLocaleString("it-IT"),u:"metri a piedi"}}
+function fmt(d){return {n:(d/1000).toLocaleString("it-IT",{minimumFractionDigits:1,maximumFractionDigits:1}),u:"km a piedi"}}
 var FOOD={
  pizza:{label:"di una pizza",kcal:850},
  trancio:{label:"di un trancio di pizza",kcal:300},
