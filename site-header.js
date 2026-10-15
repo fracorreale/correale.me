@@ -6,7 +6,7 @@
   const languageButtons = [...header.querySelectorAll('.lang')];
   const labels = {
     en: {home: 'Home', about: 'About', notes: 'Notes', things: 'Currently', contact: 'Contact'},
-    it: {home: 'Home', about: 'Chi sono', notes: 'Note', things: 'Currently', contact: 'Contatti'}
+    it: {home: 'Home', about: 'Chi sono', notes: 'Note', things: 'Al momento', contact: 'Contatti'}
   };
 
   const disclosures = [];
