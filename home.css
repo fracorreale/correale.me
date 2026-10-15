@@ -173,3 +173,31 @@ footer small{grid-column:auto}}
 .about .about-copy p{font-size:21px;line-height:1.65;margin:0 0 22px}
 .about .about-copy p:last-child{margin-bottom:0}
 @media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:32px}.about-copy{padding:20px;margin:0 -12px}.about .about-copy p{font-size:19px}.about::before{background-position:30% center;background-size:auto 100%;opacity:.7}}
+
+
+/* Currently: simple content structure, before visual design. */
+.currently h2{font:normal clamp(42px,4.2vw,72px)/1.03 var(--serif);letter-spacing:-.035em;margin:20px 0 42px}
+.currently-list{border-top:1px solid var(--line)}
+.currently-item{display:grid;grid-template-columns:1fr 1.4fr;gap:32px;padding:32px 0;border-bottom:1px solid var(--line)}
+.currently-label{font-size:14px;color:var(--muted);margin:8px 0}
+.currently-item h3{font:normal clamp(27px,3vw,40px)/1.2 var(--serif);margin:0;color:var(--ink)}
+.currently-author{font-size:17px;color:#667580;margin:12px 0 0}
+@media(max-width:760px){.currently-item{grid-template-columns:1fr;gap:14px}.currently h2{margin-bottom:30px}}
+
+.currently-link{display:inline-block;margin-top:18px;color:var(--blue);font-size:14px}.currently-link:hover{text-decoration:underline}.currently-link:focus-visible{outline:2px solid var(--blue);outline-offset:5px}
+
+.currently-content{display:flex;align-items:center;gap:28px;min-width:0}.currently-content>div{min-width:0}.currently-cover{display:block;width:112px;height:auto;border-radius:3px;box-shadow:0 8px 20px #10283b18}.currently-photo{display:block;flex:0 0 210px}.currently-photo img{display:block;width:100%;height:auto;border-radius:4px}.currently-content>.currently-cover,.currently-content>a{flex-shrink:0}
+@media(max-width:760px){.currently-content{gap:20px;align-items:flex-start}.currently-cover{width:86px}.currently-photo{flex-basis:115px}.currently-photo img{aspect-ratio:1;object-fit:cover;object-position:48% center}.currently-item h3{font-size:26px}.currently-content>div{flex:1}}
+
+/* Give the personal activity labels more presence. */
+.currently .currently-label{font:italic 400 clamp(27px,2.7vw,40px)/1.16 var(--serif);letter-spacing:-.025em;color:var(--blue);margin:2px 0 0;max-width:280px}
+@media(max-width:760px){.currently .currently-label{font-size:29px;margin:0 0 6px}}
+
+/* Shared image and text columns across all Currently entries. */
+.currently-content{display:grid;grid-template-columns:160px minmax(0,1fr);gap:28px;align-items:start}
+.currently-content>.currently-cover,.currently-content>a{grid-column:1;justify-self:start}
+.currently-content>div{grid-column:2}
+.currently-cover{width:112px;max-width:100%;height:auto}
+.currently-photo{width:160px;max-width:100%}
+.currently-photo img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+@media(max-width:760px){.currently-content{grid-template-columns:96px minmax(0,1fr);gap:20px}.currently-cover{width:86px}.currently-photo{width:96px}.currently-photo img{aspect-ratio:auto;object-fit:contain}}

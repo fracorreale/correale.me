@@ -5,8 +5,8 @@
   const mobile = matchMedia('(max-width:850px)');
   const languageButtons = [...header.querySelectorAll('.lang')];
   const labels = {
-    en: {home: 'Home', about: 'About', notes: 'Notes', things: 'Things I Like', contact: 'Contact'},
-    it: {home: 'Home', about: 'Chi sono', notes: 'Note', things: 'Cose che mi piacciono', contact: 'Contatti'}
+    en: {home: 'Home', about: 'About', notes: 'Notes', things: 'Currently', contact: 'Contact'},
+    it: {home: 'Home', about: 'Chi sono', notes: 'Note', things: 'Currently', contact: 'Contatti'}
   };
 
   const disclosures = [];
@@ -115,3 +115,4 @@
   setOpen(false);
   updateLanguage();
 })();
+
