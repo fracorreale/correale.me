@@ -84,7 +84,6 @@
   .site-header,.mobile-menu,.menu-btn span{transition:none}
 }
 
-/* Notes category disclosure, shared by desktop and mobile navigation. */
 .notes-dropdown{position:relative}
 .notes-dropdown>[data-nav="notes"]{display:flex;align-items:center;gap:7px;cursor:pointer}
 .notes-dropdown>[data-nav="notes"]::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px}
