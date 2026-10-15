@@ -5,6 +5,7 @@ Object.assign(t.it,{currentlyListening:"Sto ascoltando",currentlyPerformance:"Ro
 Object.assign(t.en,{currentlyWatching:"Watching",currentlyNetflix:"View on Netflix ↗"});
 Object.assign(t.it,{currentlyWatching:"Sto guardando",currentlyNetflix:"Vai su Netflix ↗"});
 Object.assign(t.it,{currentlyTitle:"Al momento"});Object.assign(t.en,{currentlyTitle:"Currently"});
+Object.assign(t.it,{heroCurrently:"Al momento: cosa leggo, ascolto e guardo"});Object.assign(t.en,{heroCurrently:"Currently: reading, listening, watching"});
 function setLang(lang){document.documentElement.lang=lang;document.querySelectorAll('[data-i18n]').forEach(el=>{const v=t[lang][el.dataset.i18n];if(v!==undefined)el.innerHTML=v});document.querySelectorAll('.lang').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));document.querySelectorAll('[data-culture-link]').forEach(a=>a.href='culture-'+lang+'.html');document.querySelectorAll('[data-chess-link]').forEach(a=>a.href='chess-'+lang+'.html');document.querySelectorAll('[data-sport-link]').forEach(a=>a.href='sport-'+lang+'.html');document.querySelectorAll('[data-places-link]').forEach(a=>a.href='places-'+lang+'.html');localStorage.setItem('correale-lang',lang)}
 document.querySelectorAll('.lang').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));const requestedLang=new URLSearchParams(location.search).get('lang');setLang(['it','en'].includes(requestedLang)?requestedLang:(localStorage.getItem('correale-lang')||'en'));
 

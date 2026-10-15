@@ -201,3 +201,9 @@ footer small{grid-column:auto}}
 .currently-photo{width:160px;max-width:100%}
 .currently-photo img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
 @media(max-width:760px){.currently-content{grid-template-columns:96px minmax(0,1fr);gap:20px}.currently-cover{width:86px}.currently-photo{width:96px}.currently-photo img{aspect-ratio:auto;object-fit:contain}}
+
+
+.hero-currently-link{display:inline-flex;align-items:baseline;gap:10px;margin-top:24px;max-width:100%;color:rgba(255,255,255,.95);font-size:15px;line-height:1.6;text-decoration:none;text-shadow:0 1px 5px #10283b35}
+.hero-currently-link>span:first-child{border-bottom:1px solid rgba(255,255,255,.45);transition:border-color .2s}
+.hero-currently-link:hover>span:first-child{border-color:#fff}.hero-currently-link:focus-visible{outline:2px solid #fff;outline-offset:5px;border-radius:2px}
+@media(max-width:850px){.hero-currently-link{font-size:14px;margin-top:19px;gap:8px}}
