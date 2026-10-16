@@ -165,14 +165,14 @@ footer small{grid-column:auto}}
 @media(max-width:850px){.editorial-grid{grid-template-columns:1fr}.editorial-grid>.card,.editorial-grid>.card:first-child{grid-column:1/-1;height:470px;min-height:470px}.editorial-grid>.card h3{font-size:44px}}
 
 
-/* Fibonacci: decorative sequence, kept behind the reading surface. */
+/* Personal illustration, with a quiet Fibonacci backdrop. */
 .about{position:relative;isolation:isolate;overflow:hidden}
-.about::before{content:"";position:absolute;inset:0;z-index:-1;background:url("assets/about-fibonacci.svg?v=2") center/cover no-repeat;pointer-events:none}
+.about::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.22;background:url("assets/about-fibonacci.svg?v=2") center/cover no-repeat;pointer-events:none}
 .about-grid{grid-template-columns:minmax(220px,.8fr) minmax(0,1.2fr);gap:7vw}
 .about-copy{background:rgba(244,249,253,.72);border-radius:24px;padding:24px 30px;margin-top:-24px}
 .about .about-copy p{font-size:21px;line-height:1.65;margin:0 0 22px}
 .about .about-copy p:last-child{margin-bottom:0}
-@media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:32px}.about-copy{padding:20px;margin:0 -12px}.about .about-copy p{font-size:19px}.about::before{background-position:30% center;background-size:auto 100%;opacity:.7}}
+@media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:32px}.about-copy{padding:20px;margin:0 -12px}.about .about-copy p{font-size:19px}.about::before{background-position:30% center;background-size:auto 100%;opacity:.15}}
 
 
 /* Currently: simple content structure, before visual design. */
@@ -213,3 +213,8 @@ footer small{grid-column:auto}}
 .currently-trivia::after{content:" ↗";display:inline;white-space:nowrap}
 .currently-trivia:hover{color:#10283b;text-decoration-color:currentColor}
 .currently-trivia:focus-visible{outline:2px solid #247fb7;outline-offset:6px;border-radius:2px}
+
+/* Keep the illustration with its heading at every screen size. */
+.about-intro{min-width:0}
+.about-illustration{display:block;width:100%;height:auto;margin:40px auto 0}
+@media(max-width:760px){.about-illustration{max-width:540px;margin-top:24px}}
