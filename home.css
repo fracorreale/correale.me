@@ -207,3 +207,9 @@ footer small{grid-column:auto}}
 .hero-currently-link>span:first-child{border-bottom:1px solid rgba(255,255,255,.45);transition:border-color .2s}
 .hero-currently-link:hover>span:first-child{border-color:#fff}.hero-currently-link:focus-visible{outline:2px solid #fff;outline-offset:5px;border-radius:2px}
 @media(max-width:850px){.hero-currently-link{font-size:14px;margin-top:19px;gap:8px}}
+
+/* Distinct, visibly clickable book trivia. */
+.currently-trivia{display:inline-block;margin-top:10px;max-width:100%;font:italic 400 clamp(19px,1.6vw,23px)/1.5 var(--serif);color:#24709f;text-decoration:underline;text-decoration-color:#83b0cc;text-underline-offset:5px;text-decoration-thickness:1px}
+.currently-trivia::after{content:" ↗";display:inline;white-space:nowrap}
+.currently-trivia:hover{color:#10283b;text-decoration-color:currentColor}
+.currently-trivia:focus-visible{outline:2px solid #247fb7;outline-offset:6px;border-radius:2px}
