@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none" stroke="#816a49" stroke-width="2.4">
+<defs><path id="ring" d="M250 57a193 193 0 1 1-1 0"/><g id="leaf"><path d="M0 0q-20-12-8-30Q8-18 0 0m0 0q20-12 8-30Q-8-18 0 0"/></g></defs>
+<circle cx="250" cy="250" r="239"/><circle cx="250" cy="250" r="229"/><circle cx="250" cy="250" r="181"/><circle cx="250" cy="250" r="173"/>
+<text fill="#816a49" stroke="none" font-family="Georgia,serif" font-size="22" letter-spacing="5"><textPath href="#ring" startOffset="4%">SIGILLVM · STVDII · LIBRI · ARTES · ET · SCIENTIA ·</textPath></text>
+<path d="M128 315V209l17-27 17 27v106m-27-125v-42m-8 14h16m-14 74h12m-12 20h12m-12 20h12m196 19V209l17-27 17 27v106m-27-125v-42m-8 14h16m-14 74h12m-12 20h12m-12 20h12M177 276v-54l73-92 73 92v54M192 269v-46l58-74 58 74v46m-58-119v-39m-9 12h18"/>
+<path d="M225 260v-35q25-45 50 0v35m-50-16h50m-25-38v53"/><circle cx="250" cy="185" r="10"/>
+<path d="M147 288q53-25 103 0 50-25 103 0v75q-53-22-103 0-50-22-103 0zm103 0v75m-113-68v78q56-16 113 0 57-16 113 0v-78M159 308q39-15 78 0m-78 13q39-15 78 0m-78 13q39-15 78 0m26-26q39-15 78 0m-78 13q39-15 78 0m-78 13q39-15 78 0"/>
+<use href="#leaf" transform="translate(118 290) rotate(-30)"/><use href="#leaf" transform="translate(382 290) rotate(30)"/><path d="m250 397 5 10 11 2-8 8 2 11-10-5-10 5 2-11-8-8 11-2z"/>
+</svg>
