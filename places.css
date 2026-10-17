@@ -1,1 +1,7 @@
 .places-page{background:#173d51}.places-page:before{background:linear-gradient(180deg,#102f4988,#102f4966 45%,#102f49dd),url('assets/around-naples-sunset.webp') center/cover no-repeat}.places-page .sport-card h2{font-size:clamp(32px,3.3vw,48px);line-height:1.08}.places-page .site-header.scrolled,.places-page .mobile-menu{background:#173d51ed}.places-page footer{background:#102e43e8}.places-page .sport-intro{max-width:650px}@media(max-width:850px){.places-page .sport-card h2{font-size:40px}}
+
+/* Continue the sunset photograph into the glass navigation. */
+:root[data-header-theme="places"]{--hg-tint:93,133,162;--hg-ink:#ffffff;--hg-base:28,61,85;--hg-edge:224,236,244;--hg-shadow:10,30,47;--hg-text:#edf4f8;--hg-fill:.42;--hg-shell:.50}
+html[data-header-theme="places"] .site-header,html[data-header-theme="places"] .site-header.scrolled{background:linear-gradient(110deg,rgba(25,58,83,.84),rgba(48,86,115,.77),rgba(79,102,120,.78))!important;border-color:#e0ecf42b;--signature-ink:#f3f7fa}
+html[data-header-theme="places"] .site-header .brand.site-signature{--signature-ink:#f3f7fa;color:#f3f7fa}
+html[data-header-theme="places"] .site-header .menu-btn span{background:#edf4f8}
