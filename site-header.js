@@ -9,6 +9,13 @@
     it: {home: 'Home', about: 'Chi sono', notes: 'Note', things: 'Al momento', contact: 'Contatti'}
   };
 
+  const menuIntro = document.createElement('div');
+  menuIntro.className = 'mobile-menu-intro';
+  const menuFooter = document.createElement('p');
+  menuFooter.className = 'mobile-menu-footer';
+  panel.querySelector('nav').prepend(menuIntro);
+  panel.querySelector('nav').append(menuFooter);
+
   const disclosures = [];
   document.querySelectorAll('[data-nav="notes"]').forEach(trigger => {
     const wrapper = document.createElement('div');
@@ -73,7 +80,33 @@
   function updateLanguage() {
     const italian = document.documentElement.lang === 'it';
     const text = labels[italian ? 'it' : 'en'];
-    document.querySelectorAll('[data-nav]').forEach(link => { link.textContent = text[link.dataset.nav]; });
+    const subtitles = italian
+      ? {about: 'Qualcosa di me', notes: 'Idee, scoperte e appunti', things: 'Cosa leggo, ascolto e guardo'}
+      : {about: 'A little about me', notes: 'Ideas, discoveries and notes', things: 'What I read, listen to and watch'};
+    menuIntro.textContent = italian ? 'ESPLORA' : 'EXPLORE';
+    menuFooter.textContent = italian ? 'Uno spazio personale, aperto al mondo.' : 'A personal space, open to the world.';
+    document.querySelectorAll('[data-nav]').forEach(link => {
+      const key = link.dataset.nav;
+      link.textContent = text[key];
+      if (!panel.contains(link)) return;
+      const copy = document.createElement('span');
+      copy.className = 'mobile-nav-copy';
+      const title = document.createElement('span');
+      title.className = 'mobile-nav-title';
+      title.textContent = text[key];
+      copy.append(title);
+      if (subtitles[key]) {
+        const subtitle = document.createElement('span');
+        subtitle.className = 'mobile-nav-subtitle';
+        subtitle.textContent = subtitles[key];
+        copy.append(subtitle);
+      }
+      link.replaceChildren(copy);
+      const isHome = key === 'home' && /\/(?:index\.html)?$/.test(location.pathname) && (!location.hash || location.hash === '#top');
+      link.classList.toggle('is-current', isHome);
+      if (isHome) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
     disclosures.forEach(({submenu}) => {
       const lang = italian ? 'it' : 'en';
       submenu.innerHTML = '<a href="sport-' + lang + '.html">Sport</a>' +
