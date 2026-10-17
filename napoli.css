@@ -40,12 +40,12 @@
 .napoli-suggestions h2{max-width:1000px}.napoli-suggestions>.napoli-memory-text{margin-top:28px}.napoli-moderation-note{font-size:14px;line-height:1.7;color:#bce8ff;margin:16px 0 30px}.napoli-discussion{background:#fff;color:#17344a;border-radius:18px;padding:28px;min-height:300px;width:100%;margin-top:10px;overflow-wrap:anywhere}@media(max-width:650px){.napoli-discussion{padding:18px 12px;border-radius:12px}}
 
 /* Navy glass navigation for Napoli, on desktop and mobile. */
-.napoli-page .site-header,.napoli-page .site-header.scrolled{background:rgba(13,43,70,.9);border-color:rgba(214,235,250,.22);color:#f3f8fc;box-shadow:inset 0 1px 0 #ffffff14,0 8px 26px #08233d20;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px)}
-.napoli-page .site-header .desktop-nav-shell{background:linear-gradient(135deg,#194564b3,#102f4ca6);border-color:#d6ebfa30;box-shadow:inset 0 1px 1px #ffffff20,0 5px 20px #08233d20;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.napoli-page .site-header,.napoli-page .site-header.scrolled{background:rgba(10,30,48,.96);border-color:rgba(214,235,250,.22);color:#f3f8fc;box-shadow:inset 0 1px 0 #ffffff14,0 8px 26px #08233d20;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px)}
+.napoli-page .site-header .desktop-nav-shell{background:linear-gradient(135deg,#102c43d9,#0b2034d9);border-color:#d6ebfa30;box-shadow:inset 0 1px 1px #ffffff20,0 5px 20px #08233d20;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
 .napoli-page .site-header .desktop-nav a,.napoli-page .site-header .desktop-nav button,.napoli-page .site-header .header-actions{color:#edf5fb}
-.napoli-page .site-header .desktop-nav a.active,.napoli-page .site-header .desktop-nav a:hover,.napoli-page .site-header .desktop-nav a[aria-expanded="true"]{background:#244f70;color:#fff;border-color:#d6ebfa40}
-.napoli-page .site-header .header-actions .lang.active{color:#fff;background:radial-gradient(circle at 76% 18%,#ffffff66,transparent 42%),linear-gradient(145deg,#537c9b99,#214968cc);box-shadow:inset 0 1px 2px #ffffff70,0 4px 13px #09284240;border-color:#d6ebfa70}
+.napoli-page .site-header .desktop-nav a.active,.napoli-page .site-header .desktop-nav a:hover,.napoli-page .site-header .desktop-nav a[aria-expanded="true"]{background:#18354d;color:#fff;border-color:#d6ebfa40}
+.napoli-page .site-header .header-actions .lang.active{color:#fff;background:radial-gradient(circle at 76% 18%,#ffffff66,transparent 42%),linear-gradient(145deg,#34536e99,#142e46dd);box-shadow:inset 0 1px 2px #ffffff70,0 4px 13px #09284240;border-color:#d6ebfa70}
 .napoli-page .site-header .header-actions .lang:not(.active){color:#c5d9e8}
-.napoli-page .mobile-menu,.napoli-page .notes-submenu{background:rgba(13,43,70,.96);color:#edf5fb;border-color:#d6ebfa30;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px)}
+.napoli-page .mobile-menu,.napoli-page .notes-submenu{background:rgba(10,30,48,.98);color:#edf5fb;border-color:#d6ebfa30;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px)}
 .napoli-page .mobile-menu a,.napoli-page .notes-submenu a{color:#edf5fb}
 @media(max-width:850px){.napoli-page .site-header .desktop-nav-shell{background:transparent;border:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}}
