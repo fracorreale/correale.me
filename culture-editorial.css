@@ -29,4 +29,6 @@ body.culture-editorial{background:#f3ede3}
 .culture-editorial .editorial-grid>.card:nth-child(1) .media{background-position:0 0}
 .culture-editorial .editorial-grid>.card:nth-child(2) .media{background-position:100% 0}
 .culture-editorial .editorial-grid>.card:nth-child(3) .media{background-position:0 100%}
-.culture-editorial .editorial-grid>.card:nth-child(4) .media{background-position:100% 100%}
+/* TV series uses its own photo instead of the shared editorial sprite. */
+.culture-editorial .editorial-grid>.card.tv-series-card .media{background-image:none}
+.culture-editorial .editorial-grid>.card.tv-series-card .media img{opacity:1}
