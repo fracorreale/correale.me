@@ -157,3 +157,15 @@
   .mobile-menu .mobile-nav-subtitle,.mobile-menu-intro,.mobile-menu-footer{color:var(--hg-text,#587998)}
   html[data-header-theme] .mobile-menu [data-nav="contact"],html[data-header-theme] .mobile-menu [data-nav="contact"]:hover{color:#fff!important}
 }
+
+/* Minimal, uniform editorial navigation — 2026-10-19 */
+@media(max-width:850px){
+.mobile-menu [data-nav],.mobile-menu [data-nav].is-current,.mobile-menu [data-nav="contact"],html[data-header-theme] .mobile-menu [data-nav="contact"]{background:transparent!important;color:#102e4a!important;border-radius:0!important;border-bottom:1px solid rgba(104,148,181,.2)!important;margin-top:0!important;min-height:64px!important}
+.mobile-menu [data-nav]:last-of-type{border-bottom:0!important}
+.mobile-menu .is-current .mobile-nav-title::after{display:none!important}
+.mobile-menu [data-nav="notes"]::after{transform:none!important}
+.mobile-menu [data-nav="notes"][aria-expanded="true"]::after{transform:rotate(90deg)!important}
+.mobile-menu [data-nav]::after{filter:none!important;background:none!important;width:13px!important;height:13px!important;flex:0 0 13px!important;border-right:3px solid #83c3ed!important;border-top:3px solid #83c3ed!important;transform:rotate(45deg)!important;border-radius:1px!important;margin-right:8px!important}
+.mobile-menu [data-nav="notes"][aria-expanded="true"]::after{transform:rotate(135deg)!important}
+.mobile-menu [data-nav]:hover{background:rgba(210,232,248,.2)!important}
+}
