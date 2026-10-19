@@ -178,3 +178,9 @@
 .mobile-menu nav > [data-nav="contact"]{border-bottom:0!important}
 .mobile-menu-footer{border-top:0!important}
 }
+
+/* Consistent navigation title color, including active Home and Contact */
+@media(max-width:850px){
+.mobile-menu [data-nav],.mobile-menu [data-nav].is-current,.mobile-menu [data-nav="home"],.mobile-menu [data-nav="contact"],html[data-header-theme] .mobile-menu [data-nav="home"],html[data-header-theme] .mobile-menu [data-nav="contact"]{color:#102e4a!important}
+.mobile-menu [data-nav] .mobile-nav-title,.mobile-menu [data-nav].is-current .mobile-nav-title{color:#102e4a!important;font-weight:400!important}
+}
