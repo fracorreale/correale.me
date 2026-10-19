@@ -32,3 +32,7 @@ body.culture-editorial{background:#f3ede3}
 /* TV series uses its own photo instead of the shared editorial sprite. */
 .culture-editorial .editorial-grid>.card.tv-series-card .media{background-image:none}
 .culture-editorial .editorial-grid>.card.tv-series-card .media img{opacity:1}
+
+/* Display individual culture photos instead of legacy sprite */
+.culture-editorial .card .media{background-image:none!important}
+.culture-editorial .card .media img{opacity:1!important}
