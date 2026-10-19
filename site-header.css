@@ -169,3 +169,12 @@
 .mobile-menu [data-nav="notes"][aria-expanded="true"]::after{transform:rotate(135deg)!important}
 .mobile-menu [data-nav]:hover{background:rgba(210,232,248,.2)!important}
 }
+
+/* Uniform dividers in mobile menu — approved 2026-10-19 */
+@media(max-width:850px){
+.mobile-menu nav > [data-nav="notes"],.mobile-menu nav > .notes-dropdown{border-bottom:1px solid rgba(104,148,181,.2)!important}
+.mobile-menu .notes-dropdown{border-bottom:1px solid rgba(104,148,181,.2)!important}
+.mobile-menu .notes-dropdown > [data-nav="notes"]{border-bottom:0!important}
+.mobile-menu nav > [data-nav="contact"]{border-bottom:0!important}
+.mobile-menu-footer{border-top:0!important}
+}
