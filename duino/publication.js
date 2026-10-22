@@ -5,7 +5,7 @@ function syncLinks(){
  const lang=document.documentElement.lang==='it'?'it':'en';
  document.querySelectorAll('.site-nav a').forEach(a=>{
  const label=a.dataset.en||a.textContent.trim();
- const routes={'Home':'/','About me':'/#about','Currently':'/#things','Contact':'/#contact','Sport':'/sport-'+lang+'.html','Naples':'/napoli-'+lang+'.html','Napoli':'/napoli-'+lang+'.html','Places':'/places-'+lang+'.html','Duino':base+'index.html'};
+ const routes={'Home':'/','About me':'/#about','Currently':'/#things','Contact':'/#contact','Sport':'/sport-'+lang+'.html','Naples':'/naples.html','Napoli':'/naples.html','Places':'/places-'+lang+'.html','Duino':base+'index.html'};
  if(routes[label])a.setAttribute('href',routes[label]);
  });
  document.querySelectorAll('a[href]').forEach(a=>{
