@@ -1,4 +1,4 @@
 header .brand.site-signature{display:flex;align-items:center;flex:0 0 auto;line-height:0;letter-spacing:0;color:var(--signature-ink,#10283b)}
-header .site-signature .signature-mark{display:block;width:190px;height:64px;background-color:currentColor;-webkit-mask:url("assets/f-correale-handwriting-v2.png") center/contain no-repeat;mask:url("assets/f-correale-handwriting-v2.png") center/contain no-repeat}
+header .site-signature .signature-mark{display:block;width:190px;height:64px;background-color:currentColor;-webkit-mask:url("assets/f-correale-handwriting-v2.webp") center/contain no-repeat;mask:url("assets/f-correale-handwriting-v2.webp") center/contain no-repeat}
 header .site-signature:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
 @media(max-width:850px){header .site-signature .signature-mark{width:clamp(120px,38vw,160px);height:50px}header:has(.site-signature){gap:12px}}
