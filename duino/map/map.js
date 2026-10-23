@@ -1,6 +1,6 @@
 let lang='it',currentArea='unified',showReference=false,currentPlace=0,atlasData;
 const $=s=>document.querySelector(s),t=(it,en)=>lang==='it'?it:en;
-const artwork={unified:'assets/duino-mappa-unica-calda.png',centro:'assets/centro-acquerello-v3-caldo.png',porto:'assets/porto-acquerello-caldo.png',fore:'assets/fore-acquerello-caldo.png',agip:'assets/agip-acquerello-caldo.png'};
+const artwork={unified:'assets/duino-mappa-unica-calda.webp',centro:'assets/centro-acquerello-v3-caldo.webp',porto:'assets/porto-acquerello-caldo.webp',fore:'assets/fore-acquerello-caldo.webp',agip:'assets/agip-acquerello-caldo.webp'};
 const asset=path=>window.bundledAssets?.[path]||path;
 function setLang(value){
  lang=value;document.documentElement.lang=value;
@@ -18,7 +18,7 @@ function renderAreas(){
  $('#zoom').hidden=false;
 }
 function areaSize(key){if(key==='unified')return [1536,1024];return showReference&&key==='agip'?[976,1042]:atlasData.areas[key].size}
-function areaSource(key){return asset(showReference?'assets/duino-satellite.jpg':artwork[key])}
+function areaSource(key){return asset(showReference?'assets/duino-satellite.webp':artwork[key])}
 function areaAlt(key){if(key==='unified')return showReference?t('Duino — vista satellitare senza annotazioni','Duino — satellite view without annotations'):t('Duino — mappa unica ad acquerello','Duino — unified watercolor map');return atlasData.areas[key].name[lang==='it'?0:1]+t(showReference?' — satellite annotato':' — acquerello',showReference?' — annotated satellite':' — watercolor')}
 let tooltipAnchor=null;
 function hidePinName(){const tip=$('#pin-tooltip');tip.hidden=true;if(tooltipAnchor)tooltipAnchor.removeAttribute('aria-describedby');tooltipAnchor=null}
@@ -70,54 +70,54 @@ function renderMemory(){
  if(p.key==='bocciofila'){
   const quote=document.createElement('blockquote');quote.textContent='Un bicerin de vin e sugo de palle de toro';body.append(quote);
   const gallery=document.createElement('div');gallery.className='polaroid-gallery';
-  const photos=[['bocciofila-campo.jpeg',t('Campo della Bocciofila','Bocciofila court')],['bocciofila-targa.jpeg',t('Targa della Bocciofila Duinese','Bocciofila Duinese plaque')],['bocciofila-esterno.jpeg',t('Esterno della Bocciofila','Bocciofila exterior')]];
+  const photos=[['bocciofila-campo.webp',t('Campo della Bocciofila','Bocciofila court')],['bocciofila-targa.webp',t('Targa della Bocciofila Duinese','Bocciofila Duinese plaque')],['bocciofila-esterno.webp',t('Esterno della Bocciofila','Bocciofila exterior')]];
   photos.forEach(([file,alt])=>{const frame=document.createElement('figure');frame.className='polaroid';const img=document.createElement('img');img.src=asset('assets/'+file);img.alt=alt;img.decoding='async';const label=document.createElement('figcaption');frame.append(img,label);gallery.append(frame)});body.append(gallery);
  }else if(p.key==='agip'){
   const gallery=document.createElement('div');gallery.className='product-gallery';
-  [['agip-limoncello.png','Limoncello Mari Mayans'],['agip-faxe.png','Faxe Premium'],['agip-graspa.png','Graspa de casa']].forEach(([file,alt])=>{const img=document.createElement('img');img.src=asset('assets/'+file);img.alt=alt;gallery.append(img)});body.append(gallery);
+  [['agip-limoncello.webp','Limoncello Mari Mayans'],['agip-faxe.webp','Faxe Premium'],['agip-graspa.webp','Graspa de casa']].forEach(([file,alt])=>{const img=document.createElement('img');img.src=asset('assets/'+file);img.alt=alt;gallery.append(img)});body.append(gallery);
  }else if(p.key==='mickey-mouse'){
   const gallery=document.createElement('div');gallery.className='polaroid-gallery';
-  const photos=[['mickey-mouse-dettaglio.jpeg',t('Dettaglio del bancone del Mickey Mouse','Detail of the Mickey Mouse counter')],['mickey-mouse-bancone.jpeg',t('Bancone del Mickey Mouse','Mickey Mouse counter')],['mickey-mouse-bar.jpeg',t('Interno del bar Mickey Mouse','Inside the Mickey Mouse bar')],['mickey-mouse-sala.jpg',t('Sala del Mickey Mouse','Mickey Mouse interior')]];
+  const photos=[['mickey-mouse-dettaglio.webp',t('Dettaglio del bancone del Mickey Mouse','Detail of the Mickey Mouse counter')],['mickey-mouse-bancone.webp',t('Bancone del Mickey Mouse','Mickey Mouse counter')],['mickey-mouse-bar.webp',t('Interno del bar Mickey Mouse','Inside the Mickey Mouse bar')],['mickey-mouse-sala.webp',t('Sala del Mickey Mouse','Mickey Mouse interior')]];
   photos.forEach(([file,alt])=>{const frame=document.createElement('figure');frame.className='polaroid';const img=document.createElement('img');img.src=asset('assets/'+file);img.alt=alt;img.decoding='async';const label=document.createElement('figcaption');frame.append(img,label);gallery.append(frame)});body.append(gallery);
  }else if(p.key==='al-castel'){
   const gallery=document.createElement('div');gallery.className='polaroid-gallery';
-  const photos=[['al-castel-brindisi.png',t('Brindisi ad Al Castel','A toast at Al Castel')],['al-castel-tavolo.jpeg',t('Foto al tavolo di Al Castel','At a table at Al Castel')],['al-castel-gruppo.jpeg',t('Foto di gruppo ad Al Castel','Group photo at Al Castel')]];
+  const photos=[['al-castel-brindisi.webp',t('Brindisi ad Al Castel','A toast at Al Castel')],['al-castel-tavolo.webp',t('Foto al tavolo di Al Castel','At a table at Al Castel')],['al-castel-gruppo.webp',t('Foto di gruppo ad Al Castel','Group photo at Al Castel')]];
   photos.forEach(([file,alt])=>{const frame=document.createElement('figure');frame.className='polaroid';const img=document.createElement('img');img.src=asset('assets/'+file);img.alt=alt;img.decoding='async';const label=document.createElement('figcaption');frame.append(img,label);gallery.append(frame)});body.append(gallery);
  }else if(p.key==='office-building'){
   const gallery=document.createElement('div');gallery.className='polaroid-gallery';
   const frame=document.createElement('figure');frame.className='polaroid';
-  const img=document.createElement('img');img.src=asset('assets/office-building-chitarra.jpg');img.alt=t('Chitarra davanti all’ingresso dell’Office Building','Guitar outside the Office Building entrance');img.decoding='async';
+  const img=document.createElement('img');img.src=asset('assets/office-building-chitarra.webp');img.alt=t('Chitarra davanti all’ingresso dell’Office Building','Guitar outside the Office Building entrance');img.decoding='async';
   const label=document.createElement('figcaption');frame.append(img,label);gallery.append(frame);body.append(gallery);
  }else if(p.key==='fore-lawn'){
   const gallery=document.createElement('div');gallery.className='polaroid-gallery';
-  const photos=[['fore-lawn-festa.jpeg',t('Festa a Fore Lawn','Celebration at Fore Lawn')],['fore-lawn-panorama.jpg',t('Tavoli sul prato di Fore Lawn','Tables on Fore Lawn')],['fore-lawn-tavolo.jpg',t('Foto di gruppo al tavolo a Fore Lawn','Group at a table on Fore Lawn')],['fore-lawn-ricordo.jpg',t('Un momento a Fore Lawn','A moment on Fore Lawn')]];
+  const photos=[['fore-lawn-festa.webp',t('Festa a Fore Lawn','Celebration at Fore Lawn')],['fore-lawn-panorama.webp',t('Tavoli sul prato di Fore Lawn','Tables on Fore Lawn')],['fore-lawn-tavolo.webp',t('Foto di gruppo al tavolo a Fore Lawn','Group at a table on Fore Lawn')],['fore-lawn-ricordo.webp',t('Un momento a Fore Lawn','A moment on Fore Lawn')]];
   photos.forEach(([file,alt])=>{const frame=document.createElement('figure');frame.className='polaroid';const img=document.createElement('img');img.src=asset('assets/'+file);img.alt=alt;img.decoding='async';const label=document.createElement('figcaption');frame.append(img,label);gallery.append(frame)});body.append(gallery);
  }else if(p.key==='fore'){
   const gallery=document.createElement('div');gallery.className='polaroid-gallery';
-  const photos=[['fore-frigo.jpg',t('Frigorifero a Fore','Refrigerator at Fore')],['fore-panorama.jpg',t('Vista sul mare e sul castello','View of the sea and castle')],['fore-interno.jpg',t('Interno di Fore','Inside Fore')]];
+  const photos=[['fore-frigo.webp',t('Frigorifero a Fore','Refrigerator at Fore')],['fore-panorama.webp',t('Vista sul mare e sul castello','View of the sea and castle')],['fore-interno.webp',t('Interno di Fore','Inside Fore')]];
   photos.forEach(([file,alt])=>{const frame=document.createElement('figure');frame.className='polaroid';const img=document.createElement('img');img.src=asset('assets/'+file);img.alt=alt;img.decoding='async';const label=document.createElement('figcaption');frame.append(img,label);gallery.append(frame)});body.append(gallery);
  }else if(p.key==='school-building'){
   const gallery=document.createElement('div');gallery.className='polaroid-gallery';
   const frame=document.createElement('figure');frame.className='polaroid';
-  const img=document.createElement('img');img.src=asset('assets/school-building-targa.jpeg');img.alt=t('Targa dello School Building','School Building plaque');img.decoding='async';
+  const img=document.createElement('img');img.src=asset('assets/school-building-targa.webp');img.alt=t('Targa dello School Building','School Building plaque');img.decoding='async';
   const label=document.createElement('figcaption');frame.append(img,label);gallery.append(frame);body.append(gallery);
  }else if(p.key==='porto'){
   const gallery=document.createElement('div');gallery.className='polaroid-gallery';
-  const photos=[['porto-giorno.jpeg',t('Il porto di giorno','The harbour by day')],['porto-amici.jpeg',t('Foto di gruppo al porto','Group photo at the harbour')],['porto-luna.jpeg',t('La luna sul mare','Moon over the sea')],['porto-ritoccata.png',t('Veduta del porto — foto ritoccata','Harbour view — edited photo')]];
+  const photos=[['porto-giorno.webp',t('Il porto di giorno','The harbour by day')],['porto-amici.webp',t('Foto di gruppo al porto','Group photo at the harbour')],['porto-luna.webp',t('La luna sul mare','Moon over the sea')],['porto-ritoccata.webp',t('Veduta del porto — foto ritoccata','Harbour view — edited photo')]];
   photos.forEach(([file,alt])=>{const frame=document.createElement('figure');frame.className='polaroid';const img=document.createElement('img');img.src=asset('assets/'+file);img.alt=alt;img.decoding='async';const label=document.createElement('figcaption');frame.append(img,label);gallery.append(frame)});body.append(gallery);
  }else if(p.key==='al-barone'){
   const gallery=document.createElement('div');gallery.className='polaroid-gallery';
   const frame=document.createElement('figure');frame.className='polaroid';
-  const img=document.createElement('img');img.src=asset('assets/al-barone.jpg');img.alt=t('Al Barone — foto dall’archivio','Al Barone — archive photo');img.decoding='async';
+  const img=document.createElement('img');img.src=asset('assets/al-barone.webp');img.alt=t('Al Barone — foto dall’archivio','Al Barone — archive photo');img.decoding='async';
   const label=document.createElement('figcaption');frame.append(img,label);gallery.append(frame);body.append(gallery);
  }else if(p.key==='tuttidi'){
   const gallery=document.createElement('div');gallery.className='polaroid-gallery';
-  const photos=[['tuttidi-panino.jpg',t('Panino con mortadella e peperoncino','Sandwich with mortadella and chili pepper'),'Panino arabo, mortadella e peperoncino'],['tuttidi-ingresso.jpg',t('Ingresso del TuttiDi','TuttiDi entrance'),'']];
+  const photos=[['tuttidi-panino.webp',t('Panino con mortadella e peperoncino','Sandwich with mortadella and chili pepper'),'Panino arabo, mortadella e peperoncino'],['tuttidi-ingresso.webp',t('Ingresso del TuttiDi','TuttiDi entrance'),'']];
   photos.forEach(([file,alt,caption])=>{const frame=document.createElement('figure');frame.className='polaroid';const img=document.createElement('img');img.src=asset('assets/'+file);img.alt=alt;img.decoding='async';frame.append(img);const label=document.createElement('figcaption');label.textContent=caption;frame.append(label);gallery.append(frame)});
   body.append(gallery);
  }else if(p.key==='lucchese'){
   const gallery=document.createElement('div');gallery.className='polaroid-gallery';
-  const photos=[['lucchese-albero.jpeg',t('Albero a Lucchese','Tree at Lucchese'),'❤️'],['lucchese-mare.jpeg',t('Vista sul mare da Lucchese','Sea view from Lucchese'),''],['lucchese-giardino.jpeg',t('Giardino di Lucchese','Lucchese garden'),'']];
+  const photos=[['lucchese-albero.webp',t('Albero a Lucchese','Tree at Lucchese'),'❤️'],['lucchese-mare.webp',t('Vista sul mare da Lucchese','Sea view from Lucchese'),''],['lucchese-giardino.webp',t('Giardino di Lucchese','Lucchese garden'),'']];
   photos.forEach(([file,alt,caption])=>{const frame=document.createElement('figure');frame.className='polaroid';const img=document.createElement('img');img.src=asset('assets/'+file);img.alt=alt;img.decoding='async';const label=document.createElement('figcaption');label.textContent=caption;frame.append(img,label);gallery.append(frame)});body.append(gallery);
   const link=document.createElement('a');link.className='story-link';link.href=window.chapterBase||'../02-lucchese-1.html';link.textContent=t('Leggi Lucchese #3 →','Read Lucchese #3 →');body.append(link);
  }else{const empty=document.createElement('p');empty.className='empty';empty.textContent=t('Foto e storia da aggiungere dall’archivio.','Photo and story to be added from the archive.');body.append(empty)}
