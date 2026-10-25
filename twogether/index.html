@@ -512,7 +512,7 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
   var KEY = "spese-a-due-v1";
   var $ = function (id) { return document.getElementById(id); };
   var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
-  var fmt = function (c) { return "€" + new Intl.NumberFormat(LOC(), { maximumFractionDigits: 0 }).format(Math.round(c / 100)); };
+  var fmt = function (c) { return "€" + new Intl.NumberFormat(LOC(), { maximumFractionDigits: 0, useGrouping: "always" }).format(Math.round(c / 100)); };
   var canStore = true;
 
   /* Lingue: italiano e inglese. La scelta resta in questo browser. */
@@ -727,7 +727,7 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
   }
 
   function bigAmt(el, c) {
-    el.innerHTML = '<span class="num">' + new Intl.NumberFormat(LOC(), { maximumFractionDigits: 0 }).format(Math.round(c / 100)) + '</span><span class="cur">euro</span>';
+    el.innerHTML = '<span class="num">' + new Intl.NumberFormat(LOC(), { maximumFractionDigits: 0, useGrouping: "always" }).format(Math.round(c / 100)) + '</span><span class="cur">euro</span>';
   }
   function renderBalance() {
     var list = monthItems(), r = compute(list), n = r.net0;
