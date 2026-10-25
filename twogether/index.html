@@ -1287,8 +1287,9 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
         exps.forEach(function (it) {
           need(17);
           txt(M, y, dayLabel(it.d), 10, false, GR);
-          txt(M + 52, y, pfit(itemTitle(it), 10.5, false, 230), 10.5, false, INK);
-          payer(M + 300, y, it.p, 10);
+          txt(M + 52, y, pfit(itemTitle(it), 10.5, false, 138), 10.5, false, INK);
+          payer(M + 198, y, it.p, 10);
+          txt(M + 262, y, pfit(splitText(it), 9, false, 170), 9, false, GR);
           rtxt(PW - M, y, fmt(it.c), 10.5, true, INK);
           y -= 5; hline(M, PW - M, y, LN, 0.4); y -= 12;
         });
