@@ -1264,9 +1264,9 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
     function payer(x, yy, p, sz) { txt(x, yy, nm(p), sz, true, p ? PK : AZ); }
     np();
     if (faces) {
-      var FD = 54, FG = 12, fx0 = (PW - 2 * FD - FG) / 2, fy = y - FD, KK = 0.5523;
+      var FD = 56, FS = 28, LH = logo ? 190 * logo.h / logo.w : 36, fy = y - LH * 0.64 - FD / 2, KK = 0.5523;
       faces.forEach(function (fc, i) {
-        var x0 = fx0 + i * (FD + FG), r = FD / 2, cx = x0 + r, cy = fy + r, kr = KK * r;
+        var x0 = i ? (PW + 190) / 2 + FS : (PW - 190) / 2 - FS - FD, r = FD / 2, cx = x0 + r, cy = fy + r, kr = KK * r;
         var circ = cx.toFixed(2) + " " + (cy + r).toFixed(2) + " m " +
           (cx + kr).toFixed(2) + " " + (cy + r).toFixed(2) + " " + (cx + r).toFixed(2) + " " + (cy + kr).toFixed(2) + " " + (cx + r).toFixed(2) + " " + cy.toFixed(2) + " c " +
           (cx + r).toFixed(2) + " " + (cy - kr).toFixed(2) + " " + (cx + kr).toFixed(2) + " " + (cy - r).toFixed(2) + " " + cx.toFixed(2) + " " + (cy - r).toFixed(2) + " c " +
@@ -1275,7 +1275,6 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
         ops.push("q " + circ + " W n " + FD + " 0 0 " + FD + " " + x0.toFixed(2) + " " + fy.toFixed(2) + " cm /Im" + (2 + i) + " Do Q");
         ops.push("q " + rg(i ? PK : AZ) + " RG 2.2 w " + circ + " S Q");
       });
-      y -= FD + 14;
     }
     if (logo) {
       var lw = 190, lh = lw * logo.h / logo.w;
