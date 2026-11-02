@@ -1225,8 +1225,24 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
       return { bytes: u, w: W, h: H };
     } catch (e) { return null; }
   }
+  async function facesJpeg() {
+    try {
+      var out = [];
+      for (var i = 0; i < 2; i++) {
+        var src = (AV[i] || PHOTO[i]), im = await loadImg(src), W = 300;
+        var cv = document.createElement("canvas"); cv.width = W; cv.height = W;
+        var cx = cv.getContext("2d"); cx.fillStyle = "#fff"; cx.fillRect(0, 0, W, W);
+        var s = Math.min(im.naturalWidth, im.naturalHeight), sx = (im.naturalWidth - s) / 2, sy = (im.naturalHeight - s) / 2;
+        cx.drawImage(im, sx, sy, s, s, 0, 0, W, W);
+        var bin = atob(cv.toDataURL("image/jpeg", 0.9).split(",")[1]), u = new Uint8Array(bin.length);
+        for (var k = 0; k < bin.length; k++) u[k] = bin.charCodeAt(k);
+        out.push({ bytes: u, w: W, h: W });
+      }
+      return out;
+    } catch (e) { return null; }
+  }
   async function buildPdf(only) {
-    var logo = await logoJpeg();
+    var logo = await logoJpeg(), faces = await facesJpeg();
     var PW = 595.28, PH = 841.89, M = 48, pages = [], ops, y;
     var AZ = [15, 138, 208], PK = [229, 54, 127], INK = [28, 28, 30], GR = [115, 115, 122], LN = [225, 225, 230];
     function rg(c) { return (c[0] / 255).toFixed(3) + " " + (c[1] / 255).toFixed(3) + " " + (c[2] / 255).toFixed(3); }
@@ -1247,6 +1263,20 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
     }
     function payer(x, yy, p, sz) { txt(x, yy, nm(p), sz, true, p ? PK : AZ); }
     np();
+    if (faces) {
+      var FD = 54, FG = 12, fx0 = (PW - 2 * FD - FG) / 2, fy = y - FD, KK = 0.5523;
+      faces.forEach(function (fc, i) {
+        var x0 = fx0 + i * (FD + FG), r = FD / 2, cx = x0 + r, cy = fy + r, kr = KK * r;
+        var circ = cx.toFixed(2) + " " + (cy + r).toFixed(2) + " m " +
+          (cx + kr).toFixed(2) + " " + (cy + r).toFixed(2) + " " + (cx + r).toFixed(2) + " " + (cy + kr).toFixed(2) + " " + (cx + r).toFixed(2) + " " + cy.toFixed(2) + " c " +
+          (cx + r).toFixed(2) + " " + (cy - kr).toFixed(2) + " " + (cx + kr).toFixed(2) + " " + (cy - r).toFixed(2) + " " + cx.toFixed(2) + " " + (cy - r).toFixed(2) + " c " +
+          (cx - kr).toFixed(2) + " " + (cy - r).toFixed(2) + " " + (cx - r).toFixed(2) + " " + (cy - kr).toFixed(2) + " " + (cx - r).toFixed(2) + " " + cy.toFixed(2) + " c " +
+          (cx - r).toFixed(2) + " " + (cy + kr).toFixed(2) + " " + (cx - kr).toFixed(2) + " " + (cy + r).toFixed(2) + " " + cx.toFixed(2) + " " + (cy + r).toFixed(2) + " c h";
+        ops.push("q " + circ + " W n " + FD + " 0 0 " + FD + " " + x0.toFixed(2) + " " + fy.toFixed(2) + " cm /Im" + (2 + i) + " Do Q");
+        ops.push("q " + rg(i ? PK : AZ) + " RG 2.2 w " + circ + " S Q");
+      });
+      y -= FD + 14;
+    }
     if (logo) {
       var lw = 190, lh = lw * logo.h / logo.w;
       ops.push("q " + lw + " 0 0 " + lh.toFixed(2) + " " + ((PW - lw) / 2).toFixed(2) + " " + (y - lh).toFixed(2) + " cm /Im1 Do Q");
@@ -1305,7 +1335,7 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
       txt(M, 24, "TwoGether by flurred", 8, false, GR);
       rtxt(PW - M, 24, (i + 1) + " / " + pages.length, 8, false, GR);
     });
-    var chunks = [], off = 0, offs = [], N = 6 + pages.length * 2;
+    var chunks = [], off = 0, offs = [], N = 6 + pages.length * 2 + (faces ? 2 : 0);
     function lat1(s) { var u = new Uint8Array(s.length); for (var i = 0; i < s.length; i++) u[i] = s.charCodeAt(i) & 255; return u; }
     function put(x) { var u = typeof x === "string" ? lat1(x) : x; chunks.push(u); off += u.length; }
     function obj(n, body) { offs[n] = off; put(n + " 0 obj\n" + body + "\nendobj\n"); }
@@ -1322,8 +1352,14 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
     } else obj(5, "null");
     pages.forEach(function (o, i) {
       var s = o.join("\n");
-      obj(6 + i * 2, "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 " + PW + " " + PH + "] /Resources << /Font << /F1 3 0 R /F2 4 0 R >>" + (logo ? " /XObject << /Im1 5 0 R >>" : "") + " >> /Contents " + (7 + i * 2) + " 0 R >>");
+      obj(6 + i * 2, "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 " + PW + " " + PH + "] /Resources << /Font << /F1 3 0 R /F2 4 0 R >>" + " /XObject << " + (logo ? "/Im1 5 0 R " : "") + (faces ? "/Im2 " + (6 + pages.length * 2) + " 0 R /Im3 " + (7 + pages.length * 2) + " 0 R " : "") + ">>" + " >> /Contents " + (7 + i * 2) + " 0 R >>");
       obj(7 + i * 2, "<< /Length " + s.length + " >>\nstream\n" + s + "\nendstream");
+    });
+    if (faces) faces.forEach(function (fc, i) {
+      var n = 6 + pages.length * 2 + i;
+      offs[n] = off;
+      put(n + " 0 obj\n<< /Type /XObject /Subtype /Image /Width " + fc.w + " /Height " + fc.h + " /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length " + fc.bytes.length + " >>\nstream\n");
+      put(fc.bytes); put("\nendstream\nendobj\n");
     });
     var xr = off, x = "xref\n0 " + N + "\n0000000000 65535 f \n";
     for (var n = 1; n < N; n++) x += ("0000000000" + offs[n]).slice(-10) + " 00000 n \n";
