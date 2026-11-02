@@ -464,6 +464,7 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
     <div class="exrow">
       <button type="button" class="btn ghost" id="xlBtn" data-i18n="xlBtn" hidden>Esporta in Excel</button>
       <button type="button" class="btn ghost" id="pdfBtn" data-i18n="pdfBtn" hidden>Esporta in PDF</button>
+      <button type="button" class="btn ghost" id="mailBtn">Invia il PDF per email</button>
     </div>
   </section>
 
@@ -545,7 +546,7 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
       stPasteFirst: "Incolla prima il codice ricevuto.", stDone: "Fatto: {x}.", stSame: "Eravate già allineati.",
       clLbl: "Sincronizzazione automatica", clOffP: "Crea un link da mandare all'altra persona: aprendolo, le spese si aggiornano da sole su entrambi i telefoni.", clOnBtn: "Attiva la sincronizzazione automatica", clOnP: "Per collegare l'altro telefono, mandagli questo link e fallo aprire una volta sola.", clCopy: "Copia il link da mandare", clLinkDone: "Link copiato: mandalo su WhatsApp", clOffBtn: "Disattiva su questo dispositivo", clOffAsk: "Disattivare la sincronizzazione su questo dispositivo? Le spese restano qui.", clJoinAsk: "Collegare questo dispositivo a un altro archivio condiviso? Le spese attuali verranno unite.", clJoined: "Sincronizzazione automatica attivata", clStOn: "Sincronizzazione attiva", clStConn: "Connessione in corso...", clStErr: "Server non raggiungibile: riprovo", clManual: "Alternativa manuale", stBad: "Codice non valido. Controlla di averlo copiato per intero.",
       mAdded1: "{n} spesa aggiunta", mAddedN: "{n} spese aggiunte", mUpd1: "{n} aggiornata", mUpdN: "{n} aggiornate", mDel1: "{n} eliminata", mDelN: "{n} eliminate",
-      uAdded: "Spesa aggiunta", uEdited: "Spesa modificata", uDeleted: "Spesa eliminata", uSettled: "Saldo registrato", uMerged: "Spese unite", xlBtn: "Esporta in Excel", pdfBtn: "Esporta in PDF", pdfFile: "TwoGether-riepilogo", pdfSub: "Riepilogo spese", pdfGen: "Generato il {d}", pdfDone: "PDF pronto", xlFile: "TwoGether-spese", xlSheet1: "Spese", xlSheet2: "Consuntivi", xlDate: "Data", xlMonth: "Mese", xlDesc: "Descrizione", xlAmt: "Importo (€)", xlPaidBy: "Pagato da", xlShare: "Quota {n} (€)", xlType: "Tipo", xlStatus: "Stato", xlExp: "Spesa", xlSet: "Saldo", xlPaid: "Pagato", xlOpenSet: "Saldo registrato", xlToSettle: "Da saldare", xlEven: "In pari", xlMonthTot: "Totale mese (€)", xlWho: "Chi deve", xlToWhom: "A chi", xlDone: "File Excel pronto", xlErr: "Esportazione non riuscita", sumTitle: "Consuntivi mensili", sumSub: "Quanto è stato dato a fine mese", sumEmpty: "Qui compariranno i mesi, con quanto è stato dato a fine mese.", sumGave: "{a} ha dato a {b}", sumOpen: "Da saldare: {a} deve a {b}", sumToGive: "Saldo registrato: {a} deve ancora dare a {b}", markPaid: "Segna come pagato", uPaid: "Pagamento segnato", sumEven: "In pari, niente da saldare", sumSpent: "Totale mese: {x}", uExamples: "Esempi rimossi", uWiped: "Tutte le spese cancellate",
+      uAdded: "Spesa aggiunta", uEdited: "Spesa modificata", uDeleted: "Spesa eliminata", uSettled: "Saldo registrato", uMerged: "Spese unite", xlBtn: "Esporta in Excel", pdfBtn: "Esporta in PDF", mailBtn: "Invia per email il PDF di {m}", mailSubj: "TwoGether - {m}", mailBody: "Ciao, ecco il riepilogo spese di {m}.\n{b}", mailAttach: "Allega qui il PDF appena scaricato.", mailHint: "PDF scaricato: allegalo alla mail", pdfFile: "TwoGether-riepilogo", pdfSub: "Riepilogo spese", pdfGen: "Generato il {d}", pdfDone: "PDF pronto", xlFile: "TwoGether-spese", xlSheet1: "Spese", xlSheet2: "Consuntivi", xlDate: "Data", xlMonth: "Mese", xlDesc: "Descrizione", xlAmt: "Importo (€)", xlPaidBy: "Pagato da", xlShare: "Quota {n} (€)", xlType: "Tipo", xlStatus: "Stato", xlExp: "Spesa", xlSet: "Saldo", xlPaid: "Pagato", xlOpenSet: "Saldo registrato", xlToSettle: "Da saldare", xlEven: "In pari", xlMonthTot: "Totale mese (€)", xlWho: "Chi deve", xlToWhom: "A chi", xlDone: "File Excel pronto", xlErr: "Esportazione non riuscita", sumTitle: "Consuntivi mensili", sumSub: "Quanto è stato dato a fine mese", sumEmpty: "Qui compariranno i mesi, con quanto è stato dato a fine mese.", sumGave: "{a} ha dato a {b}", sumOpen: "Da saldare: {a} deve a {b}", sumToGive: "Saldo registrato: {a} deve ancora dare a {b}", markPaid: "Segna come pagato", uPaid: "Pagamento segnato", sumEven: "In pari, niente da saldare", sumSpent: "Totale mese: {x}", uExamples: "Esempi rimossi", uWiped: "Tutte le spese cancellate",
       restored1: "Ripristinata {n} spesa di ottobre", restoredN: "Ripristinate {n} spese di ottobre", toastUndone: "Annullato: {x}", toastRedone: "Ripristinato: {x}", btnUndo: "Annulla", btnRedo: "Ripristina",
       titleUndo: "Annulla: {x}", titleRedo: "Ripristina: {x}"
     },
@@ -576,7 +577,7 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
       stPasteFirst: "Paste the received code first.", stDone: "Done: {x}.", stSame: "You were already in sync.",
       clLbl: "Automatic sync", clOffP: "Create a link to send to the other person: once they open it, expenses update by themselves on both phones.", clOnBtn: "Turn on automatic sync", clOnP: "To connect the other phone, send it this link and have them open it once.", clCopy: "Copy the link to send", clLinkDone: "Link copied: send it on WhatsApp", clOffBtn: "Turn off on this device", clOffAsk: "Turn off sync on this device? Your expenses stay here.", clJoinAsk: "Connect this device to a different shared archive? Current expenses will be merged.", clJoined: "Automatic sync turned on", clStOn: "Sync active", clStConn: "Connecting...", clStErr: "Server unreachable: retrying", clManual: "Manual alternative", stBad: "Invalid code. Check that you copied all of it.",
       mAdded1: "{n} expense added", mAddedN: "{n} expenses added", mUpd1: "{n} updated", mUpdN: "{n} updated", mDel1: "{n} deleted", mDelN: "{n} deleted",
-      uAdded: "Expense added", uEdited: "Expense edited", uDeleted: "Expense deleted", uSettled: "Settlement recorded", uMerged: "Expenses merged", xlBtn: "Export to Excel", pdfBtn: "Export to PDF", pdfFile: "TwoGether-summary", pdfSub: "Expense summary", pdfGen: "Generated on {d}", pdfDone: "PDF ready", xlFile: "TwoGether-expenses", xlSheet1: "Expenses", xlSheet2: "Summaries", xlDate: "Date", xlMonth: "Month", xlDesc: "Description", xlAmt: "Amount (€)", xlPaidBy: "Paid by", xlShare: "{n}'s share (€)", xlType: "Type", xlStatus: "Status", xlExp: "Expense", xlSet: "Settlement", xlPaid: "Paid", xlOpenSet: "Recorded", xlToSettle: "To settle", xlEven: "Even", xlMonthTot: "Month total (€)", xlWho: "Who owes", xlToWhom: "To whom", xlDone: "Excel file ready", xlErr: "Export failed", sumTitle: "Monthly summaries", sumSub: "What was handed over at month end", sumEmpty: "Months will appear here, with what was handed over at month end.", sumGave: "{a} gave {b}", sumOpen: "To settle: {a} owes {b}", sumToGive: "Settlement recorded: {a} still has to pay {b}", markPaid: "Mark as paid", uPaid: "Payment marked", sumEven: "All even, nothing to settle", sumSpent: "Month total: {x}", uExamples: "Examples removed", uWiped: "All expenses deleted",
+      uAdded: "Expense added", uEdited: "Expense edited", uDeleted: "Expense deleted", uSettled: "Settlement recorded", uMerged: "Expenses merged", xlBtn: "Export to Excel", pdfBtn: "Export to PDF", mailBtn: "Email the PDF for {m}", mailSubj: "TwoGether - {m}", mailBody: "Hi, here is the expense summary for {m}.\n{b}", mailAttach: "Attach the PDF you just downloaded.", mailHint: "PDF downloaded: attach it to the email", pdfFile: "TwoGether-summary", pdfSub: "Expense summary", pdfGen: "Generated on {d}", pdfDone: "PDF ready", xlFile: "TwoGether-expenses", xlSheet1: "Expenses", xlSheet2: "Summaries", xlDate: "Date", xlMonth: "Month", xlDesc: "Description", xlAmt: "Amount (€)", xlPaidBy: "Paid by", xlShare: "{n}'s share (€)", xlType: "Type", xlStatus: "Status", xlExp: "Expense", xlSet: "Settlement", xlPaid: "Paid", xlOpenSet: "Recorded", xlToSettle: "To settle", xlEven: "Even", xlMonthTot: "Month total (€)", xlWho: "Who owes", xlToWhom: "To whom", xlDone: "Excel file ready", xlErr: "Export failed", sumTitle: "Monthly summaries", sumSub: "What was handed over at month end", sumEmpty: "Months will appear here, with what was handed over at month end.", sumGave: "{a} gave {b}", sumOpen: "To settle: {a} owes {b}", sumToGive: "Settlement recorded: {a} still has to pay {b}", markPaid: "Mark as paid", uPaid: "Payment marked", sumEven: "All even, nothing to settle", sumSpent: "Month total: {x}", uExamples: "Examples removed", uWiped: "All expenses deleted",
       restored1: "Restored {n} October expense", restoredN: "Restored {n} October expenses", toastUndone: "Undone: {x}", toastRedone: "Redone: {x}", btnUndo: "Undo", btnRedo: "Redo",
       titleUndo: "Undo: {x}", titleRedo: "Redo: {x}"
     }
@@ -848,6 +849,7 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
     renderMonthBar();
     renderList();
     renderSummaries();
+    renderMailBtn();
     $("exnotice").hidden = !S.items.some(function (i) { return i.ex; });
   }
 
@@ -1223,7 +1225,7 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
       return { bytes: u, w: W, h: H };
     } catch (e) { return null; }
   }
-  async function buildPdf() {
+  async function buildPdf(only) {
     var logo = await logoJpeg();
     var PW = 595.28, PH = 841.89, M = 48, pages = [], ops, y;
     var AZ = [15, 138, 208], PK = [229, 54, 127], INK = [28, 28, 30], GR = [115, 115, 122], LN = [225, 225, 230];
@@ -1258,6 +1260,7 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
     var months = {};
     S.items.forEach(function (it) { months[it.d.slice(0, 7)] = 1; });
     var keys = Object.keys(months).sort().reverse();
+    if (only) keys = keys.filter(function (k) { return k === only; });
     if (!keys.length) ctxt(y, tr("sumEmpty"), 11, false, GR);
     keys.forEach(function (k) {
       var list = S.items.filter(function (it) { return it.d.slice(0, 7) === k; });
@@ -1326,6 +1329,46 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
     for (var n = 1; n < N; n++) x += ("0000000000" + offs[n]).slice(-10) + " 00000 n \n";
     put(x + "trailer\n<< /Size " + N + " /Root 1 0 R >>\nstartxref\n" + xr + "\n%%EOF");
     return new Blob(chunks, { type: "application/pdf" });
+  }
+  /* Invio del PDF del mese per email: foglio di condivisione del telefono/Mac con il PDF allegato; in mancanza, scarica il PDF e apre una mail pronta */
+  function monthBalanceLine(m) {
+    var r = compute(S.items.filter(function (it) { return it.d.slice(0, 7) === m; })), n = r.net0;
+    if (n === 0) return tr("sumEven");
+    var d = n > 0 ? 1 : 0;
+    return tr("sumOpen", { a: nm(d), b: nm(d ? 0 : 1) }) + ": " + fmt(Math.abs(n));
+  }
+  function renderMailBtn() {
+    var b = $("mailBtn"); if (!b) return;
+    b.textContent = tr("mailBtn", { m: monthName(monthFilter) });
+    b.disabled = !monthItems().length;
+  }
+  async function mailPdf() {
+    var btn = $("mailBtn"), m = monthFilter, mn = cap(monthLabel(m));
+    btn.disabled = true;
+    try {
+      var blob = await buildPdf(m), name = "TwoGether-" + m + ".pdf";
+      var subj = tr("mailSubj", { m: mn }), body = tr("mailBody", { m: mn, b: monthBalanceLine(m) });
+      var file = null;
+      try { file = new File([blob], name, { type: "application/pdf" }); } catch (e) {}
+      if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
+        try { await navigator.share({ files: [file], title: subj, text: body }); return; }
+        catch (e) { if (e && e.name === "AbortError") return; }
+      }
+      if (DL) {
+        try { await DL.save({ filename: name, data: blob }); }
+        catch (e) { if (e && e.code === "declined") return; }
+      } else {
+        var a = document.createElement("a");
+        a.href = URL.createObjectURL(blob); a.download = name;
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
+      }
+      var l = document.createElement("a");
+      l.href = "mailto:?subject=" + encodeURIComponent(subj) + "&body=" + encodeURIComponent(body + "\n\n" + tr("mailAttach"));
+      document.body.appendChild(l); l.click(); l.remove();
+      showToast(tr("mailHint"));
+    } catch (e) { showToast(tr("xlErr")); }
+    finally { renderMailBtn(); }
   }
   async function exportPdf() {
     var btn = $("pdfBtn"); btn.disabled = true;
@@ -1534,6 +1577,7 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
     });
     $("xlBtn").addEventListener("click", exportXlsx);
     $("pdfBtn").addEventListener("click", exportPdf);
+    $("mailBtn").addEventListener("click", mailPdf);
     if (window.claude && typeof claude.use === "function") {
       claude.use("downloads").then(function (d) { if (d) { DL = d; $("xlBtn").hidden = false; $("pdfBtn").hidden = false; } }).catch(function () {});
     } else { $("xlBtn").hidden = false; $("pdfBtn").hidden = false; }
