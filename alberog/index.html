@@ -332,9 +332,11 @@ const DATA={
       "name": "Giuseppina Coccia",
       "branch": "Correale",
       "gen": 1,
-      "dates": "",
-      "note": "In vita; date da verificare.",
-      "main": false
+      "dates": "1933 –",
+      "note": "In vita. Nata a ottobre 1933, mese e anno confermati dall’utente; giorno non disponibile.",
+      "main": false,
+      "birthYear": 1933,
+      "birthMonth": 10
     },
     {
       "id": "lucc",
@@ -360,8 +362,10 @@ const DATA={
       "branch": "Correale",
       "gen": 1,
       "dates": "",
-      "note": "Marito di Annunziata Correale e padre di Alfredo Cutrupi. Legami confermati dall’utente. Deceduto; date da verificare.",
-      "main": false
+      "note": "Marito di Annunziata Correale e padre di Alfredo Cutrupi. Legami confermati dall’utente. Deceduto; date da verificare. Età al decesso confermata dall’utente: 64 anni.",
+      "main": false,
+      "deceased": true,
+      "ageAtDeath": 64
     },
     {
       "id": "alfredo",
@@ -395,9 +399,11 @@ const DATA={
       "name": "Oreste Mosca",
       "branch": "Correale",
       "gen": 1,
-      "dates": "",
-      "note": "Marito di Olga Correale e padre di Sergio, Nicola e Katia Mosca. Legami confermati dall’utente. Deceduto; date non disponibili.",
-      "main": false
+      "dates": "? – 1975",
+      "note": "Marito di Olga Correale e padre di Sergio, Nicola e Katia Mosca. Legami confermati dall’utente. Deceduto nel 1975, anno confermato dall’utente.",
+      "main": false,
+      "deceased": true,
+      "deathYear": 1975
     },
     {
       "id": "sergio",
@@ -434,7 +440,7 @@ const DATA={
     },
     {
       "id": "teresa",
-      "name": "Teresa · cognome non noto",
+      "name": "Teresa Guida",
       "branch": "Correale",
       "gen": 2,
       "dates": "",
@@ -479,7 +485,7 @@ const DATA={
     },
     {
       "id": "enzo",
-      "name": "Enzo · cognome non noto",
+      "name": "Enzo Villani",
       "branch": "Correale",
       "gen": 2,
       "dates": "",
@@ -510,8 +516,10 @@ const DATA={
       "branch": "Correale",
       "gen": 1,
       "dates": "",
-      "note": "Marito di Benedetta Correale e padre di Rita Salvati. Legami confermati dall’utente; sostituita la precedente attribuzione a Titina Correale. Deceduto; date non disponibili.",
-      "main": false
+      "note": "Marito di Benedetta Correale e padre di Rita Salvati. Legami confermati dall’utente; sostituita la precedente attribuzione a Titina Correale. Deceduto; date non disponibili. Età al decesso confermata dall’utente: 82 anni.",
+      "main": false,
+      "deceased": true,
+      "ageAtDeath": 82
     },
     {
       "id": "rita",
@@ -527,9 +535,10 @@ const DATA={
       "name": "Raffaele Santoro",
       "branch": "Correale",
       "gen": 2,
-      "dates": "",
-      "note": "Marito di Rita Salvati e padre di Marco, Maurizio e Claudia Santoro. Legami confermati dall’utente.",
-      "main": false
+      "dates": "1951 –",
+      "note": "Marito di Rita Salvati e padre di Marco, Maurizio e Claudia Santoro. Legami confermati dall’utente. Anno di nascita confermato dall’utente: 1951.",
+      "main": false,
+      "birthYear": 1951
     },
     {
       "id": "marco",
@@ -651,9 +660,9 @@ const DATA={
       "branch": "Correale",
       "gen": 2,
       "dates": "1959 – 2025",
-      "note": "Marito di Margherita Correale e padre di Marcello, Francesco Paolo e Giorgia Desgro. Nato il 1 dicembre 1959 e deceduto il 7 novembre 2025, a 65 anni. Date e legami confermati dall’utente.",
+      "note": "Marito di Margherita Correale e padre di Marcello, Francesco Paolo e Giorgia Desgro. Nato il 2 settembre 1959 e deceduto il 7 novembre 2025, a 66 anni. Date e legami confermati dall’utente.",
       "main": false,
-      "birthDate": "1959-12-01",
+      "birthDate": "1959-09-02",
       "deathDate": "2025-11-07",
       "birthDateUncertain": false,
       "deceased": true
@@ -941,9 +950,11 @@ const DATA={
       "name": "Rodolfo Iovino",
       "branch": "Correale",
       "gen": 1,
-      "dates": "",
-      "note": "Marito di Titina Correale. Era chiamato Antonio. Identificato dall’utente come la persona numero 2 nella foto di gruppo. Date non indicate.",
-      "main": false
+      "dates": "? – 1973",
+      "note": "Marito di Titina Correale. Era chiamato Antonio. Identificato dall’utente come la persona numero 2 nella foto di gruppo. Deceduto nel 1973, anno confermato dall’utente.",
+      "main": false,
+      "deceased": true,
+      "deathYear": 1973
     }
   ],
   "edges": [
@@ -1839,7 +1850,7 @@ function ageInfo(p,referenceDate){
 function ageMarkup(p){const a=ageInfo(p);return `${a.deceased?'<span class="death-mark" aria-label="Età alla morte" title="Età alla morte">†</span> ':''}${esc(a.label)}`}
 function personalDates(p){
  const info=lifeInfo(p),format=date=>new Intl.DateTimeFormat('it-IT',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(date+'T00:00:00Z'));
- const birth=info.birth?format(info.birth):info.birthYear?String(info.birthYear):'Non disponibile';
+ const birth=info.birth?format(info.birth):info.birthYear&&p.birthMonth?new Intl.DateTimeFormat('it-IT',{month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(Date.UTC(info.birthYear,p.birthMonth-1,1))):info.birthYear?String(info.birthYear):'Non disponibile';
  const death=info.death?format(info.death):info.deathYear?String(info.deathYear):'Data non disponibile';
  return `<h3>Date</h3><p>Nascita: ${esc(birth)}${p.birthDateUncertain?' · da verificare':''}${info.deceased?`<br>Decesso: ${esc(death)}${p.id==='amelia'?' · anno da verificare':''}`:''}</p>`;
 }
