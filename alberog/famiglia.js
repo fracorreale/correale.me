@@ -299,11 +299,11 @@ window.FAMIGLIA = {
       "name": "Margherita Correale",
       "branch": "Correale",
       "gen": 2,
-      "dates": "1963 –",
+      "dates": "1962 –",
       "note": "Moglie di Amedeo Desgro e madre di Marcello, Francesco Paolo e Giorgia Desgro.",
       "main": false,
-      "birthDate": "1963-12-21",
-      "birthYear": 1963,
+      "birthDate": "1962-12-21",
+      "birthYear": 1962,
       "birthDateUncertain": false,
       "foto": "foto/margc.webp"
     },
@@ -367,7 +367,7 @@ window.FAMIGLIA = {
       "main": false,
       "birthYear": 1960,
       "deceased": false,
-      "birthDate": "1960-02-13",
+      "birthDate": "1960-02-12",
       "birthDateUncertain": false
     },
     {
@@ -695,7 +695,10 @@ window.FAMIGLIA = {
       "gen": 2,
       "dates": "1960 –",
       "note": "Marito di Federica Iossa.",
-      "main": false
+      "main": false,
+      "birthDate": "1960-03-22",
+      "birthYear": 1960,
+      "birthDateUncertain": false
     },
     {
       "id": "gian",
@@ -704,7 +707,10 @@ window.FAMIGLIA = {
       "gen": 2,
       "dates": "1963 –",
       "note": "Compagno di Silvia Orlandini; padre di Giuseppe Langella, nato da un precedente matrimonio.",
-      "main": false
+      "main": false,
+      "birthDate": "1963-02-17",
+      "birthYear": 1963,
+      "birthDateUncertain": false
     },
     {
       "id": "margl",
@@ -713,7 +719,10 @@ window.FAMIGLIA = {
       "gen": 2,
       "dates": "1965 –",
       "note": "Ha delle figlie, di cui non sono noti i nomi.",
-      "main": false
+      "main": false,
+      "birthDate": "1965-12-03",
+      "birthYear": 1965,
+      "birthDateUncertain": false
     },
     {
       "id": "livial",
@@ -723,7 +732,9 @@ window.FAMIGLIA = {
       "dates": "1957 –",
       "note": "Moglie di Franco Guerrera e madre di Artem.",
       "main": false,
-      "birthYear": 1957
+      "birthYear": 1957,
+      "birthDate": "1957-08-13",
+      "birthDateUncertain": false
     },
     {
       "id": "mirella",
@@ -732,7 +743,9 @@ window.FAMIGLIA = {
       "gen": 2,
       "dates": "",
       "note": "Divorziata; madre di Mireia.",
-      "main": false
+      "main": false,
+      "birthMonth": 11,
+      "birthDay": 6
     },
     {
       "id": "federica",
