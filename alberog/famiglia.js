@@ -684,9 +684,9 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 1,
       "dates": "? – 2026",
-      "note": "Anno di morte da verificare.",
       "main": false,
-      "deceased": true
+      "deceased": true,
+      "deathYear": 2026
     },
     {
       "id": "franl",
@@ -876,7 +876,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 4,
       "dates": "",
-      "note": "Figlio/a di Isabella Perez.",
+      "note": "Figlia di Isabella Perez.",
       "main": false
     },
     {
@@ -885,7 +885,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 4,
       "dates": "",
-      "note": "Figlio/a di Isabella Perez.",
+      "note": "Figlio di Isabella Perez.",
       "main": false
     },
     {
@@ -894,7 +894,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 4,
       "dates": "",
-      "note": "Figlio/a di Isabella Perez.",
+      "note": "Figlia di Isabella Perez.",
       "main": false
     },
     {
@@ -903,7 +903,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 4,
       "dates": "",
-      "note": "Figlio/a di Isabella Perez.",
+      "note": "Figlio di Isabella Perez.",
       "main": false
     },
     {
