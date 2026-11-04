@@ -14,7 +14,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 3,
       "dates": "1983 –",
-      "note": "Persona di riferimento. Figlio unico. Marito di Antonia Mortensen e padre di Margherita Janina Correale Mortensen.",
+      "note": "Figlio unico. Marito di Antonia Mortensen e padre di Margherita Janina Correale Mortensen.",
       "main": true,
       "birthDate": "1983-05-11",
       "birthDateUncertain": false,
@@ -26,7 +26,6 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 2,
       "dates": "1947 –",
-      "note": "",
       "main": true,
       "foto": "foto/padre.webp"
     },
@@ -36,7 +35,6 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 2,
       "dates": "1953 –",
-      "note": "",
       "main": true,
       "foto": "foto/madre.webp"
     },
@@ -46,7 +44,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 1,
       "dates": "1921 – 1982",
-      "note": "Anno di nascita e genitori confermati dall’utente: Giuseppe Correale e Lucia Capriglione. Data del decesso confermata dall’utente: 02/07/1982. Data di nascita confermata dall’utente: 2 maggio 1921.",
+      "note": "Figlio di Giuseppe Correale e Lucia Capriglione.",
       "main": true,
       "deathDate": "1982-07-02",
       "deathYear": 1982,
@@ -63,12 +61,12 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 1,
       "dates": "1923 – 2016",
-      "note": " Data di nascita confermata dall’utente: 3 dicembre 1923.",
       "main": true,
       "birthDate": "1923-12-03",
       "birthYear": 1923,
       "birthDateUncertain": false,
-      "foto": "foto/nonna.webp"
+      "foto": "foto/nonna.webp",
+      "deceased": true
     },
     {
       "id": "ziof",
@@ -76,7 +74,6 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 2,
       "dates": "1955 –",
-      "note": " Data di nascita confermata dall’utente: 1955-05-21.",
       "main": true,
       "birthDate": "1955-05-21",
       "birthYear": 1955,
@@ -89,7 +86,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 2,
       "dates": "1964 –",
-      "note": "Nascita da verificare. Nessun figlio dichiarato per la coppia. Data di nascita confermata dall’utente: 1964-03-24.",
+      "note": "Nessun figlio.",
       "main": false,
       "birthDate": "1964-03-24",
       "birthYear": 1964,
@@ -102,7 +99,6 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 1,
       "dates": "1915 – 2005",
-      "note": "Nascita confermata: 5 novembre 1915. Nell’albero è mostrato solo l’anno. Decesso confermato dall’utente; data di morte non indicata. Anno del decesso corretto e confermato dall’utente: 2005.",
       "main": true,
       "birthDate": "1915-11-05",
       "birthDateUncertain": false,
@@ -118,7 +114,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 1,
       "dates": "1918 – 2014",
-      "note": "Moglie di Gennaro Basile. Nome, matrimonio e nascita (2 settembre 1918) confermati dall’utente. Sostituisce la precedente attribuzione ad Annunziata. Nell’albero è mostrato solo l’anno. Deceduta: confermato dall’utente. Anno del decesso confermato dall’utente: 2014.",
+      "note": "Moglie di Gennaro Basile.",
       "main": true,
       "birthDate": "1918-09-02",
       "birthDateUncertain": false,
@@ -133,7 +129,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 2,
       "dates": "",
-      "note": "Figlia di Gennaro Basile e Nunzia Visciano; sposata con Franco Perez e madre di Guglielmo, Isabella e Stefania Perez. Legami confermati dall’utente. In vita secondo la conversazione originale.",
+      "note": "Figlia di Gennaro Basile e Nunzia Visciano; sposata con Franco Perez e madre di Guglielmo, Isabella e Stefania Perez. In vita.",
       "main": false,
       "foto": "foto/lucb.webp"
     },
@@ -143,7 +139,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 2,
       "dates": "1960 –",
-      "note": "Figlia di Gennaro Basile e Nunzia Visciano. Legami e anno di nascita (1960) confermati dall’utente. In vita secondo la conversazione originale.",
+      "note": "Figlia di Gennaro Basile e Nunzia Visciano.",
       "main": false,
       "birthYear": 1960,
       "foto": "foto/elenab.webp"
@@ -154,7 +150,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 2,
       "dates": "",
-      "note": "Figlio di Gennaro Basile e Nunzia Visciano; marito di Rosa Spettro e padre di Alessandra Basile. Legami confermati dall’utente. In vita secondo la conversazione originale.",
+      "note": "Figlio di Gennaro Basile e Nunzia Visciano; marito di Rosa Spettro e padre di Alessandra Basile. In vita.",
       "main": false,
       "foto": "foto/luigib.webp"
     },
@@ -164,7 +160,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 2,
       "dates": "",
-      "note": "Sposato con Lucia Basile; padre di Guglielmo, Isabella e Stefania Perez. Matrimonio e filiazioni confermati dall’utente. Date non disponibili.",
+      "note": "Sposato con Lucia Basile; padre di Guglielmo, Isabella e Stefania Perez.",
       "main": false,
       "foto": "foto/perez.webp"
     },
@@ -174,7 +170,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 3,
       "dates": "1971 –",
-      "note": "Figlio di Lucia Basile e Franco Perez. In vita, non sposato e senza figli: informazioni confermate dall’utente.",
+      "note": "Figlio di Lucia Basile e Franco Perez. Non sposato, senza figli.",
       "main": false,
       "birthDate": "1971-01-22",
       "birthDateUncertain": false
@@ -185,7 +181,6 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 3,
       "dates": "",
-      "note": "Nome e cognome confermati dall’utente. Le date non sono ancora disponibili.",
       "main": false,
       "foto": "foto/isabella.webp"
     },
@@ -195,7 +190,6 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 3,
       "dates": "",
-      "note": "Nome e cognome confermati dall’utente. Le date non sono ancora disponibili.",
       "main": false
     },
     {
@@ -204,7 +198,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 2,
       "dates": "",
-      "note": "Moglie di Luigi Basile e madre di Alessandra Basile. Legami confermati dall’utente. Date non disponibili.",
+      "note": "Moglie di Luigi Basile e madre di Alessandra Basile.",
       "main": false
     },
     {
@@ -213,7 +207,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 3,
       "dates": "",
-      "note": "Figlia di Luigi Basile e Rosa Spettro. Nome e filiazione confermati dall’utente. Date non disponibili.",
+      "note": "Figlia di Luigi Basile e Rosa Spettro.",
       "main": false
     },
     {
@@ -222,7 +216,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 1,
       "dates": "1932 – 1978",
-      "note": "Fratello/sorella di Gaetano. Deceduto/a; date mancanti da verificare. Anni di nascita e decesso confermati dall’utente.",
+      "note": "Fratello di Gaetano.",
       "main": false,
       "birthYear": 1932,
       "deathYear": 1978,
@@ -235,7 +229,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 1,
       "dates": "1922 –",
-      "note": "Fratello/sorella di Gaetano. In vita secondo la conversazione.",
+      "note": "Sorella di Gaetano. In vita.",
       "main": false,
       "foto": "foto/annc.webp"
     },
@@ -245,7 +239,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 1,
       "dates": "",
-      "note": "Sorella di Gaetano. Deceduta; date non disponibili. Età al decesso confermata dall’utente: 94 anni.",
+      "note": "Sorella di Gaetano.",
       "main": false,
       "deceased": true,
       "ageAtDeath": 94,
@@ -257,7 +251,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 1,
       "dates": "",
-      "note": "Sorella di Gaetano Correale e moglie di Rodolfo Iovino, chiamato Antonio. Matrimonio confermato dall’utente. Deceduta; date non disponibili. Età al decesso confermata dall’utente: 89 anni.",
+      "note": "Sorella di Gaetano Correale e moglie di Rodolfo Iovino, detto Antonio.",
       "main": false,
       "deceased": true,
       "ageAtDeath": 89,
@@ -269,7 +263,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 1,
       "dates": "1924 – 2004",
-      "note": "Sorella di Gaetano Correale, moglie di Arturo Salvati e madre di Rita Salvati. Legami confermati dall’utente. Deceduta; date da verificare. Anni di nascita e decesso confermati dall’utente.",
+      "note": "Sorella di Gaetano Correale, moglie di Arturo Salvati e madre di Rita Salvati.",
       "main": false,
       "birthYear": 1924,
       "deathYear": 2004,
@@ -282,7 +276,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 1,
       "dates": "1933 –",
-      "note": "In vita. Nata a ottobre 1933, mese e anno confermati dall’utente; giorno non disponibile.",
+      "note": "Nata a ottobre 1933.",
       "main": false,
       "birthYear": 1933,
       "birthMonth": 10,
@@ -294,7 +288,6 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 2,
       "dates": "1960 –",
-      "note": " Data di nascita confermata dall’utente: 1 agosto 1960.",
       "main": false,
       "birthDate": "1960-08-01",
       "birthYear": 1960,
@@ -307,7 +300,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 2,
       "dates": "1963 –",
-      "note": "Moglie di Amedeo Desgro e madre di Marcello, Francesco Paolo e Giorgia Desgro. Rapporti confermati dall’utente. Data di nascita confermata dall’utente: 1963-12-21.",
+      "note": "Moglie di Amedeo Desgro e madre di Marcello, Francesco Paolo e Giorgia Desgro.",
       "main": false,
       "birthDate": "1963-12-21",
       "birthYear": 1963,
@@ -320,7 +313,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 1,
       "dates": "",
-      "note": "Marito di Annunziata Correale e padre di Alfredo Cutrupi. Legami confermati dall’utente. Deceduto; date da verificare. Età al decesso confermata dall’utente: 64 anni.",
+      "note": "Marito di Annunziata Correale e padre di Alfredo Cutrupi.",
       "main": false,
       "deceased": true,
       "ageAtDeath": 64
@@ -331,7 +324,6 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 2,
       "dates": "1956 –",
-      "note": " Data di nascita confermata dall’utente: 1956-12-11.",
       "main": false,
       "birthDate": "1956-12-11",
       "birthYear": 1956,
@@ -344,7 +336,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 2,
       "dates": "",
-      "note": "In vita; date non note. Divorziata da Alfredo Cutrupi.",
+      "note": "Divorziata da Alfredo Cutrupi. In vita.",
       "main": false
     },
     {
@@ -353,7 +345,6 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 3,
       "dates": "1995 –",
-      "note": "",
       "main": false
     },
     {
@@ -362,7 +353,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 1,
       "dates": "? – 1975",
-      "note": "Marito di Olga Correale e padre di Sergio, Nicola e Katia Mosca. Legami confermati dall’utente. Deceduto nel 1975, anno confermato dall’utente.",
+      "note": "Marito di Olga Correale e padre di Sergio, Nicola e Katia Mosca.",
       "main": false,
       "deceased": true,
       "deathYear": 1975
@@ -373,7 +364,6 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 2,
       "dates": "1960 –",
-      "note": "Anno di nascita e stato in vita confermati dall’utente. Data di nascita confermata dall’utente: 1960-02-13.",
       "main": false,
       "birthYear": 1960,
       "deceased": false,
@@ -386,7 +376,6 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 2,
       "dates": "1957 –",
-      "note": "Anno di nascita e stato in vita confermati dall’utente. Data di nascita confermata dall’utente: 1957-01-01.",
       "main": false,
       "birthYear": 1957,
       "deceased": false,
@@ -399,7 +388,6 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 2,
       "dates": "1963 –",
-      "note": "Anno di nascita e stato in vita confermati dall’utente. Data di nascita confermata dall’utente: 1963-08-19.",
       "main": false,
       "birthYear": 1963,
       "deceased": false,
@@ -412,7 +400,6 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 2,
       "dates": "",
-      "note": "",
       "main": false
     },
     {
@@ -421,7 +408,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 3,
       "dates": "",
-      "note": "Figlio di Sergio Mosca e Teresa. Filiazione confermata dall’utente. Cognome non indicato; date volutamente omesse.",
+      "note": "Figlio di Sergio Mosca e Teresa.",
       "main": false
     },
     {
@@ -430,7 +417,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 3,
       "dates": "",
-      "note": "Figlio di Sergio Mosca e Teresa. Filiazione confermata dall’utente. Cognome non indicato; date volutamente omesse.",
+      "note": "Figlio di Sergio Mosca e Teresa.",
       "main": false
     },
     {
@@ -439,7 +426,6 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 2,
       "dates": "",
-      "note": "",
       "main": false
     },
     {
@@ -448,7 +434,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 3,
       "dates": "",
-      "note": "Figlio di Nicola Mosca e Cettina. Filiazione confermata dall’utente. Cognome e date non indicati.",
+      "note": "Figlio di Nicola Mosca e Cettina.",
       "main": false
     },
     {
@@ -457,7 +443,6 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 2,
       "dates": "",
-      "note": "",
       "main": false
     },
     {
@@ -466,7 +451,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 3,
       "dates": "",
-      "note": "Primo figlio di Katia Mosca ed Enzo. Nome, ordine e filiazione confermati dall’utente; cognome e date non indicati.",
+      "note": "Primo figlio di Katia Mosca ed Enzo.",
       "main": false
     },
     {
@@ -475,7 +460,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 3,
       "dates": "",
-      "note": "Seconda figlia di Katia Mosca ed Enzo. Nome, ordine e filiazione confermati dall’utente; cognome e date non indicati.",
+      "note": "Seconda figlia di Katia Mosca ed Enzo.",
       "main": false
     },
     {
@@ -484,7 +469,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 1,
       "dates": "",
-      "note": "Marito di Benedetta Correale e padre di Rita Salvati. Legami confermati dall’utente; sostituita la precedente attribuzione a Titina Correale. Deceduto; date non disponibili. Età al decesso confermata dall’utente: 82 anni.",
+      "note": "Marito di Benedetta Correale e padre di Rita Salvati.",
       "main": false,
       "deceased": true,
       "ageAtDeath": 82
@@ -495,7 +480,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 2,
       "dates": "1957 –",
-      "note": "Figlia di Benedetta Correale e Arturo Salvati; moglie di Raffaele Santoro e madre di Marco, Maurizio e Claudia Santoro. Legami confermati dall’utente. Data di nascita confermata dall’utente: 1957-01-13.",
+      "note": "Figlia di Benedetta Correale e Arturo Salvati; moglie di Raffaele Santoro e madre di Marco, Maurizio e Claudia Santoro.",
       "main": false,
       "birthDate": "1957-01-13",
       "birthYear": 1957,
@@ -508,7 +493,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 2,
       "dates": "1951 –",
-      "note": "Marito di Rita Salvati e padre di Marco, Maurizio e Claudia Santoro. Legami confermati dall’utente. Anno di nascita confermato dall’utente: 1951.",
+      "note": "Marito di Rita Salvati e padre di Marco, Maurizio e Claudia Santoro.",
       "main": false,
       "birthYear": 1951,
       "foto": "foto/raff.webp"
@@ -519,7 +504,6 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 3,
       "dates": "1983 –",
-      "note": "",
       "main": false,
       "birthDate": "1983-01-15",
       "birthDateUncertain": false,
@@ -531,7 +515,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 3,
       "dates": "1987 –",
-      "note": "Gemello di Claudia. Marito di Caterina e padre di Riccardo e Irene: legami confermati dall’utente.",
+      "note": "Gemello di Claudia. Marito di Caterina e padre di Riccardo e Irene.",
       "main": false,
       "birthDate": "1987-09-22",
       "birthDateUncertain": false
@@ -542,7 +526,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 3,
       "dates": "1987 –",
-      "note": "Gemella di Maurizio. Moglie di Marco Rago e madre di Emma e Federico: legami confermati dall’utente.",
+      "note": "Gemella di Maurizio. Moglie di Marco Rago e madre di Emma e Federico.",
       "main": false,
       "birthDate": "1987-09-22",
       "birthDateUncertain": false
@@ -553,7 +537,6 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 3,
       "dates": "",
-      "note": "",
       "main": false,
       "foto": "foto/nobile.webp"
     },
@@ -563,7 +546,6 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 4,
       "dates": "",
-      "note": "",
       "main": false
     },
     {
@@ -572,7 +554,6 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 4,
       "dates": "",
-      "note": "",
       "main": false
     },
     {
@@ -581,7 +562,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 3,
       "dates": "1987 –",
-      "note": "Moglie di Maurizio Santoro e madre di Riccardo e Irene. Legami confermati dall’utente; cognome non indicato.",
+      "note": "Moglie di Maurizio Santoro e madre di Riccardo e Irene.",
       "main": false
     },
     {
@@ -590,7 +571,6 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 4,
       "dates": "",
-      "note": "Cognome da verificare.",
       "main": false
     },
     {
@@ -599,7 +579,6 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 4,
       "dates": "",
-      "note": "Cognome da verificare.",
       "main": false
     },
     {
@@ -608,7 +587,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 3,
       "dates": "",
-      "note": "Marito di Claudia Santoro e padre di Emma e Federico. Legami confermati dall’utente.",
+      "note": "Marito di Claudia Santoro e padre di Emma e Federico.",
       "main": false
     },
     {
@@ -617,7 +596,6 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 4,
       "dates": "",
-      "note": "Cognome da verificare.",
       "main": false
     },
     {
@@ -626,7 +604,6 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 4,
       "dates": "",
-      "note": "Cognome da verificare.",
       "main": false
     },
     {
@@ -635,7 +612,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 2,
       "dates": "1959 – 2025",
-      "note": "Marito di Margherita Correale e padre di Marcello, Francesco Paolo e Giorgia Desgro. Nato il 2 settembre 1959 e deceduto il 7 novembre 2025, a 66 anni. Date e legami confermati dall’utente.",
+      "note": "Marito di Margherita Correale e padre di Marcello, Francesco Paolo e Giorgia Desgro.",
       "main": false,
       "birthDate": "1959-09-02",
       "deathDate": "2025-11-07",
@@ -673,7 +650,7 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 0,
       "dates": "",
-      "note": "Moglie di Francesco Langella e madre di Margherita Langella (nonna paterna di Francesco Correale). Matrimonio e filiazione confermati dall’utente.",
+      "note": "Moglie di Francesco Langella e madre di Margherita Langella (nonna paterna di Francesco Correale).",
       "main": true,
       "foto": "foto/livia0.webp"
     },
@@ -683,7 +660,7 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 0,
       "dates": "? – 1956",
-      "note": "Marito di Livia De Sena e padre di Margherita Langella (nonna paterna di Francesco Correale). Matrimonio e filiazione confermati dall’utente. Data del decesso confermata dall’utente: 24/10/1956.",
+      "note": "Marito di Livia De Sena e padre di Margherita Langella (nonna paterna di Francesco Correale).",
       "main": true,
       "deathDate": "1956-10-24",
       "deathYear": 1956,
@@ -697,7 +674,7 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 1,
       "dates": "",
-      "note": "Fratello di Margherita Langella. Decesso confermato dall’utente; data di morte non indicata.",
+      "note": "Fratello di Margherita Langella.",
       "main": false,
       "deceased": true
     },
@@ -707,8 +684,9 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 1,
       "dates": "? – 2026",
-      "note": "Cognome Zamboni confermato dall’utente. Attribuzione dell’anno di morte da verificare.",
-      "main": false
+      "note": "Anno di morte da verificare.",
+      "main": false,
+      "deceased": true
     },
     {
       "id": "franl",
@@ -716,7 +694,7 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 2,
       "dates": "1960 –",
-      "note": "In vita secondo la conversazione. Marito di Federica Iossa: matrimonio confermato dall’utente.",
+      "note": "Marito di Federica Iossa.",
       "main": false
     },
     {
@@ -725,7 +703,7 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 2,
       "dates": "1963 –",
-      "note": "In vita secondo la conversazione. Compagno di Silvia Orlandini e padre di Giuseppe Langella da un precedente matrimonio: legami confermati dall’utente.",
+      "note": "Compagno di Silvia Orlandini; padre di Giuseppe Langella, nato da un precedente matrimonio.",
       "main": false
     },
     {
@@ -734,7 +712,7 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 2,
       "dates": "1965 –",
-      "note": "In vita secondo la conversazione. Madre delle figlie dai nomi non indicati: filiazione confermata dall’utente.",
+      "note": "Ha delle figlie, di cui non sono noti i nomi.",
       "main": false
     },
     {
@@ -743,7 +721,7 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 2,
       "dates": "1957 –",
-      "note": "In vita secondo la conversazione. Moglie di Franco Guerrera e madre di Artem: legami confermati dall’utente. Anno di nascita confermato dall’utente: 1957.",
+      "note": "Moglie di Franco Guerrera e madre di Artem.",
       "main": false,
       "birthYear": 1957
     },
@@ -753,7 +731,7 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 2,
       "dates": "",
-      "note": "In vita secondo la conversazione. Divorziata e madre di Mireia: informazioni confermate dall’utente.",
+      "note": "Divorziata; madre di Mireia.",
       "main": false
     },
     {
@@ -762,7 +740,7 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 2,
       "dates": "",
-      "note": "Moglie di Francesco Langella (1960). Nome, cognome e matrimonio confermati dall’utente.",
+      "note": "Moglie di Francesco Langella (1960).",
       "main": false
     },
     {
@@ -771,7 +749,7 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 2,
       "dates": "",
-      "note": "Compagna di Gianluigi Langella. Rapporto confermato dall’utente; non è stato indicato un matrimonio.",
+      "note": "Compagna di Gianluigi Langella.",
       "main": false
     },
     {
@@ -780,7 +758,7 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 3,
       "dates": "",
-      "note": "Figlio di Gianluigi Langella, nato da un precedente matrimonio del padre. Filiazione confermata dall’utente; nome della madre e date non indicati.",
+      "note": "Figlio di Gianluigi Langella, nato da un precedente matrimonio del padre.",
       "main": false
     },
     {
@@ -789,7 +767,7 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 2,
       "dates": "",
-      "note": "Marito di Livia Langella e padre di Artem. Legami confermati dall’utente.",
+      "note": "Marito di Livia Langella e padre di Artem.",
       "main": false
     },
     {
@@ -798,7 +776,7 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 3,
       "dates": "",
-      "note": "Figlio di Livia Langella e Franco Guerrera. Filiazione confermata dall’utente; cognome e date non indicati.",
+      "note": "Figlio di Livia Langella e Franco Guerrera.",
       "main": false
     },
     {
@@ -807,7 +785,7 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 3,
       "dates": "",
-      "note": "Figlia di Mirella Langella. La madre è divorziata. Filiazione confermata dall’utente; cognome e date non indicati.",
+      "note": "Figlia di Mirella Langella.",
       "main": false
     },
     {
@@ -816,7 +794,7 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 3,
       "dates": "",
-      "note": "Figlie di Margherita Langella (1965): filiazione confermata dall’utente. Nomi, numero e date non indicati; questa è una voce collettiva.",
+      "note": "Figlie di Margherita Langella (1965); nomi e numero non noti.",
       "main": false
     },
     {
@@ -825,7 +803,7 @@ window.FAMIGLIA = {
       "branch": "Mortensen",
       "gen": 3,
       "dates": "1981 –",
-      "note": "Moglie di Francesco Correale. Dati confermati dall’utente.",
+      "note": "Moglie di Francesco Correale.",
       "main": true,
       "birthDate": "1981-06-29",
       "birthDateUncertain": false,
@@ -837,7 +815,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 4,
       "dates": "2019 –",
-      "note": "Figlia di Francesco Correale e Antonia Mortensen. Dati confermati dall’utente.",
+      "note": "Figlia di Francesco Correale e Antonia Mortensen.",
       "main": true,
       "foto": "foto/margherita_janina.webp"
     },
@@ -847,7 +825,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 0,
       "dates": "? – 1952",
-      "note": "Marito di Lucia Capriglione e padre di Gaetano Correale. Matrimonio e filiazione confermati dall’utente. Date non disponibili. Data del decesso confermata dall’utente: 01/02/1952.",
+      "note": "Marito di Lucia Capriglione e padre di Gaetano Correale.",
       "main": true,
       "deathDate": "1952-02-01",
       "deathYear": 1952,
@@ -869,7 +847,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 0,
       "dates": "",
-      "note": "Moglie di Giuseppe Correale e madre di Gaetano Correale. Matrimonio e filiazione confermati dall’utente. Date non disponibili.",
+      "note": "Moglie di Giuseppe Correale e madre di Gaetano Correale.",
       "main": true,
       "extraInfo": "Aveva tre fratelli: Salvatore, Giovanni e Giuseppe.",
       "profileLinks": [
@@ -887,7 +865,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 3,
       "dates": "2000 –",
-      "note": "Figlia di Margherita Correale e Amedeo Desgro. Dati confermati dall’utente.",
+      "note": "Figlia di Margherita Correale e Amedeo Desgro.",
       "main": false,
       "birthDate": "2000-07-23",
       "birthDateUncertain": false
@@ -898,7 +876,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 4,
       "dates": "",
-      "note": "Figlio/a di Isabella Perez. Cognome e date non indicati; il cognome non è stato dedotto.",
+      "note": "Figlio/a di Isabella Perez.",
       "main": false
     },
     {
@@ -907,7 +885,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 4,
       "dates": "",
-      "note": "Figlio/a di Isabella Perez. Cognome e date non indicati; il cognome non è stato dedotto.",
+      "note": "Figlio/a di Isabella Perez.",
       "main": false
     },
     {
@@ -916,7 +894,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 4,
       "dates": "",
-      "note": "Figlio/a di Isabella Perez. Cognome e date non indicati; il cognome non è stato dedotto.",
+      "note": "Figlio/a di Isabella Perez.",
       "main": false
     },
     {
@@ -925,7 +903,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 4,
       "dates": "",
-      "note": "Figlio/a di Isabella Perez. Cognome e date non indicati; il cognome non è stato dedotto.",
+      "note": "Figlio/a di Isabella Perez.",
       "main": false
     },
     {
@@ -934,7 +912,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 4,
       "dates": "",
-      "note": "Figlio/a di Stefania Perez. Cognome e date non indicati; il cognome non è stato dedotto.",
+      "note": "Figlio/a di Stefania Perez.",
       "main": false
     },
     {
@@ -943,7 +921,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 4,
       "dates": "",
-      "note": "Figlio/a di Stefania Perez. Cognome e date non indicati; il cognome non è stato dedotto.",
+      "note": "Figlio/a di Stefania Perez.",
       "main": false
     },
     {
@@ -952,7 +930,7 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 1,
       "dates": "? – 1973",
-      "note": "Marito di Titina Correale. Era chiamato Antonio. Identificato dall’utente come la persona numero 2 nella foto di gruppo. Deceduto nel 1973, anno confermato dall’utente.",
+      "note": "Marito di Titina Correale. Era chiamato Antonio.",
       "main": false,
       "deceased": true,
       "deathYear": 1973,
@@ -964,7 +942,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 4,
       "dates": "",
-      "note": "Figlio/a di Alessandra Basile. Nome e filiazione confermati dall’utente; cognome e data di nascita non indicati.",
+      "note": "Figlio/a di Alessandra Basile.",
       "main": false
     },
     {
@@ -973,7 +951,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 4,
       "dates": "",
-      "note": "Figlio/a di Alessandra Basile. Nome e filiazione confermati dall’utente; cognome e data di nascita non indicati.",
+      "note": "Figlio/a di Alessandra Basile.",
       "main": false
     },
     {
@@ -982,7 +960,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 4,
       "dates": "",
-      "note": "Figlio/a di Alessandra Basile. Nome e filiazione confermati dall’utente; cognome e data di nascita non indicati.",
+      "note": "Figlio/a di Alessandra Basile.",
       "main": false
     },
     {
@@ -991,7 +969,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 0,
       "dates": "",
-      "note": "Genitore di Gennaro Basile. Filiazione confermata dall’utente; date non disponibili.",
+      "note": "Genitore di Gennaro Basile.",
       "main": false
     },
     {
@@ -1000,7 +978,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 0,
       "dates": "",
-      "note": "Genitore di Gennaro Basile. Filiazione confermata dall’utente; date non disponibili.",
+      "note": "Genitore di Gennaro Basile.",
       "main": false
     },
     {
@@ -1009,7 +987,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 0,
       "dates": "",
-      "note": "Genitore di Nunzia Visciano. Filiazione confermata dall’utente; date non disponibili.",
+      "note": "Genitore di Nunzia Visciano.",
       "main": false
     },
     {
@@ -1018,7 +996,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 0,
       "dates": "",
-      "note": "Genitore di Nunzia Visciano. Filiazione confermata dall’utente; date non disponibili.",
+      "note": "Genitore di Nunzia Visciano.",
       "main": false
     }
   ],
@@ -1925,11 +1903,8 @@ window.FAMIGLIA = {
     }
   ],
   "notes": [
-    "I legami inizialmente ricostruiti dalla sequenza della conversazione sono stati confermati o corretti dall’utente. Restano da completare le date, i nomi e le altre informazioni personali non ancora disponibili.",
-    "Informazioni conservate senza attribuzione: una persona divorziata (marito da non inserire), una persona senza figli, una persona non sposata e senza figli, una persona sposata con marito dal nome non ricordato. Non sono state assegnate arbitrariamente.",
-    "Ramo Mortensen: inserite Antonia Mortensen (1981) e sua figlia Margherita Janina Correale Mortensen (2019), confermate dall’utente. Gli antenati di Antonia non sono ancora disponibili.",
-    "La collocazione per generazioni di eventuali nuclei non collegati è provvisoria e non implica una parentela. I cognomi non dichiarati sono omessi o segnalati da verificare.",
-    "Le condizioni «in vita» e «deceduto» riportano quanto dichiarato nella conversazione, senza aggiornamenti esterni. Nessun colore distingue vivi e deceduti."
+    "Ramo Mortensen: Antonia Mortensen e la figlia Margherita Janina. Gli antenati di Antonia non sono ancora inseriti.",
+    "La posizione per generazione dei nuclei non collegati è indicativa e non implica parentela."
   ],
   "profileOnly": [
     {
@@ -1937,7 +1912,7 @@ window.FAMIGLIA = {
       "name": "Salvatore Capriglione",
       "branch": "Correale",
       "dates": "",
-      "note": "Fratello di Lucia Capriglione. Informazione confermata dall’utente. Date non disponibili.",
+      "note": "Fratello di Lucia Capriglione.",
       "profileLinks": [
         {
           "id": "famiglia_capriglione",
