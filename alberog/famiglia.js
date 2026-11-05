@@ -751,7 +751,8 @@ window.FAMIGLIA = {
       "note": "Fratello di Margherita Langella.",
       "main": false,
       "deceased": true,
-      "onomastico": "03-19"
+      "onomastico": "03-19",
+      "foto": "foto/giusl.webp"
     },
     {
       "id": "amelia",
