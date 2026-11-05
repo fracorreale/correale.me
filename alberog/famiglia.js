@@ -799,11 +799,20 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 2,
       "dates": "1965 –",
-      "note": "Ha delle figlie, di cui non sono noti i nomi.",
+      "note": "Moglie di Luciano Polinari. Ha delle figlie, di cui non sono noti i nomi.",
       "main": false,
       "birthDate": "1965-12-03",
       "birthYear": 1965,
       "birthDateUncertain": false
+    },
+    {
+      "id": "polinari",
+      "name": "Luciano Polinari",
+      "branch": "Langella",
+      "gen": 2,
+      "dates": "",
+      "note": "Marito di Margherita Langella (1965).",
+      "main": false
     },
     {
       "id": "livial",
@@ -2020,6 +2029,12 @@ window.FAMIGLIA = {
       "a": "rosa_ciavolino",
       "b": "annb",
       "kind": "figlio",
+      "uncertain": false
+    },
+    {
+      "a": "margl",
+      "b": "polinari",
+      "kind": "coniuge",
       "uncertain": false
     }
   ],
