@@ -84,7 +84,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .generation-toggle:disabled{opacity:.65}
 
 
-.generation-toggle{height:94px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;box-sizing:border-box}
+.generation-toggle{z-index:6;height:94px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;box-sizing:border-box}
 
 .generation-toggle small{font-size:12px;line-height:1.4;font-weight:500}
 
@@ -135,7 +135,7 @@ function personalDates(p){
  return `<h3>Date</h3><p>Nascita: ${esc(birth)}${p.birthDateUncertain?' · da verificare':''}${info.deceased?`<br>Decesso: ${esc(death)}`:''}${p.onomastico?`<br>Onomastico: ${esc(new Intl.DateTimeFormat('it-IT',{day:'numeric',month:'long',timeZone:'UTC'}).format(new Date('2000-'+p.onomastico+'T00:00:00Z')))}`:''}</p>`;
 }
 
-function setScale(s){scale=Math.max(.04,Math.min(1.7,s));$('#tree').style.transform=`scale(${scale})`;$('#connections').style.transform=`scale(${scale})`;$('#tree').style.transformOrigin=$('#connections').style.transformOrigin='0 0';$('#stage').style.width=width*scale+'px';$('#stage').style.height=height*scale+'px';$('#zoom').textContent=Math.round(scale*100)+'%';scheduleOverflowHint()}
+function setScale(s){scale=Math.max(.04,Math.min(1.7,s));$('#tree').style.transform=`scale(${scale})`;$('#connections').style.transform=`scale(${scale})`;$('#tree').style.transformOrigin=$('#connections').style.transformOrigin='0 0';$('#stage').style.width=width*scale+'px';$('#stage').style.height=height*scale+'px';$('#zoom').textContent=Math.round(scale*100)+'%';pinGenerationLabels();scheduleOverflowHint()}
 let overflowFrame=null;
 function updateOverflowHints(){
  const viewport=$('#viewport'),rightEdge=viewport.scrollLeft+viewport.clientWidth,leftEdge=viewport.scrollLeft;
@@ -146,6 +146,8 @@ function updateOverflowHints(){
  $('.hint-copy').textContent=rightCount===1?'Un’altra persona':'Altre persone';
  $('.tree-shell').dataset.moreRight=String(rightCount>0);
 }
+/* Le etichette "Generazione" restano ancorate al lato sinistro mentre si scorre in orizzontale */
+function pinGenerationLabels(){const v=$('#viewport');if(!v)return;const x=14+v.scrollLeft/scale;document.querySelectorAll('#tree .generation-toggle').forEach(b=>b.style.left=x+'px');const h=$('#more-left');if(h)h.style.left=Math.round((14+128)*scale+10)+'px'}
 function scheduleOverflowHint(){if(overflowFrame!==null)return;overflowFrame=requestAnimationFrame(()=>{overflowFrame=null;updateOverflowHints()})}
 function familyLayout(ps){
  const ids=new Set(ps.map(p=>p.id)), uf=Object.fromEntries(ps.map(p=>[p.id,p.id]));
@@ -355,7 +357,7 @@ function openPerson(id){const profile=(DATA.familyProfiles||[]).find(x=>x.id===i
 $('#person .close').onclick=()=>$('#person').close();$('#person').addEventListener('click',e=>{if(e.target===$('#person')){let r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close()}});$('#person').addEventListener('close',()=>{if(lastFocus&&lastFocus.isConnected)lastFocus.focus()});const tabs=[...document.querySelectorAll('[data-family]')];
 function selectFamily(tab){selectedFamily=tab.dataset.family;mode=selectedFamily?'family':'main';scale=.75;render();$('#viewport').scrollTo(0,0);$('#results').innerHTML=''}
 tabs.forEach((tab,i)=>{tab.id=tab.id||'tab-'+tab.dataset.family;tab.setAttribute('aria-controls','viewport');tab.onclick=()=>selectFamily(tab);tab.onkeydown=e=>{let next;if(e.key==='ArrowRight')next=(i+1)%tabs.length;if(e.key==='ArrowLeft')next=(i+tabs.length-1)%tabs.length;if(e.key==='Home')next=0;if(e.key==='End')next=tabs.length-1;if(next!==undefined){e.preventDefault();tabs[next].focus();selectFamily(tabs[next])}}});$('#plus').onclick=()=>setScale(scale+.15);$('#minus').onclick=()=>setScale(scale-.15);$('#fit').onclick=()=>{setScale(Math.min(1,($('#viewport').clientWidth-30)/width));$('#viewport').scrollTo(0,0)};$('#search').oninput=()=>{let q=$('#search').value.trim().toLocaleLowerCase('it');$('#results').innerHTML=q?DATA.people.filter(p=>p.name.toLocaleLowerCase('it').includes(q)).map(p=>`<button data-result="${p.id}">${esc(p.name)} · ${esc(p.dates||p.branch)}</button>`).join('')||'<p style="padding:12px">Nessun risultato</p>':'';$('#results').querySelectorAll('button').forEach(b=>b.onclick=()=>{$('#results').innerHTML='';openPerson(b.dataset.result)})};document.addEventListener('keydown',e=>{if(e.key==='Escape')$('#results').innerHTML=''});$('#notes').innerHTML=DATA.notes.map(n=>`<li>${esc(n)}</li>`).join('');
-$('#viewport').addEventListener('scroll',scheduleOverflowHint,{passive:true});
+$('#viewport').addEventListener('scroll',()=>{pinGenerationLabels();scheduleOverflowHint()},{passive:true});
 window.addEventListener('resize',scheduleOverflowHint);
 if(typeof ResizeObserver!=='undefined')new ResizeObserver(scheduleOverflowHint).observe($('#viewport'));
 for(const [id,direction] of [['more-right',1],['more-left',-1]])$('#'+id).onclick=()=>{$('#viewport').scrollBy({left:direction*Math.max(240,$('#viewport').clientWidth*.7),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})};
