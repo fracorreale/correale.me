@@ -604,7 +604,9 @@ window.FAMIGLIA = {
       "dates": "",
       "main": false,
       "foto": "foto/nobile.webp",
-      "onomastico": "08-23"
+      "onomastico": "08-23",
+      "birthMonth": 8,
+      "birthDay": 16
     },
     {
       "id": "bens",
