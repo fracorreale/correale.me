@@ -8,10 +8,20 @@ carica i file su GitHub (ramo `main`): la pagina online si aggiorna in un minuto
 
 | File | Cosa contiene | Quando lo tocchi |
 |---|---|---|
-| `famiglia.js` | persone, date, note, legami | quasi sempre |
+| `famiglia.js` | persone, date, note, legami — **unica fonte dei dati** | quasi sempre |
 | `foto/<id>.webp` | un ritratto per persona | quando aggiungi o cambi una foto |
 | `img/` | sfondo e titolo | quasi mai |
-| `index.html` | grafica e logica della pagina | solo per cambiare l'aspetto |
+| `index.html` | grafica e logica dell'albero | solo per cambiare l'aspetto |
+| `Calendario-Compleanni.html` | grafica del calendario: legge le date da `famiglia.js` | solo per cambiare l'aspetto |
+| `Compleanni-Famiglia.ics` | file per Calendario Apple, generato da `famiglia.js` | da rigenerare dopo ogni cambio di date |
+
+**Regola importante:** non incollare mai dati o foto dentro `index.html` o `Calendario-Compleanni.html`
+e non ripubblicare una copia vecchia della pagina. Si parte sempre dai file attuali del repository,
+altrimenti si cancellano le modifiche fatte nel frattempo. Le date si cambiano solo in `famiglia.js`:
+albero e calendario si aggiornano da soli; il file `.ics` va rigenerato.
+
+Date di nascita in `famiglia.js`: `"birthDate": "AAAA-MM-GG"` se l'anno è noto;
+`"birthMonth": M, "birthDay": G` se l'anno non è noto.
 
 ## Operazioni tipiche
 

@@ -27,7 +27,10 @@ window.FAMIGLIA = {
       "gen": 2,
       "dates": "1947 –",
       "main": true,
-      "foto": "foto/padre.webp"
+      "foto": "foto/padre.webp",
+      "birthDate": "1947-10-24",
+      "birthYear": 1947,
+      "birthDateUncertain": false
     },
     {
       "id": "madre",
@@ -36,7 +39,10 @@ window.FAMIGLIA = {
       "gen": 2,
       "dates": "1953 –",
       "main": true,
-      "foto": "foto/madre.webp"
+      "foto": "foto/madre.webp",
+      "birthDate": "1953-01-21",
+      "birthYear": 1953,
+      "birthDateUncertain": false
     },
     {
       "id": "gaetano",
@@ -182,7 +188,9 @@ window.FAMIGLIA = {
       "gen": 3,
       "dates": "",
       "main": false,
-      "foto": "foto/isabella.webp"
+      "foto": "foto/isabella.webp",
+      "birthMonth": 5,
+      "birthDay": 3
     },
     {
       "id": "stefania",
@@ -190,7 +198,9 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 3,
       "dates": "",
-      "main": false
+      "main": false,
+      "birthMonth": 10,
+      "birthDay": 5
     },
     {
       "id": "rosa",
@@ -221,17 +231,22 @@ window.FAMIGLIA = {
       "birthYear": 1932,
       "deathYear": 1978,
       "deceased": true,
-      "foto": "foto/frant.webp"
+      "foto": "foto/frant.webp",
+      "birthDate": "1932-04-02",
+      "birthDateUncertain": false
     },
     {
       "id": "annc",
       "name": "Annunziata Correale",
       "branch": "Correale",
       "gen": 1,
-      "dates": "1922 –",
+      "dates": "1923 –",
       "note": "Sorella di Gaetano. In vita.",
       "main": false,
-      "foto": "foto/annc.webp"
+      "foto": "foto/annc.webp",
+      "birthDate": "1923-01-01",
+      "birthYear": 1923,
+      "birthDateUncertain": false
     },
     {
       "id": "olga",
@@ -268,7 +283,9 @@ window.FAMIGLIA = {
       "birthYear": 1924,
       "deathYear": 2004,
       "deceased": true,
-      "foto": "foto/benedetta.webp"
+      "foto": "foto/benedetta.webp",
+      "birthDate": "1924-04-01",
+      "birthDateUncertain": false
     },
     {
       "id": "coccia",
@@ -279,8 +296,9 @@ window.FAMIGLIA = {
       "note": "Nata a ottobre 1933.",
       "main": false,
       "birthYear": 1933,
-      "birthMonth": 10,
-      "foto": "foto/coccia.webp"
+      "foto": "foto/coccia.webp",
+      "birthDate": "1933-10-20",
+      "birthDateUncertain": false
     },
     {
       "id": "lucc",
@@ -345,7 +363,10 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 3,
       "dates": "1995 –",
-      "main": false
+      "main": false,
+      "birthDate": "1995-01-21",
+      "birthYear": 1995,
+      "birthDateUncertain": false
     },
     {
       "id": "oreste",
@@ -496,7 +517,9 @@ window.FAMIGLIA = {
       "note": "Marito di Rita Salvati e padre di Marco, Maurizio e Claudia Santoro.",
       "main": false,
       "birthYear": 1951,
-      "foto": "foto/raff.webp"
+      "foto": "foto/raff.webp",
+      "birthDate": "1951-03-01",
+      "birthDateUncertain": false
     },
     {
       "id": "marco",
@@ -505,9 +528,10 @@ window.FAMIGLIA = {
       "gen": 3,
       "dates": "1983 –",
       "main": false,
-      "birthDate": "1983-01-15",
+      "birthDate": "1983-01-14",
       "birthDateUncertain": false,
-      "foto": "foto/marco.webp"
+      "foto": "foto/marco.webp",
+      "birthYear": 1983
     },
     {
       "id": "maurizio",
@@ -859,7 +883,7 @@ window.FAMIGLIA = {
       "name": "Lucia Capriglione",
       "branch": "Correale",
       "gen": 0,
-      "dates": "",
+      "dates": "1891 –",
       "note": "Moglie di Giuseppe Correale e madre di Gaetano Correale.",
       "main": true,
       "extraInfo": "Aveva tre fratelli: Salvatore, Giovanni e Giuseppe.",
@@ -870,7 +894,11 @@ window.FAMIGLIA = {
           "highlight": true
         }
       ],
-      "foto": "foto/lucia_capriglione.webp"
+      "foto": "foto/lucia_capriglione.webp",
+      "birthDate": "1891-11-13",
+      "birthYear": 1891,
+      "birthDateUncertain": false,
+      "deceased": true
     },
     {
       "id": "giorgia_desgro",
@@ -890,7 +918,9 @@ window.FAMIGLIA = {
       "gen": 4,
       "dates": "",
       "note": "Figlia di Isabella Perez.",
-      "main": false
+      "main": false,
+      "birthMonth": 8,
+      "birthDay": 30
     },
     {
       "id": "saul",
@@ -899,7 +929,9 @@ window.FAMIGLIA = {
       "gen": 4,
       "dates": "",
       "note": "Figlio di Isabella Perez.",
-      "main": false
+      "main": false,
+      "birthMonth": 9,
+      "birthDay": 2
     },
     {
       "id": "alice",
@@ -908,7 +940,9 @@ window.FAMIGLIA = {
       "gen": 4,
       "dates": "",
       "note": "Figlia di Isabella Perez.",
-      "main": false
+      "main": false,
+      "birthMonth": 8,
+      "birthDay": 20
     },
     {
       "id": "pippo",
@@ -917,7 +951,9 @@ window.FAMIGLIA = {
       "gen": 4,
       "dates": "",
       "note": "Figlio di Isabella Perez.",
-      "main": false
+      "main": false,
+      "birthMonth": 7,
+      "birthDay": 19
     },
     {
       "id": "lara_cristina",
@@ -926,7 +962,9 @@ window.FAMIGLIA = {
       "gen": 4,
       "dates": "",
       "note": "Figlio/a di Stefania Perez.",
-      "main": false
+      "main": false,
+      "birthMonth": 8,
+      "birthDay": 27
     },
     {
       "id": "giorgia_perez_figlia",
@@ -935,7 +973,9 @@ window.FAMIGLIA = {
       "gen": 4,
       "dates": "",
       "note": "Figlio/a di Stefania Perez.",
-      "main": false
+      "main": false,
+      "birthMonth": 8,
+      "birthDay": 10
     },
     {
       "id": "rodolfo_iovino",
