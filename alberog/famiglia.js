@@ -961,7 +961,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 4,
       "dates": "",
-      "note": "Figlio/a di Stefania Perez.",
+      "note": "Figlia di Stefania Perez.",
       "main": false,
       "birthMonth": 8,
       "birthDay": 27
@@ -972,7 +972,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 4,
       "dates": "",
-      "note": "Figlio/a di Stefania Perez.",
+      "note": "Figlia di Stefania Perez.",
       "main": false,
       "birthMonth": 8,
       "birthDay": 10
