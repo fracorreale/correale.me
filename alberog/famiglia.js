@@ -4,6 +4,7 @@
    - edges: legami (kind: "coniuge", "figlio", "fratello/sorella"); a → b
    - profileOnly: persone solo in scheda, non disegnate nell'albero
    - familyProfiles: schede di famiglia
+   onomastico: "MM-GG" (es. "03-19"). onomasticiAltri: onomastici di persone non presenti nell'albero.
    Per una nuova foto: salva foto/<id>.webp e aggiungi "foto": "foto/<id>.webp" alla persona.
    Attenzione: virgole e virgolette devono restare corrette, altrimenti la pagina resta vuota. */
 window.FAMIGLIA = {
@@ -18,7 +19,8 @@ window.FAMIGLIA = {
       "main": true,
       "birthDate": "1983-05-11",
       "birthDateUncertain": false,
-      "foto": "foto/io.webp"
+      "foto": "foto/io.webp",
+      "onomastico": "04-02"
     },
     {
       "id": "padre",
@@ -30,7 +32,8 @@ window.FAMIGLIA = {
       "foto": "foto/padre.webp",
       "birthDate": "1947-10-24",
       "birthYear": 1947,
-      "birthDateUncertain": false
+      "birthDateUncertain": false,
+      "onomastico": "03-19"
     },
     {
       "id": "madre",
@@ -42,7 +45,8 @@ window.FAMIGLIA = {
       "foto": "foto/madre.webp",
       "birthDate": "1953-01-21",
       "birthYear": 1953,
-      "birthDateUncertain": false
+      "birthDateUncertain": false,
+      "onomastico": "08-30"
     },
     {
       "id": "gaetano",
@@ -59,7 +63,8 @@ window.FAMIGLIA = {
       "birthDate": "1921-05-02",
       "birthYear": 1921,
       "birthDateUncertain": false,
-      "foto": "foto/gaetano.webp"
+      "foto": "foto/gaetano.webp",
+      "onomastico": "08-07"
     },
     {
       "id": "nonna",
@@ -72,7 +77,8 @@ window.FAMIGLIA = {
       "birthYear": 1923,
       "birthDateUncertain": false,
       "foto": "foto/nonna.webp",
-      "deceased": true
+      "deceased": true,
+      "onomastico": "06-10"
     },
     {
       "id": "ziof",
@@ -84,7 +90,8 @@ window.FAMIGLIA = {
       "birthDate": "1955-05-21",
       "birthYear": 1955,
       "birthDateUncertain": false,
-      "foto": "foto/ziof.webp"
+      "foto": "foto/ziof.webp",
+      "onomastico": "10-04"
     },
     {
       "id": "elisa",
@@ -188,7 +195,8 @@ window.FAMIGLIA = {
       "main": false,
       "birthDate": "1971-01-22",
       "birthDateUncertain": false,
-      "foto": "foto/guglielmo.webp"
+      "foto": "foto/guglielmo.webp",
+      "onomastico": "06-25"
     },
     {
       "id": "isabella",
@@ -255,7 +263,8 @@ window.FAMIGLIA = {
       "foto": "foto/annc.webp",
       "birthDate": "1923-01-01",
       "birthYear": 1923,
-      "birthDateUncertain": false
+      "birthDateUncertain": false,
+      "onomastico": "03-25"
     },
     {
       "id": "olga",
@@ -267,7 +276,8 @@ window.FAMIGLIA = {
       "main": false,
       "deceased": true,
       "ageAtDeath": 94,
-      "foto": "foto/olga.webp"
+      "foto": "foto/olga.webp",
+      "onomastico": "07-11"
     },
     {
       "id": "titina",
@@ -279,7 +289,8 @@ window.FAMIGLIA = {
       "main": false,
       "deceased": true,
       "ageAtDeath": 89,
-      "foto": "foto/titina.webp"
+      "foto": "foto/titina.webp",
+      "onomastico": "08-07"
     },
     {
       "id": "benedetta",
@@ -307,7 +318,8 @@ window.FAMIGLIA = {
       "birthYear": 1933,
       "foto": "foto/coccia.webp",
       "birthDate": "1933-10-20",
-      "birthDateUncertain": false
+      "birthDateUncertain": false,
+      "onomastico": "03-19"
     },
     {
       "id": "lucc",
@@ -319,7 +331,8 @@ window.FAMIGLIA = {
       "birthDate": "1960-08-01",
       "birthYear": 1960,
       "birthDateUncertain": false,
-      "foto": "foto/lucc.webp"
+      "foto": "foto/lucc.webp",
+      "onomastico": "12-13"
     },
     {
       "id": "margc",
@@ -332,7 +345,8 @@ window.FAMIGLIA = {
       "birthDate": "1962-12-21",
       "birthYear": 1962,
       "birthDateUncertain": false,
-      "foto": "foto/margc.webp"
+      "foto": "foto/margc.webp",
+      "onomastico": "02-22"
     },
     {
       "id": "cut",
@@ -355,7 +369,8 @@ window.FAMIGLIA = {
       "birthDate": "1956-12-11",
       "birthYear": 1956,
       "birthDateUncertain": false,
-      "foto": "foto/alfredo.webp"
+      "foto": "foto/alfredo.webp",
+      "onomastico": "08-14"
     },
     {
       "id": "rosanna",
@@ -364,7 +379,8 @@ window.FAMIGLIA = {
       "gen": 2,
       "dates": "",
       "note": "Divorziata da Alfredo Cutrupi. In vita.",
-      "main": false
+      "main": false,
+      "onomastico": "08-23"
     },
     {
       "id": "francesca",
@@ -375,7 +391,8 @@ window.FAMIGLIA = {
       "main": false,
       "birthDate": "1995-01-21",
       "birthYear": 1995,
-      "birthDateUncertain": false
+      "birthDateUncertain": false,
+      "onomastico": "10-04"
     },
     {
       "id": "oreste",
@@ -398,7 +415,8 @@ window.FAMIGLIA = {
       "birthYear": 1960,
       "deceased": false,
       "birthDate": "1960-02-12",
-      "birthDateUncertain": false
+      "birthDateUncertain": false,
+      "onomastico": "10-07"
     },
     {
       "id": "nicola",
@@ -410,7 +428,8 @@ window.FAMIGLIA = {
       "birthYear": 1957,
       "deceased": false,
       "birthDate": "1957-01-01",
-      "birthDateUncertain": false
+      "birthDateUncertain": false,
+      "onomastico": "12-06"
     },
     {
       "id": "katia",
@@ -422,7 +441,8 @@ window.FAMIGLIA = {
       "birthYear": 1963,
       "deceased": false,
       "birthDate": "1963-08-19",
-      "birthDateUncertain": false
+      "birthDateUncertain": false,
+      "onomastico": "05-12"
     },
     {
       "id": "teresa",
@@ -430,7 +450,10 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 2,
       "dates": "",
-      "main": false
+      "main": false,
+      "onomastico": "10-15",
+      "birthMonth": 9,
+      "birthDay": 14
     },
     {
       "id": "walter",
@@ -456,7 +479,8 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 2,
       "dates": "",
-      "main": false
+      "main": false,
+      "onomastico": "12-08"
     },
     {
       "id": "roberto",
@@ -465,7 +489,8 @@ window.FAMIGLIA = {
       "gen": 3,
       "dates": "",
       "note": "Figlio di Nicola Mosca e Cettina.",
-      "main": false
+      "main": false,
+      "onomastico": "06-07"
     },
     {
       "id": "enzo",
@@ -473,7 +498,8 @@ window.FAMIGLIA = {
       "branch": "Correale",
       "gen": 2,
       "dates": "",
-      "main": false
+      "main": false,
+      "onomastico": "04-05"
     },
     {
       "id": "enzof1",
@@ -491,7 +517,8 @@ window.FAMIGLIA = {
       "gen": 3,
       "dates": "",
       "note": "Seconda figlia di Katia Mosca ed Enzo.",
-      "main": false
+      "main": false,
+      "onomastico": "10-05"
     },
     {
       "id": "arturo",
@@ -515,7 +542,8 @@ window.FAMIGLIA = {
       "birthDate": "1957-01-13",
       "birthYear": 1957,
       "birthDateUncertain": false,
-      "foto": "foto/rita.webp"
+      "foto": "foto/rita.webp",
+      "onomastico": "05-22"
     },
     {
       "id": "raff",
@@ -528,7 +556,8 @@ window.FAMIGLIA = {
       "birthYear": 1951,
       "foto": "foto/raff.webp",
       "birthDate": "1951-03-01",
-      "birthDateUncertain": false
+      "birthDateUncertain": false,
+      "onomastico": "10-24"
     },
     {
       "id": "marco",
@@ -540,7 +569,8 @@ window.FAMIGLIA = {
       "birthDate": "1983-01-14",
       "birthDateUncertain": false,
       "foto": "foto/marco.webp",
-      "birthYear": 1983
+      "birthYear": 1983,
+      "onomastico": "04-25"
     },
     {
       "id": "maurizio",
@@ -551,7 +581,8 @@ window.FAMIGLIA = {
       "note": "Gemello di Claudia. Marito di Caterina e padre di Riccardo e Irene.",
       "main": false,
       "birthDate": "1987-09-22",
-      "birthDateUncertain": false
+      "birthDateUncertain": false,
+      "onomastico": "09-22"
     },
     {
       "id": "claudia",
@@ -562,7 +593,8 @@ window.FAMIGLIA = {
       "note": "Gemella di Maurizio. Moglie di Marco Rago e madre di Emma e Federico.",
       "main": false,
       "birthDate": "1987-09-22",
-      "birthDateUncertain": false
+      "birthDateUncertain": false,
+      "onomastico": "03-20"
     },
     {
       "id": "nobile",
@@ -571,7 +603,8 @@ window.FAMIGLIA = {
       "gen": 3,
       "dates": "",
       "main": false,
-      "foto": "foto/nobile.webp"
+      "foto": "foto/nobile.webp",
+      "onomastico": "08-23"
     },
     {
       "id": "bens",
@@ -621,7 +654,8 @@ window.FAMIGLIA = {
       "gen": 3,
       "dates": "",
       "note": "Marito di Claudia Santoro e padre di Emma e Federico.",
-      "main": false
+      "main": false,
+      "onomastico": "04-25"
     },
     {
       "id": "emma",
@@ -651,7 +685,8 @@ window.FAMIGLIA = {
       "deathDate": "2025-11-07",
       "birthDateUncertain": false,
       "deceased": true,
-      "foto": "foto/amedeo.webp"
+      "foto": "foto/amedeo.webp",
+      "onomastico": "03-30"
     },
     {
       "id": "marcello",
@@ -663,7 +698,8 @@ window.FAMIGLIA = {
       "main": false,
       "birthDate": "1987-07-04",
       "birthDateUncertain": false,
-      "foto": "foto/marcello.webp"
+      "foto": "foto/marcello.webp",
+      "onomastico": "01-16"
     },
     {
       "id": "fp",
@@ -675,7 +711,8 @@ window.FAMIGLIA = {
       "main": false,
       "birthDate": "1989-02-13",
       "birthDateUncertain": false,
-      "foto": "foto/fp.webp"
+      "foto": "foto/fp.webp",
+      "onomastico": "04-02"
     },
     {
       "id": "livia0",
@@ -709,7 +746,8 @@ window.FAMIGLIA = {
       "dates": "",
       "note": "Fratello di Margherita Langella.",
       "main": false,
-      "deceased": true
+      "deceased": true,
+      "onomastico": "03-19"
     },
     {
       "id": "amelia",
@@ -719,7 +757,8 @@ window.FAMIGLIA = {
       "dates": "? – 2026",
       "main": false,
       "deceased": true,
-      "deathYear": 2026
+      "deathYear": 2026,
+      "onomastico": "01-05"
     },
     {
       "id": "franl",
@@ -732,7 +771,8 @@ window.FAMIGLIA = {
       "birthDate": "1960-03-22",
       "birthYear": 1960,
       "birthDateUncertain": false,
-      "foto": "foto/franl.webp"
+      "foto": "foto/franl.webp",
+      "onomastico": "10-04"
     },
     {
       "id": "gian",
@@ -745,7 +785,8 @@ window.FAMIGLIA = {
       "birthDate": "1963-02-17",
       "birthYear": 1963,
       "birthDateUncertain": false,
-      "foto": "foto/gian.webp"
+      "foto": "foto/gian.webp",
+      "onomastico": "12-27"
     },
     {
       "id": "margl",
@@ -769,7 +810,8 @@ window.FAMIGLIA = {
       "main": false,
       "birthYear": 1957,
       "birthDate": "1957-08-13",
-      "birthDateUncertain": false
+      "birthDateUncertain": false,
+      "onomastico": "11-29"
     },
     {
       "id": "mirella",
@@ -780,7 +822,8 @@ window.FAMIGLIA = {
       "note": "Divorziata; madre di Mireia.",
       "main": false,
       "birthMonth": 11,
-      "birthDay": 6
+      "birthDay": 6,
+      "onomastico": "05-21"
     },
     {
       "id": "federica",
@@ -816,7 +859,8 @@ window.FAMIGLIA = {
       "gen": 2,
       "dates": "",
       "note": "Marito di Livia Langella e padre di Artem.",
-      "main": false
+      "main": false,
+      "onomastico": "10-04"
     },
     {
       "id": "artem",
@@ -855,7 +899,8 @@ window.FAMIGLIA = {
       "main": true,
       "birthDate": "1981-06-29",
       "birthDateUncertain": false,
-      "foto": "foto/antonia.webp"
+      "foto": "foto/antonia.webp",
+      "onomastico": "06-13"
     },
     {
       "id": "margherita_janina",
@@ -868,7 +913,8 @@ window.FAMIGLIA = {
       "foto": "foto/margherita_janina.webp",
       "birthDate": "2019-10-15",
       "birthYear": 2019,
-      "birthDateUncertain": false
+      "birthDateUncertain": false,
+      "onomastico": "06-10"
     },
     {
       "id": "giuseppe_antenato",
@@ -912,7 +958,8 @@ window.FAMIGLIA = {
       "birthDate": "1891-11-13",
       "birthYear": 1891,
       "birthDateUncertain": false,
-      "deceased": true
+      "deceased": true,
+      "onomastico": "12-13"
     },
     {
       "id": "giorgia_desgro",
@@ -923,7 +970,8 @@ window.FAMIGLIA = {
       "note": "Figlia di Margherita Correale e Amedeo Desgro.",
       "main": false,
       "birthDate": "2000-07-23",
-      "birthDateUncertain": false
+      "birthDateUncertain": false,
+      "onomastico": "04-23"
     },
     {
       "id": "sirya",
@@ -989,7 +1037,8 @@ window.FAMIGLIA = {
       "note": "Figlia di Stefania Perez.",
       "main": false,
       "birthMonth": 8,
-      "birthDay": 10
+      "birthDay": 10,
+      "onomastico": "04-23"
     },
     {
       "id": "rodolfo_iovino",
@@ -2029,6 +2078,64 @@ window.FAMIGLIA = {
           ]
         }
       ]
+    }
+  ],
+  "onomasticiAltri": [
+    {
+      "nome": "Mario",
+      "onomastico": "01-19"
+    },
+    {
+      "nome": "Agnese",
+      "onomastico": "01-21"
+    },
+    {
+      "nome": "Ciro",
+      "onomastico": "01-31"
+    },
+    {
+      "nome": "Lisa",
+      "onomastico": "03-24"
+    },
+    {
+      "nome": "Pasquale",
+      "onomastico": "05-17"
+    },
+    {
+      "nome": "Antonio V.",
+      "onomastico": "06-13"
+    },
+    {
+      "nome": "Giovanna Magliulo",
+      "onomastico": "06-24"
+    },
+    {
+      "nome": "Giovanni Capriglione",
+      "onomastico": "06-24"
+    },
+    {
+      "nome": "Giovanni O.",
+      "onomastico": "06-24"
+    },
+    {
+      "nome": "Zia Anna (Capriglione)",
+      "onomastico": "07-26"
+    },
+    {
+      "nome": "Salvatore B.",
+      "onomastico": "08-06"
+    },
+    {
+      "nome": "Emilia Cilio",
+      "onomastico": "08-17"
+    },
+    {
+      "nome": "Zio Bruno",
+      "onomastico": "10-06"
+    },
+    {
+      "nome": "Zia Lina",
+      "onomastico": "10-24"
     }
   ]
 };
