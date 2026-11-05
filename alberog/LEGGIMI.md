@@ -14,6 +14,8 @@ carica i file su GitHub (ramo `main`): la pagina online si aggiorna in un minuto
 | `index.html` | grafica e logica dell'albero | solo per cambiare l'aspetto |
 | `Calendario-Compleanni.html` | grafica del calendario: legge le date da `famiglia.js` | solo per cambiare l'aspetto |
 | `Compleanni-Famiglia.ics` | file per Calendario Apple, generato da `famiglia.js` | da rigenerare dopo ogni cambio di date |
+| `Calendario-Onomastici.html` | grafica del calendario degli onomastici: legge da `famiglia.js` | solo per cambiare l'aspetto |
+| `Onomastici-Famiglia.ics` | onomastici per Calendario Apple, generato da `famiglia.js` | da rigenerare dopo ogni cambio di onomastico |
 
 **Regola importante:** non incollare mai dati o foto dentro `index.html` o `Calendario-Compleanni.html`
 e non ripubblicare una copia vecchia della pagina. Si parte sempre dai file attuali del repository,
