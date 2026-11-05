@@ -148,7 +148,9 @@ window.FAMIGLIA = {
       "note": "Figlia di Gennaro Basile e Nunzia Visciano.",
       "main": false,
       "birthYear": 1960,
-      "foto": "foto/elenab.webp"
+      "foto": "foto/elenab.webp",
+      "birthDate": "1960-01-04",
+      "birthDateUncertain": false
     },
     {
       "id": "luigib",
@@ -854,7 +856,10 @@ window.FAMIGLIA = {
       "dates": "2019 –",
       "note": "Figlia di Francesco Correale e Antonia Mortensen.",
       "main": true,
-      "foto": "foto/margherita_janina.webp"
+      "foto": "foto/margherita_janina.webp",
+      "birthDate": "2019-10-15",
+      "birthYear": 2019,
+      "birthDateUncertain": false
     },
     {
       "id": "giuseppe_antenato",
