@@ -1062,7 +1062,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 4,
       "dates": "",
-      "note": "Figlio/a di Alessandra Basile.",
+      "note": "Figlia di Alessandra Basile.",
       "main": false
     },
     {
@@ -1071,7 +1071,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 4,
       "dates": "",
-      "note": "Figlio/a di Alessandra Basile.",
+      "note": "Figlio di Alessandra Basile.",
       "main": false
     },
     {
@@ -1080,7 +1080,7 @@ window.FAMIGLIA = {
       "branch": "Basile",
       "gen": 4,
       "dates": "",
-      "note": "Figlio/a di Alessandra Basile.",
+      "note": "Figlio di Alessandra Basile.",
       "main": false
     },
     {
