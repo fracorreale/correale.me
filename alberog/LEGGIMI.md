@@ -32,3 +32,8 @@ Date di nascita in `famiglia.js`: `"birthDate": "AAAA-MM-GG"` se l'anno è noto;
   poi aggiungi in `edges` i legami (`coniuge`, `figlio`, `fratello/sorella`).
 
 Se dopo una modifica la pagina resta vuota, quasi sempre manca una virgola o una virgoletta in `famiglia.js`.
+
+## Schede
+
+- Nel calendario, un clic su un nome apre la scheda dell'albero sopra la pagina: è la stessa scheda di `index.html`, non una copia.
+- Link diretto a una scheda: `index.html#persona=<id>` (es. `#persona=gaetano`).

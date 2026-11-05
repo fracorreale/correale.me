@@ -20,6 +20,7 @@ header>a.back:first-child,header>a.back:first-child:hover{border:0;background:tr
 .month:not(#date-mancanti) h2{background:#b12d31;color:#fffaf0;border:0;padding:10px 14px}.month:not(#date-mancanti) h2 small{color:#fffaf0}@media(max-width:600px){.month:not(#date-mancanti) h2{padding:9px 12px}}
 
 .month:not(#date-mancanti) .cards{grid-template-columns:1fr}.birthday-day .day-people{display:flex;flex:1;gap:12px 28px;flex-wrap:wrap;align-items:center;min-width:0}.birthday-person{display:flex;align-items:center;gap:12px;min-height:80px;flex:0 1 320px;min-width:0}.birthday-day .day-number{flex:0 0 60px}.birthday-person[hidden],.birthday-day[hidden]{display:none}@media(max-width:600px){.birthday-person{flex:1 1 150px;min-height:65px}.birthday-day .day-people{gap:8px 15px}.birthday-person img{width:48px;height:66px}.birthday-day .day-number{flex-basis:50px}}
+.birthday-person[data-id]{cursor:pointer;border-radius:12px;transition:background .15s}.birthday-person[data-id]:hover strong{text-decoration:underline;text-underline-offset:3px}.birthday-person[data-id]:focus-visible{outline:3px solid #7893a9;outline-offset:2px}.scheda-frame{position:fixed;inset:0;width:100%;height:100%;border:0;z-index:1000;background:transparent;color-scheme:light}
 </style><header><a class="back" href="./">← Torna all’albero</a><div class="calendar-masthead"><h1><span>Calendario dei</span><strong>Compleanni</strong></h1><p class="masthead-tagline">I giorni da ricordare, mese per mese.</p></div><div class="calendar-tools"><input type="search" id="birthday-search" placeholder="Cerca una persona…" aria-label="Cerca nel calendario"><a class="back download-birthdays" href="Compleanni-Famiglia.ics" download="Compleanni-Famiglia.ics">↓ Scarica per Calendario Apple</a></div><nav class="months" aria-label="Mesi"><a href="#mese-1" aria-label="Gennaio" title="Gennaio">Gen</a><a href="#mese-2" aria-label="Febbraio" title="Febbraio">Feb</a><a href="#mese-3" aria-label="Marzo" title="Marzo">Mar</a><a href="#mese-4" aria-label="Aprile" title="Aprile">Apr</a><a href="#mese-5" aria-label="Maggio" title="Maggio">Mag</a><a href="#mese-6" aria-label="Giugno" title="Giugno">Giu</a><a href="#mese-7" aria-label="Luglio" title="Luglio">Lug</a><a href="#mese-8" aria-label="Agosto" title="Agosto">Ago</a><a href="#mese-9" aria-label="Settembre" title="Settembre">Set</a><a href="#mese-10" aria-label="Ottobre" title="Ottobre">Ott</a><a href="#mese-11" aria-label="Novembre" title="Novembre">Nov</a><a href="#mese-12" aria-label="Dicembre" title="Dicembre">Dic</a><a href="#date-mancanti">Date da completare</a></nav></header><main></main><script src="famiglia.js"></script><script>
 /* Il calendario si costruisce da famiglia.js: per cambiare una data modifica solo quel file. */
 (()=>{const D=window.FAMIGLIA,people=[...D.people,...(D.profileOnly||[])];
@@ -27,7 +28,7 @@ const MESI=['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Ag
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const key=p=>p.name.toLocaleLowerCase('it');
 const nascita=p=>{if(p.birthDate){const[,m,d]=p.birthDate.split('-').map(Number);return{m,d}}return p.birthMonth?{m:p.birthMonth,d:p.birthDay||null}:null};
-const persona=p=>`<div class="birthday-person" data-name="${esc(key(p))}">${p.foto?`<img src="${esc(p.foto)}" alt="" loading="lazy">`:''}<div><strong>${esc(p.name)}</strong></div></div>`;
+const persona=p=>`<div class="birthday-person" data-id="${esc(p.id)}" data-name="${esc(key(p))}" role="button" tabindex="0" title="Apri la scheda di ${esc(p.name)}">${p.foto?`<img src="${esc(p.foto)}" alt="" loading="lazy">`:''}<div><strong>${esc(p.name)}</strong></div></div>`;
 const mesi=MESI.map(()=>[]),mancanti=[];
 for(const p of people){const n=nascita(p);n?mesi[n.m-1].push({p,d:n.d}):mancanti.push(p)}
 let html=mesi.map((lista,i)=>{
@@ -37,5 +38,12 @@ let html=mesi.map((lista,i)=>{
  return `<section id="mese-${i+1}" class="month"><h2>${MESI[i]} <small>${lista.length}</small></h2><div class="cards">${schede||'<p class="empty">Nessun compleanno registrato.</p>'}</div></section>`}).join('');
 mancanti.sort((a,b)=>a.name.localeCompare(b.name,'it'));
 html+=`<section class="month" id="date-mancanti"><h2>Date da completare</h2><p>Mese e giorno di nascita non ancora registrati.</p><div class="cards">${mancanti.map(p=>`<article class="birthday" data-name="${esc(key(p))}"><b class="day-number">—</b>${persona(p)}</article>`).join('')}</div></section>`;
-document.querySelector('main').innerHTML=html;})();
+document.querySelector('main').innerHTML=html;
+/* Clic su un nome: apre la scheda dell'albero sopra il calendario */
+let scheda=null;const chiudi=()=>{if(scheda){scheda.remove();scheda=null;document.documentElement.style.overflow=''}};
+const apri=id=>{chiudi();scheda=document.createElement('iframe');scheda.className='scheda-frame';scheda.title='Scheda della persona';scheda.src='index.html?embed=1&scheda='+encodeURIComponent(id);document.body.append(scheda);document.documentElement.style.overflow='hidden';scheda.addEventListener('load',()=>scheda&&scheda.focus())};
+window.addEventListener('message',e=>{if(e.data&&e.data.tipo==='scheda-chiusa')chiudi()});
+document.querySelector('main').addEventListener('click',e=>{const el=e.target.closest('.birthday-person[data-id]');if(el)apri(el.dataset.id)});
+document.querySelector('main').addEventListener('keydown',e=>{const el=e.target.closest('.birthday-person[data-id]');if(el&&(e.key==='Enter'||e.key===' ')){e.preventDefault();apri(el.dataset.id)}});
+})();
 </script><script>document.querySelector("#birthday-search").oninput=e=>{const q=e.target.value.trim().toLocaleLowerCase("it");document.querySelectorAll(".birthday-person").forEach(person=>person.hidden=!person.dataset.name.includes(q));document.querySelectorAll(".birthday").forEach(card=>{const people=[...card.querySelectorAll(".birthday-person")];card.hidden=people.length?people.every(person=>person.hidden):!card.dataset.name.includes(q)})};</script></html>
