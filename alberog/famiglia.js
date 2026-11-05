@@ -637,7 +637,7 @@ window.FAMIGLIA = {
     },
     {
       "id": "riccardo",
-      "name": "Riccardo",
+      "name": "Riccardo Santoro",
       "branch": "Correale",
       "gen": 4,
       "dates": "",
@@ -645,7 +645,7 @@ window.FAMIGLIA = {
     },
     {
       "id": "irene",
-      "name": "Irene",
+      "name": "Irene Santoro",
       "branch": "Correale",
       "gen": 4,
       "dates": "",
@@ -663,7 +663,7 @@ window.FAMIGLIA = {
     },
     {
       "id": "emma",
-      "name": "Emma",
+      "name": "Emma Rago",
       "branch": "Correale",
       "gen": 4,
       "dates": "",
@@ -671,7 +671,7 @@ window.FAMIGLIA = {
     },
     {
       "id": "federico",
-      "name": "Federico",
+      "name": "Federico Rago",
       "branch": "Correale",
       "gen": 4,
       "dates": "",
