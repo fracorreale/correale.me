@@ -130,7 +130,7 @@ function personalDates(p){
  const info=lifeInfo(p),format=date=>new Intl.DateTimeFormat('it-IT',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(date+'T00:00:00Z'));
  const birth=info.birth?format(info.birth):info.birthYear&&p.birthMonth?new Intl.DateTimeFormat('it-IT',{month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(Date.UTC(info.birthYear,p.birthMonth-1,1))):info.birthYear?String(info.birthYear):p.birthMonth&&p.birthDay?new Intl.DateTimeFormat('it-IT',{day:'numeric',month:'long',timeZone:'UTC'}).format(new Date(Date.UTC(2000,p.birthMonth-1,p.birthDay)))+' (anno non noto)':'Non disponibile';
  const death=info.death?format(info.death):info.deathYear?String(info.deathYear):'Data non disponibile';
- return `<h3>Date</h3><p>Nascita: ${esc(birth)}${p.birthDateUncertain?' · da verificare':''}${info.deceased?`<br>Decesso: ${esc(death)}`:''}</p>`;
+ return `<h3>Date</h3><p>Nascita: ${esc(birth)}${p.birthDateUncertain?' · da verificare':''}${info.deceased?`<br>Decesso: ${esc(death)}`:''}${p.onomastico?`<br>Onomastico: ${esc(new Intl.DateTimeFormat('it-IT',{day:'numeric',month:'long',timeZone:'UTC'}).format(new Date('2000-'+p.onomastico+'T00:00:00Z')))}`:''}</p>`;
 }
 
 function setScale(s){scale=Math.max(.04,Math.min(1.7,s));$('#tree').style.transform=`scale(${scale})`;$('#connections').style.transform=`scale(${scale})`;$('#tree').style.transformOrigin=$('#connections').style.transformOrigin='0 0';$('#stage').style.width=width*scale+'px';$('#stage').style.height=height*scale+'px';$('#zoom').textContent=Math.round(scale*100)+'%';scheduleOverflowHint()}
