@@ -380,7 +380,9 @@ window.FAMIGLIA = {
       "dates": "",
       "note": "Divorziata da Alfredo Cutrupi. In vita.",
       "main": false,
-      "onomastico": "08-23"
+      "onomastico": "08-23",
+      "birthMonth": 1,
+      "birthDay": 5
     },
     {
       "id": "francesca",
