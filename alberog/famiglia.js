@@ -459,20 +459,20 @@ window.FAMIGLIA = {
     },
     {
       "id": "walter",
-      "name": "Walter",
+      "name": "Walter Mosca",
       "branch": "Correale",
       "gen": 3,
       "dates": "",
-      "note": "Figlio di Sergio Mosca e Teresa.",
+      "note": "Figlio di Sergio Mosca e Teresa Guida.",
       "main": false
     },
     {
       "id": "ivano",
-      "name": "Ivano",
+      "name": "Ivano Mosca",
       "branch": "Correale",
       "gen": 3,
       "dates": "",
-      "note": "Figlio di Sergio Mosca e Teresa.",
+      "note": "Figlio di Sergio Mosca e Teresa Guida.",
       "main": false
     },
     {
@@ -486,7 +486,7 @@ window.FAMIGLIA = {
     },
     {
       "id": "roberto",
-      "name": "Roberto",
+      "name": "Roberto Mosca",
       "branch": "Correale",
       "gen": 3,
       "dates": "",
@@ -505,20 +505,20 @@ window.FAMIGLIA = {
     },
     {
       "id": "enzof1",
-      "name": "Luca",
+      "name": "Luca Villani",
       "branch": "Correale",
       "gen": 3,
       "dates": "",
-      "note": "Primo figlio di Katia Mosca ed Enzo.",
+      "note": "Primo figlio di Katia Mosca ed Enzo Villani.",
       "main": false
     },
     {
       "id": "enzof2",
-      "name": "Ilaria",
+      "name": "Ilaria Villani",
       "branch": "Correale",
       "gen": 3,
       "dates": "",
-      "note": "Seconda figlia di Katia Mosca ed Enzo.",
+      "note": "Seconda figlia di Katia Mosca ed Enzo Villani.",
       "main": false,
       "onomastico": "10-05"
     },
