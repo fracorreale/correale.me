@@ -134,10 +134,13 @@ window.FAMIGLIA = {
       "name": "Lucia Basile",
       "branch": "Basile",
       "gen": 2,
-      "dates": "",
+      "dates": "1947 –",
       "note": "Figlia di Gennaro Basile e Nunzia Visciano; sposata con Franco Perez e madre di Guglielmo, Isabella e Stefania Perez. In vita.",
       "main": false,
-      "foto": "foto/lucb.webp"
+      "foto": "foto/lucb.webp",
+      "birthDate": "1947-08-11",
+      "birthYear": 1947,
+      "birthDateUncertain": false
     },
     {
       "id": "elenab",
@@ -157,10 +160,13 @@ window.FAMIGLIA = {
       "name": "Luigi Basile",
       "branch": "Basile",
       "gen": 2,
-      "dates": "",
+      "dates": "1950 –",
       "note": "Figlio di Gennaro Basile e Nunzia Visciano; marito di Rosa Spettro e padre di Alessandra Basile. In vita.",
       "main": false,
-      "foto": "foto/luigib.webp"
+      "foto": "foto/luigib.webp",
+      "birthDate": "1950-07-26",
+      "birthYear": 1950,
+      "birthDateUncertain": false
     },
     {
       "id": "perez",
