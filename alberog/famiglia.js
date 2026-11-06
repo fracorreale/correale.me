@@ -1025,67 +1025,73 @@ window.FAMIGLIA = {
       "name": "Sirya",
       "branch": "Basile",
       "gen": 4,
-      "dates": "",
+      "dates": "1997 –",
       "note": "Figlia di Isabella Perez.",
       "main": false,
-      "birthMonth": 8,
-      "birthDay": 30
+      "birthDate": "1997-08-30",
+      "birthYear": 1997,
+      "birthDateUncertain": false
     },
     {
       "id": "saul",
       "name": "Saul",
       "branch": "Basile",
       "gen": 4,
-      "dates": "",
+      "dates": "2000 –",
       "note": "Figlio di Isabella Perez.",
       "main": false,
-      "birthMonth": 9,
-      "birthDay": 2
+      "birthDate": "2000-09-02",
+      "birthYear": 2000,
+      "birthDateUncertain": false
     },
     {
       "id": "alice",
       "name": "Alice",
       "branch": "Basile",
       "gen": 4,
-      "dates": "",
+      "dates": "2009 –",
       "note": "Figlia di Isabella Perez.",
       "main": false,
-      "birthMonth": 8,
-      "birthDay": 20
+      "birthDate": "2009-08-20",
+      "birthYear": 2009,
+      "birthDateUncertain": false
     },
     {
       "id": "pippo",
       "name": "Filippo",
       "branch": "Basile",
       "gen": 4,
-      "dates": "",
+      "dates": "2013 –",
       "note": "Figlio di Isabella Perez.",
       "main": false,
-      "birthMonth": 7,
-      "birthDay": 19
+      "birthDate": "2013-07-19",
+      "birthYear": 2013,
+      "birthDateUncertain": false
     },
     {
       "id": "lara_cristina",
       "name": "Lara Cristina",
       "branch": "Basile",
       "gen": 4,
-      "dates": "",
+      "dates": "2005 –",
       "note": "Figlia di Stefania Perez.",
       "main": false,
-      "birthMonth": 8,
-      "birthDay": 27
+      "birthDate": "2005-08-27",
+      "birthYear": 2005,
+      "birthDateUncertain": false
     },
     {
       "id": "giorgia_perez_figlia",
       "name": "Giorgia",
       "branch": "Basile",
       "gen": 4,
-      "dates": "",
+      "dates": "2009 –",
       "note": "Figlia di Stefania Perez.",
       "main": false,
-      "birthMonth": 8,
-      "birthDay": 10,
-      "onomastico": "04-23"
+      "onomastico": "04-23",
+      "birthDate": "2009-08-10",
+      "birthYear": 2009,
+      "birthDateUncertain": false
     },
     {
       "id": "rodolfo_iovino",
@@ -1104,9 +1110,10 @@ window.FAMIGLIA = {
       "name": "Giulia",
       "branch": "Basile",
       "gen": 4,
-      "dates": "",
+      "dates": "2001 –",
       "note": "Figlia di Alessandra Basile.",
-      "main": false
+      "main": false,
+      "birthYear": 2001
     },
     {
       "id": "diego_alessandra",
@@ -1122,9 +1129,10 @@ window.FAMIGLIA = {
       "name": "Gabriele",
       "branch": "Basile",
       "gen": 4,
-      "dates": "",
+      "dates": "2013 –",
       "note": "Figlio di Alessandra Basile.",
-      "main": false
+      "main": false,
+      "birthYear": 2013
     },
     {
       "id": "carmine_basile",
