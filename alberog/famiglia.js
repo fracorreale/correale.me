@@ -134,7 +134,8 @@ window.FAMIGLIA = {
       "deceased": true,
       "birthYear": 1918,
       "deathYear": 2014,
-      "extraInfo": "Aveva due fratelli, Gennaro e Luigi, e una sorella, Virginia."
+      "extraInfo": "Aveva due fratelli, Gennaro e Luigi, e una sorella, Virginia.",
+      "foto": "foto/annb.webp"
     },
     {
       "id": "lucb",
