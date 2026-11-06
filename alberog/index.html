@@ -105,6 +105,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 /* Testata: schede famiglia e "Compleanni / Cerca" in alto a destra, una sotto l'altra */
 header>.header-top{grid-column:1/-1;grid-row:1}.header-top{align-items:flex-start}.header-right{display:flex;flex-direction:column;align-items:flex-end;gap:12px;margin-left:auto;padding-top:6px}
 .header-right .family-tabs{margin-left:0}.header-right .search-row{display:flex;margin:0;justify-content:flex-end;flex-wrap:nowrap}.header-right .search-row .search{margin:0;width:240px}
+/* Schede famiglia alte e larghe come la riga sotto (Compleanni, Onomastici, Cerca) */@media(min-width:851px){.header-right{align-items:stretch}.header-right .family-tabs{display:flex;height:45px;padding:4px;border-radius:22px;box-sizing:border-box}.header-right .family-tabs button{flex:1 1 auto;height:100%;padding-top:0;padding-bottom:0;display:flex;align-items:center;justify-content:center;border-radius:18px}.header-right .search-row .search{height:45px;box-sizing:border-box;border-radius:22px}}
 @media(max-width:850px){.header-right{align-items:flex-start;width:100%;margin-left:0;padding-top:0}.header-right .search-row{justify-content:flex-start;flex-wrap:nowrap}}
 @media(max-width:650px){.header-right .search-row{flex-wrap:wrap}.header-right .search-row .search{width:min(100%,340px)}}
 /* Piè di pagina: contatore accanto a "Come leggere l'albero" */
