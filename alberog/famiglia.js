@@ -217,7 +217,8 @@ window.FAMIGLIA = {
       "dates": "",
       "main": false,
       "birthMonth": 10,
-      "birthDay": 5
+      "birthDay": 5,
+      "foto": "foto/stefania.webp"
     },
     {
       "id": "rosa",
@@ -531,7 +532,8 @@ window.FAMIGLIA = {
       "note": "Marito di Benedetta Correale e padre di Rita Salvati.",
       "main": false,
       "deceased": true,
-      "ageAtDeath": 82
+      "ageAtDeath": 82,
+      "foto": "foto/arturo.webp"
     },
     {
       "id": "rita",
