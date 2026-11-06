@@ -776,7 +776,7 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 2,
       "dates": "1960 –",
-      "note": "Marito di Federica Iossa.",
+      "note": "Marito di Federica Iossa; padre di Elisa e Sara Langella.",
       "main": false,
       "birthDate": "1960-03-22",
       "birthYear": 1960,
@@ -804,7 +804,7 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 2,
       "dates": "1965 –",
-      "note": "Moglie di Luciano Polinari. Ha delle figlie, di cui non sono noti i nomi.",
+      "note": "Moglie di Luciano Polinari. Madre di Francesca e Federica.",
       "main": false,
       "birthDate": "1965-12-03",
       "birthYear": 1965,
@@ -850,7 +850,7 @@ window.FAMIGLIA = {
       "branch": "Langella",
       "gen": 2,
       "dates": "",
-      "note": "Moglie di Francesco Langella (1960).",
+      "note": "Moglie di Francesco Langella (1960); madre di Elisa e Sara Langella.",
       "main": false
     },
     {
@@ -860,6 +860,24 @@ window.FAMIGLIA = {
       "gen": 2,
       "dates": "",
       "note": "Compagna di Gianluigi Langella.",
+      "main": false
+    },
+    {
+      "id": "elisa_langella",
+      "name": "Elisa Langella",
+      "branch": "Langella",
+      "gen": 3,
+      "dates": "",
+      "note": "Figlia di Francesco Langella e Federica Iossa.",
+      "main": false
+    },
+    {
+      "id": "sara_langella",
+      "name": "Sara Langella",
+      "branch": "Langella",
+      "gen": 3,
+      "dates": "",
+      "note": "Figlia di Francesco Langella e Federica Iossa.",
       "main": false
     },
     {
@@ -891,21 +909,30 @@ window.FAMIGLIA = {
       "main": false
     },
     {
+      "id": "francesca_margl",
+      "name": "Francesca",
+      "branch": "Langella",
+      "gen": 3,
+      "dates": "",
+      "note": "Figlia di Margherita Langella (1965).",
+      "main": false
+    },
+    {
+      "id": "federica_margl",
+      "name": "Federica",
+      "branch": "Langella",
+      "gen": 3,
+      "dates": "",
+      "note": "Figlia di Margherita Langella (1965).",
+      "main": false
+    },
+    {
       "id": "mireia",
       "name": "Mireia",
       "branch": "Langella",
       "gen": 3,
       "dates": "",
       "note": "Figlia di Mirella Langella.",
-      "main": false
-    },
-    {
-      "id": "figlie",
-      "name": "Figlie · nomi non ricordati",
-      "branch": "Langella",
-      "gen": 3,
-      "dates": "",
-      "note": "Figlie di Margherita Langella (1965); nomi e numero non noti.",
       "main": false
     },
     {
@@ -1756,12 +1783,6 @@ window.FAMIGLIA = {
       "uncertain": false
     },
     {
-      "a": "margl",
-      "b": "figlie",
-      "kind": "figlio",
-      "uncertain": false
-    },
-    {
       "a": "gaetano",
       "b": "frant",
       "kind": "fratello/sorella",
@@ -2041,6 +2062,42 @@ window.FAMIGLIA = {
       "a": "margl",
       "b": "polinari",
       "kind": "coniuge",
+      "uncertain": false
+    },
+    {
+      "a": "franl",
+      "b": "elisa_langella",
+      "kind": "figlio",
+      "uncertain": false
+    },
+    {
+      "a": "federica",
+      "b": "elisa_langella",
+      "kind": "figlio",
+      "uncertain": false
+    },
+    {
+      "a": "franl",
+      "b": "sara_langella",
+      "kind": "figlio",
+      "uncertain": false
+    },
+    {
+      "a": "federica",
+      "b": "sara_langella",
+      "kind": "figlio",
+      "uncertain": false
+    },
+    {
+      "a": "margl",
+      "b": "francesca_margl",
+      "kind": "figlio",
+      "uncertain": false
+    },
+    {
+      "a": "margl",
+      "b": "federica_margl",
+      "kind": "figlio",
       "uncertain": false
     }
   ],
