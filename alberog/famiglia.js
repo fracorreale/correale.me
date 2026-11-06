@@ -1121,9 +1121,10 @@ window.FAMIGLIA = {
       "name": "Diego",
       "branch": "Basile",
       "gen": 4,
-      "dates": "",
+      "dates": "2008 –",
       "note": "Figlio di Alessandra Basile.",
-      "main": false
+      "main": false,
+      "birthYear": 2008
     },
     {
       "id": "gabriele_alessandra",
