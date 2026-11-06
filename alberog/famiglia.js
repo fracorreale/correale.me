@@ -584,7 +584,8 @@ window.FAMIGLIA = {
       "main": false,
       "birthDate": "1987-09-22",
       "birthDateUncertain": false,
-      "onomastico": "09-22"
+      "onomastico": "09-22",
+      "foto": "foto/maurizio.webp"
     },
     {
       "id": "claudia",
@@ -596,7 +597,8 @@ window.FAMIGLIA = {
       "main": false,
       "birthDate": "1987-09-22",
       "birthDateUncertain": false,
-      "onomastico": "03-20"
+      "onomastico": "03-20",
+      "foto": "foto/claudia.webp"
     },
     {
       "id": "nobile",
@@ -659,7 +661,8 @@ window.FAMIGLIA = {
       "dates": "",
       "note": "Marito di Claudia Santoro e padre di Emma e Federico.",
       "main": false,
-      "onomastico": "04-25"
+      "onomastico": "04-25",
+      "foto": "foto/rago.webp"
     },
     {
       "id": "emma",
