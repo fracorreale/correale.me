@@ -985,7 +985,8 @@ window.FAMIGLIA = {
       "main": false,
       "birthDate": "2000-07-23",
       "birthDateUncertain": false,
-      "onomastico": "04-23"
+      "onomastico": "04-23",
+      "foto": "foto/giorgia_desgro.webp"
     },
     {
       "id": "sirya",
