@@ -9,7 +9,8 @@ carica i file su GitHub (ramo `main`): la pagina online si aggiorna in un minuto
 | File | Cosa contiene | Quando lo tocchi |
 |---|---|---|
 | `famiglia.js` | persone, date, note, legami — **unica fonte dei dati** | quasi sempre |
-| `foto/<id>.webp` | un ritratto per persona | quando aggiungi o cambi una foto |
+| `foto/<id>.webp` | ritratto grande (300 px), usato nella scheda | quando aggiungi o cambi una foto |
+| `foto/mini/<id>.webp` | miniatura (100 px) per caselle dell'albero e calendari | insieme alla foto grande |
 | `img/` | sfondo e titolo | quasi mai |
 | `index.html` | grafica e logica dell'albero | solo per cambiare l'aspetto |
 | `Calendario-Compleanni.html` | grafica del calendario: legge le date da `famiglia.js` | solo per cambiare l'aspetto |
@@ -28,7 +29,7 @@ Date di nascita in `famiglia.js`: `"birthDate": "AAAA-MM-GG"` se l'anno è noto;
 ## Operazioni tipiche
 
 - **Correggere una data o una nota**: in `famiglia.js` cerca il nome e cambia il valore tra virgolette.
-- **Aggiungere una foto**: salva l'immagine come `foto/<id>.webp` (circa 300 px di altezza)
+- **Aggiungere una foto**: salva l'immagine come `foto/<id>.webp` (circa 300 px di altezza) e una miniatura `foto/mini/<id>.webp` (circa 100 px; se manca, la pagina usa la foto grande)
   e aggiungi alla persona la riga `"foto": "foto/<id>.webp",`.
 - **Aggiungere una persona**: copia il blocco di una persona simile, cambia `id`, nome e dati,
   poi aggiungi in `edges` i legami (`coniuge`, `figlio`, `fratello/sorella`).

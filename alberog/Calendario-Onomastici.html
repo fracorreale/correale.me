@@ -28,7 +28,7 @@ const MESI=['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Ag
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const key=p=>p.name.toLocaleLowerCase('it');
 const nascita=p=>{if(!p.onomastico)return null;const[m,d]=p.onomastico.split('-').map(Number);return{m,d}};
-const persona=p=>`<div class="birthday-person" ${p.esterno?'':`data-id="${esc(p.id)}" role="button" tabindex="0" title="Apri la scheda di ${esc(p.name)}" `}data-name="${esc(key(p))}">${p.foto?`<img src="${esc(p.foto)}" alt="" loading="lazy">`:''}<div><strong>${esc(p.name)}</strong></div></div>`;
+const persona=p=>`<div class="birthday-person" ${p.esterno?'':`data-id="${esc(p.id)}" role="button" tabindex="0" title="Apri la scheda di ${esc(p.name)}" `}data-name="${esc(key(p))}">${p.foto?`<img src="${esc(p.foto.replace('foto/','foto/mini/'))}" onerror="this.onerror=null;this.src='${esc(p.foto)}'" alt="" loading="lazy">`:''}<div><strong>${esc(p.name)}</strong></div></div>`;
 const mesi=MESI.map(()=>[]),mancanti=[];
 for(const p of people){const n=nascita(p);n?mesi[n.m-1].push({p,d:n.d}):mancanti.push(p)}
 let html=mesi.map((lista,i)=>{
