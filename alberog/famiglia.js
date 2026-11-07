@@ -235,9 +235,10 @@ window.FAMIGLIA = {
       "name": "Alessandra Basile",
       "branch": "Basile",
       "gen": 3,
-      "dates": "",
+      "dates": "1974 –",
       "note": "Figlia di Luigi Basile e Rosa Spettro.",
-      "main": false
+      "main": false,
+      "birthYear": 1974
     },
     {
       "id": "frant",
