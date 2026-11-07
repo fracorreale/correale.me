@@ -3,6 +3,8 @@ VERSION:2.0
 PRODID:-//La mia famiglia//Compleanni//IT
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
+X-PUBLISHED-TTL:PT12H
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-WR-CALNAME:Compleanni di famiglia
 BEGIN:VEVENT
 UID:compleanno-annc@alberog.correale.me

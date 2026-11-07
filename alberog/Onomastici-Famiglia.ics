@@ -3,6 +3,8 @@ VERSION:2.0
 PRODID:-//La mia famiglia//Onomastici//IT
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
+X-PUBLISHED-TTL:PT12H
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-WR-CALNAME:Onomastici di famiglia
 BEGIN:VEVENT
 UID:onomastico-amelia@alberog.correale.me
