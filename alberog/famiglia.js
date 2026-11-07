@@ -480,7 +480,7 @@ window.FAMIGLIA = {
     },
     {
       "id": "cettina",
-      "name": "Cettina · cognome non noto",
+      "name": "Cettina",
       "branch": "Correale",
       "gen": 2,
       "dates": "",
@@ -634,7 +634,7 @@ window.FAMIGLIA = {
     },
     {
       "id": "caterina",
-      "name": "Caterina · cognome non noto",
+      "name": "Caterina",
       "branch": "Correale",
       "gen": 3,
       "dates": "1987 –",
