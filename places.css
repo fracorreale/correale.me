@@ -5,3 +5,6 @@
 html[data-header-theme="places"] .site-header,html[data-header-theme="places"] .site-header.scrolled{background:linear-gradient(110deg,rgba(25,58,83,.84),rgba(48,86,115,.77),rgba(79,102,120,.78))!important;border-color:#e0ecf42b;--signature-ink:#f3f7fa}
 html[data-header-theme="places"] .site-header .brand.site-signature{--signature-ink:#f3f7fa;color:#f3f7fa}
 html[data-header-theme="places"] .site-header .menu-btn span{background:#edf4f8}
+
+/* Past trips, preserving the Places page typography and palette. */
+.places-page .trip-archive{margin-top:64px;max-width:900px}.places-page .trip-archive>h2{font-size:clamp(28px,3vw,38px);margin:0 0 24px}.places-page .archived-trip{display:flex;align-items:center;gap:28px;padding:24px 0;border-top:1px solid #ffffff30}.places-page .archived-trip>img{width:240px;max-width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px}.places-page .archived-trip h3{font-size:24px;margin:0 0 8px}.places-page .archived-trip p{margin:8px 0;line-height:1.6}.places-page .archived-trip-date{opacity:.7}@media(max-width:600px){.places-page .archived-trip{align-items:flex-start;flex-direction:column;gap:16px}}
