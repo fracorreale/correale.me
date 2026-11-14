@@ -22,33 +22,36 @@ function list(){ $('customList').replaceChildren();[...custom].sort(alphabetic).
 $('manage').onclick=()=>{$('newCat').value=$('category').value;list();$('dialog').showModal()};$('close').onclick=()=>$('dialog').close();$('sources').onclick=e=>{e.preventDefault();$('info').showModal()};$('closeInfo').onclick=()=>$('info').close();
 $('addForm').onsubmit=e=>{e.preventDefault();const name=$('newName').value.trim();if(!name){$('newName').setCustomValidity('Inserisci un nome.');$('newName').reportValidity();return}const f={id:crypto.randomUUID(),name,kcal:Number($('newKcal').value),cat:$('newCat').value,custom:true};custom.push(f);save();$('category').value=f.cat;foods(f.id);$('newName').value='';$('newKcal').value='';list();$('storageStatus').textContent=storageOK?'Alimento aggiunto e salvato in questo browser.':'Alimento aggiunto solo per questa sessione: salvataggio non disponibile.'};$('newName').oninput=()=>$('newName').setCustomValidity('');foods();
 
-// Confronto a parità di peso: valori CREA misurati, senza fattori di conversione.
-function caloriesForWeight(weight,kcalPer100){return weight*kcalPer100/100}
+// Conversione con rese in peso CREA, indipendente dal rapporto tra calorie.
+function convertWeight(weight,food,toCooked=true){return toCooked?weight*food.cookedPer100/100:weight*100/food.cookedPer100}
 [...cookingFoods].sort(alphabetic).forEach(food=>{const option=document.createElement('option');option.value=food.id;option.textContent=food.name;$('cookingFood').append(option)});
+$('cookingDirection').value='toCooked';
 function renderCooking(){
  const food=cookingFoods.find(f=>f.id===$('cookingFood').value);
  const weight=Number($('cookingWeight').value);
  const valid=Number.isFinite(weight)&&weight>0&&weight<=10000;
+ const toCooked=$('cookingDirection').value==='toCooked';
+ const raw=toCooked?weight:convertWeight(weight,food,false);
+ const cooked=toCooked?convertWeight(weight,food):weight;
  $('cookingValidation').hidden=valid;
  $('cookingValidation').textContent=valid?'':'Inserisci un peso tra 1 e 10.000 grammi.';
  $('cookingWeight').setAttribute('aria-invalid',String(!valid));
- $('rawLabel').textContent=food.cat==='Legumi'||food.cat==='Farinacei e cereali'?'Crudo / secco':'Crudo';
- for(const [state,prefix] of [['raw','raw'],['cooked','cooked']]){
-  $(prefix+'Weight').textContent=valid?fmt(weight)+' g':'—';
-  $(prefix+'Energy').textContent=valid?fmt(caloriesForWeight(weight,food[state].kcal))+' kcal':'—';
-  $(prefix+'Density').textContent=fmt(food[state].kcal)+' kcal / 100 g';
-  $(prefix+'Source').href=food[state].url;
-  $(prefix+'Source').title=food[state].title;
- }
+ $('rawLabel').textContent=food.dry?'Crudo / secco':'Crudo';
+ $('cookingWeightLabel').textContent=toCooked?(food.dry?'Peso a crudo / secco, in grammi':'Peso a crudo, in grammi'):'Peso cotto e scolato, in grammi';
+ $('rawWeight').textContent=valid?fmt(raw)+' g':'—';
+ $('cookedWeight').textContent=valid?'≈ '+fmt(cooked)+' g':'—';
+ $('cookingSummary').textContent=valid?`${fmt(weight)} g ${toCooked?'a crudo':'cotti'} di ${food.name.toLowerCase()} corrispondono a circa ${fmt(toCooked?cooked:raw)} g ${toCooked?'cotti':'a crudo'}.`:'';
  $('cookingMethod').textContent='Cottura di riferimento: '+food.method+'.';
 }
 $('manage2').onclick=()=>{
  const selected=cookingFoods.find(f=>f.baseId===$('food').value);
- $('cookingFood').value=selected?selected.id:'000800';
- const weight=Number($('weight').value);
- $('cookingWeight').value=Number.isFinite(weight)&&weight>0&&weight<=10000?weight:100;
+ $('cookingFood').value=selected?selected.id:'ceci';
+ $('cookingDirection').value='toCooked';
+ $('cookingWeight').value=100;
  renderCooking();$('cookingDialog').showModal();
 };
 $('closeCooking').onclick=()=>$('cookingDialog').close();
 $('cookingFood').addEventListener('change',renderCooking);
+$('cookingDirection').addEventListener('change',renderCooking);
 $('cookingWeight').addEventListener('input',renderCooking);
+if(location.hash==='#crudo-cotto')$('manage2').onclick();

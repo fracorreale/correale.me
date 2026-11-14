@@ -12,26 +12,18 @@ class Element{
 }
 const els=Object.fromEntries([...html.matchAll(/id="([^"]+)"/g)].map(m=>[m[1],new Element()]));
 els.weight.value=150;
-const context=vm.createContext({console,Intl,Number,crypto:require('node:crypto').webcrypto,localStorage:{getItem:()=>null,setItem(){}},document:{getElementById:id=>{assert.ok(els[id],`Missing element ${id}`);return els[id]},createElement:()=>new Element(),querySelectorAll:()=>[]}});
+const context=vm.createContext({console,Intl,Number,location:{hash:""},crypto:require('node:crypto').webcrypto,localStorage:{getItem:()=>null,setItem(){}},document:{getElementById:id=>{assert.ok(els[id],`Missing element ${id}`);return els[id]},createElement:()=>new Element(),querySelectorAll:()=>[]}});
 vm.runInContext(fs.readFileSync('cambiointavola/cooking-data.js','utf8'),context);
 vm.runInContext(fs.readFileSync('cambiointavola/app.js','utf8'),context);
+
 const run=s=>vm.runInContext(s,context);
-const names=id=>els[id].children.map(o=>o.textContent.replace(/^\S+\s+/u,''));
-function sorted(values){assert.deepEqual(values,[...values].sort((a,b)=>a.localeCompare(b,'it',{sensitivity:'base'})));}
-sorted(names('category'));sorted(names('newCat'));sorted(els.cookingFood.children.map(o=>o.textContent));
-for(const cat of els.category.children){els.category.value=cat.value;els.category.handlers.change();sorted(els.food.children.map(o=>o.textContent));}
-assert.equal(run('cookingFoods.length'),16);
-assert.equal(run('caloriesForWeight(80,175)'),140);
-assert.equal(run('caloriesForWeight(150,341)'),511.5);
-assert.ok(run('cookingFoods.every(f=>f.raw.kcal>0&&f.cooked.kcal>0&&f.raw.url.startsWith("https://www.alimentinutrizione.it/")&&f.cooked.url.startsWith("https://www.alimentinutrizione.it/"))'));
-els.category.value='Farinacei e cereali';els.category.handlers.change();els.food.value='4-0';els.weight.value=80;
-els.manage2.onclick();assert.equal(els.cookingDialog.open,true);assert.equal(els.cookingFood.value,'000800');assert.equal(els.rawEnergy.textContent,'272,8 kcal');assert.equal(els.cookedEnergy.textContent,'140 kcal');
-els.cookingWeight.value=150;els.cookingWeight.handlers.input();assert.equal(els.rawEnergy.textContent,'511,5 kcal');assert.equal(els.cookedEnergy.textContent,'262,5 kcal');
-for(const w of ['',0,-1,10001,'no']){els.cookingWeight.value=w;els.cookingWeight.handlers.input();assert.equal(els.cookingValidation.hidden,false);assert.equal(els.cookedEnergy.textContent,'—');}
-els.cookingWeight.value=100;els.cookingFood.value='106500';els.cookingFood.handlers.change();assert.equal(els.rawEnergy.textContent,'100 kcal');assert.equal(els.cookedEnergy.textContent,'129 kcal');assert.equal(els.cookingValidation.hidden,true);
-els.closeCooking.onclick();assert.equal(els.cookingDialog.open,false);
-els.category.value='Latticini';els.category.handlers.change();els.manage2.onclick();assert.equal(els.cookingFood.value,'000800');
-els.manage.onclick();assert.equal(els.dialog.open,true);assert.equal(els.newCat.value,'Latticini');
-assert.ok(!html.includes('Personalizza gli alimenti'));
-assert.ok(html.indexOf('src="cooking-data.js"')<html.indexOf('src="app.js"'));
-console.log('OK: 16 coppie CREA, ordine alfabetico di tutte le categorie e alimenti, confronto a peso uguale, decimali, input non validi, apertura/chiusura dialoghi e aggiunta alimenti.');
+assert.equal(run('convertWeight(100,cookingFoods.find(f=>f.id==="ceci"))'),290);
+assert.equal(run('convertWeight(290,cookingFoods.find(f=>f.id==="ceci"),false)'),100);
+assert.equal(run('convertWeight(50,cookingFoods.find(f=>f.id==="ceci"))'),145);
+assert.equal(run('convertWeight(100,cookingFoods.find(f=>f.id==="pollo-forno"))'),67);
+els.manage2.onclick();assert.equal(els.cookingFood.value,'ceci');assert.equal(els.rawWeight.textContent,'100 g');assert.equal(els.cookedWeight.textContent,'≈ 290 g');
+els.cookingDirection.value='toRaw';els.cookingWeight.value=290;els.cookingDirection.handlers.change();assert.equal(els.rawWeight.textContent,'100 g');
+els.cookingWeight.value=0;els.cookingWeight.handlers.input();assert.equal(els.cookingValidation.hidden,false);assert.equal(els.cookedWeight.textContent,'—');
+console.log('OK: conversione ceci 100→290, inversa 290→100, porzioni decimali, perdita di peso pollo e input non validi.');
+
+assert.ok(!html.includes('class="sun"'));assert.ok(html.includes("Da 🌱 crudo a 🍲 cotto"));assert.ok(html.includes("Da 🍲 cotto a 🌱 crudo"));

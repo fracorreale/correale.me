@@ -82,3 +82,5 @@ select:focus-visible{outline:2px solid #28618d;outline-offset:4px}
 #cookingDialog .cooking-explainer{border-top:1px solid #dae5ed;padding-top:16px}
 #cookingValidation{color:#9c4c35}
 @media(max-width:380px){.cooking-comparison{gap:10px}.cooking-comparison section{padding:16px 10px}.cooking-comparison strong{font-size:22px}}
+
+#cookingSummary{color:#28618d;font-weight:600}.cooking-comparison strong{font-size:30px}#cookingDialog .cooking-comparison h3{margin-bottom:14px}

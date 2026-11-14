@@ -1,275 +1,183 @@
-// Valori per 100 g, CREA. Schede consultate il 14 novembre 2026.
+// CREA, Tabella C: peso cotto per 100 g crudi, parte edibile. Consultata il 14 novembre 2026.
 const cookingFoods = [
   {
-    "id": "000800",
-    "name": "Pasta di semola",
-    "baseId": "4-0",
-    "cat": "Farinacei e cereali",
-    "raw": {
-      "kcal": 341.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000800",
-      "title": "Pasta di semola"
-    },
-    "cooked": {
-      "kcal": 175.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000805",
-      "title": "Pasta di semola, cotta, bollita"
-    },
-    "method": "Bollita"
-  },
-  {
-    "id": "000850",
-    "name": "Pasta integrale",
-    "baseId": "4-1",
-    "cat": "Farinacei e cereali",
-    "raw": {
-      "kcal": 330.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000850",
-      "title": "Pasta di semola, integrale"
-    },
-    "cooked": {
-      "kcal": 182.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000855",
-      "title": "Pasta di semola, integrale, cotta, bollita"
-    },
-    "method": "Bollita"
-  },
-  {
-    "id": "000100",
-    "name": "Riso brillato",
-    "baseId": "4-2",
-    "cat": "Farinacei e cereali",
-    "raw": {
-      "kcal": 334.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000100",
-      "title": "Riso, brillato"
-    },
-    "cooked": {
-      "kcal": 100.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000105",
-      "title": "Riso, brillato, cotto, bollito"
-    },
-    "method": "Bollito"
-  },
-  {
-    "id": "000110",
-    "name": "Riso integrale",
-    "baseId": "4-3",
-    "cat": "Farinacei e cereali",
-    "raw": {
-      "kcal": 341.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000110",
-      "title": "Riso, integrale"
-    },
-    "cooked": {
-      "kcal": 113.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000115",
-      "title": "Riso, integrale, cotto, bollito"
-    },
-    "method": "Bollito"
-  },
-  {
-    "id": "000045",
-    "name": "Cous cous",
-    "baseId": "4-6",
-    "cat": "Farinacei e cereali",
-    "raw": {
-      "kcal": 361.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000045",
-      "title": "Couscous, crudo"
-    },
-    "cooked": {
-      "kcal": 179.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000046",
-      "title": "Couscous, cotto"
-    },
-    "method": "Cotto in acqua"
-  },
-  {
-    "id": "000020",
-    "name": "Farro perlato",
-    "baseId": "4-7",
-    "cat": "Farinacei e cereali",
-    "raw": {
-      "kcal": 353.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000020",
-      "title": "Farro perlato, crudo"
-    },
-    "cooked": {
-      "kcal": 178.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000025",
-      "title": "Farro perlato, cotto, bollito"
-    },
-    "method": "Bollito"
-  },
-  {
-    "id": "106500",
-    "name": "Petto di pollo",
-    "baseId": "1-0",
-    "cat": "Carne",
-    "raw": {
-      "kcal": 100.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/106500",
-      "title": "Pollo, petto, crudo"
-    },
-    "cooked": {
-      "kcal": 129.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/106506",
-      "title": "Pollo, petto, cotto, in padella"
-    },
-    "method": "In padella, senza grassi aggiunti"
-  },
-  {
-    "id": "121420",
-    "name": "Merluzzo surgelato",
-    "baseId": null,
-    "cat": "Pesce",
-    "raw": {
-      "kcal": 75.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/121420",
-      "title": "Merluzzo o nasello, surgelato"
-    },
-    "cooked": {
-      "kcal": 78.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/121423",
-      "title": "Merluzzo o nasello, surgelato, cotto, in forno"
-    },
-    "method": "Al forno, senza grassi aggiunti"
-  },
-  {
-    "id": "004000",
+    "id": "ceci",
     "name": "Ceci secchi",
     "baseId": "3-0",
-    "cat": "Legumi",
-    "raw": {
-      "kcal": 343.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/004000",
-      "title": "Ceci, secchi"
-    },
-    "cooked": {
-      "kcal": 132.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/004005",
-      "title": "Ceci, secchi, cotti, bolliti"
-    },
-    "method": "Lessati e scolati"
+    "cookedPer100": 290,
+    "method": "Bollitura, dopo ammollo",
+    "dry": true,
+    "source": "https://www.alimentinutrizione.it/presentazione-dati"
   },
   {
-    "id": "004500",
+    "id": "lenticchie",
     "name": "Lenticchie secche",
     "baseId": "3-1",
-    "cat": "Legumi",
-    "raw": {
-      "kcal": 319.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/004500",
-      "title": "Lenticchie, secche"
-    },
-    "cooked": {
-      "kcal": 109.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/004505",
-      "title": "Lenticchie, secche, cotte, bollite"
-    },
-    "method": "Lessate e scolate"
+    "cookedPer100": 247,
+    "method": "Bollitura",
+    "dry": true,
+    "source": "https://www.alimentinutrizione.it/presentazione-dati"
   },
   {
-    "id": "004120",
-    "name": "Fagioli borlotti secchi",
+    "id": "fagioli",
+    "name": "Fagioli secchi",
     "baseId": "3-2",
-    "cat": "Legumi",
-    "raw": {
-      "kcal": 312.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/004120",
-      "title": "Fagioli, Borlotti, secchi"
-    },
-    "cooked": {
-      "kcal": 106.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/004125",
-      "title": "Fagioli, Borlotti, secchi, cotti, bolliti"
-    },
-    "method": "Lessati e scolati"
+    "cookedPer100": 230,
+    "method": "Bollitura, dopo ammollo",
+    "dry": true,
+    "source": "https://www.alimentinutrizione.it/presentazione-dati"
   },
   {
-    "id": "005110",
-    "name": "Broccoli",
+    "id": "pasta-corta",
+    "name": "Pasta di semola corta",
+    "baseId": "4-0",
+    "cookedPer100": 188,
+    "method": "Bollitura",
+    "dry": true,
+    "source": "https://www.alimentinutrizione.it/presentazione-dati"
+  },
+  {
+    "id": "pasta-lunga",
+    "name": "Pasta di semola lunga",
+    "baseId": null,
+    "cookedPer100": 210,
+    "method": "Bollitura",
+    "dry": true,
+    "source": "https://www.alimentinutrizione.it/presentazione-dati"
+  },
+  {
+    "id": "riso",
+    "name": "Riso brillato",
+    "baseId": "4-2",
+    "cookedPer100": 260,
+    "method": "Bollitura",
+    "dry": true,
+    "source": "https://www.alimentinutrizione.it/presentazione-dati"
+  },
+  {
+    "id": "farro",
+    "name": "Farro perlato",
+    "baseId": "4-7",
+    "cookedPer100": 228,
+    "method": "Bollitura",
+    "dry": true,
+    "source": "https://www.alimentinutrizione.it/presentazione-dati"
+  },
+  {
+    "id": "couscous",
+    "name": "Cous cous precotto",
+    "baseId": "4-6",
+    "cookedPer100": 225,
+    "method": "Preparazione in acqua",
+    "dry": true,
+    "source": "https://www.alimentinutrizione.it/presentazione-dati"
+  },
+  {
+    "id": "pollo",
+    "name": "Petto di pollo",
+    "baseId": "1-0",
+    "cookedPer100": 90,
+    "method": "Bollitura",
+    "dry": false,
+    "source": "https://www.alimentinutrizione.it/presentazione-dati"
+  },
+  {
+    "id": "pollo-forno",
+    "name": "Petto di pollo al forno",
+    "baseId": null,
+    "cookedPer100": 67,
+    "method": "Forno",
+    "dry": false,
+    "source": "https://www.alimentinutrizione.it/presentazione-dati"
+  },
+  {
+    "id": "tacchino",
+    "name": "Fesa di tacchino",
+    "baseId": "1-1",
+    "cookedPer100": 94,
+    "method": "Bollitura",
+    "dry": false,
+    "source": "https://www.alimentinutrizione.it/presentazione-dati"
+  },
+  {
+    "id": "merluzzo",
+    "name": "Merluzzo fresco",
+    "baseId": "2-0",
+    "cookedPer100": 86,
+    "method": "Bollitura",
+    "dry": false,
+    "source": "https://www.alimentinutrizione.it/presentazione-dati"
+  },
+  {
+    "id": "orata",
+    "name": "Orata",
+    "baseId": "2-4",
+    "cookedPer100": 86,
+    "method": "Bollitura",
+    "dry": false,
+    "source": "https://www.alimentinutrizione.it/presentazione-dati"
+  },
+  {
+    "id": "sogliola",
+    "name": "Sogliola",
+    "baseId": "2-5",
+    "cookedPer100": 83,
+    "method": "Bollitura",
+    "dry": false,
+    "source": "https://www.alimentinutrizione.it/presentazione-dati"
+  },
+  {
+    "id": "sgombro",
+    "name": "Sgombro",
+    "baseId": "2-6",
+    "cookedPer100": 65,
+    "method": "Bollitura",
+    "dry": false,
+    "source": "https://www.alimentinutrizione.it/presentazione-dati"
+  },
+  {
+    "id": "broccoli",
+    "name": "Broccoli a testa",
     "baseId": "5-4",
-    "cat": "Ortaggi",
-    "raw": {
-      "kcal": 33.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005110",
-      "title": "Broccolo a testa, crudo"
-    },
-    "cooked": {
-      "kcal": 34.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005105",
-      "title": "Broccolo a testa, cotto, bollito"
-    },
-    "method": "Bolliti"
+    "cookedPer100": 96,
+    "method": "Bollitura",
+    "dry": false,
+    "source": "https://www.alimentinutrizione.it/presentazione-dati"
   },
   {
-    "id": "005150",
+    "id": "carote",
     "name": "Carote",
     "baseId": "5-1",
-    "cat": "Ortaggi",
-    "raw": {
-      "kcal": 41.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005150",
-      "title": "Carote, crude"
-    },
-    "cooked": {
-      "kcal": 47.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005155",
-      "title": "Carote, cotte, bollite"
-    },
-    "method": "Bollite"
+    "cookedPer100": 87,
+    "method": "Bollitura",
+    "dry": false,
+    "source": "https://www.alimentinutrizione.it/presentazione-dati"
   },
   {
-    "id": "005320",
+    "id": "finocchi",
     "name": "Finocchi",
     "baseId": "5-3",
-    "cat": "Ortaggi",
-    "raw": {
-      "kcal": 15.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005320",
-      "title": "Finocchi, crudi"
-    },
-    "cooked": {
-      "kcal": 17.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005325",
-      "title": "Finocchi, cotti, bolliti"
-    },
-    "method": "Bolliti"
+    "cookedPer100": 86,
+    "method": "Bollitura",
+    "dry": false,
+    "source": "https://www.alimentinutrizione.it/presentazione-dati"
   },
   {
-    "id": "005700",
+    "id": "spinaci",
     "name": "Spinaci",
     "baseId": "5-5",
-    "cat": "Ortaggi",
-    "raw": {
-      "kcal": 35.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005700",
-      "title": "Spinaci, crudi"
-    },
-    "cooked": {
-      "kcal": 41.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005705",
-      "title": "Spinaci, cotti, bolliti"
-    },
-    "method": "Bolliti"
+    "cookedPer100": 84,
+    "method": "Bollitura",
+    "dry": false,
+    "source": "https://www.alimentinutrizione.it/presentazione-dati"
   },
   {
-    "id": "005730",
+    "id": "zucchine",
     "name": "Zucchine",
     "baseId": "5-0",
-    "cat": "Ortaggi",
-    "raw": {
-      "kcal": 16.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005730",
-      "title": "Zucchine, crude"
-    },
-    "cooked": {
-      "kcal": 30.0,
-      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005735",
-      "title": "Zucchine, cotte, bollite"
-    },
-    "method": "Bollite"
+    "cookedPer100": 90,
+    "method": "Bollitura",
+    "dry": false,
+    "source": "https://www.alimentinutrizione.it/presentazione-dati"
   }
 ];
