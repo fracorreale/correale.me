@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap');
+:root{--green:#28618d;--ink:#293f50;--muted:#73828d;--cream:#f7fafc;--line:#dae5ed}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif}header{max-width:1240px;margin:auto;padding:27px 45px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}button,input,select{font:inherit}button,a,select{touch-action:manipulation}button{cursor:pointer}.brand{text-decoration:none;font-weight:700;letter-spacing:-1px;font-size:23px;color:var(--ink);display:flex;align-items:center;gap:9px}.dot{color:#d39a50}.mark{background:var(--green);color:white;border-radius:50%;padding:3px 9px;font-size:26px}.outline{border:1px solid #b5cddd;border-radius:7px;background:transparent;color:var(--green);padding:12px 17px;font-size:13px;font-weight:600}main{max-width:1150px;margin:auto;padding:55px 25px 20px}.eyebrow,.step{font-size:10px;letter-spacing:1.8px;font-weight:700;color:var(--green)}h1{font-family:'Libre Caslon Display',Georgia,serif;font-size:76px;line-height:1.02;font-weight:400;letter-spacing:-2px;margin:20px 0}h1 em{color:var(--green);font-weight:400}.intro{font-size:15px;line-height:1.8;color:#75838d;margin:21px 0 36px}.workspace{display:grid;grid-template-columns:360px 1fr;gap:40px;align-items:start}.input-card{background:#fff;border:1px solid var(--line);padding:27px;border-radius:13px;box-shadow:0 7px 20px #273c3005}label{display:block;font-size:12px;font-weight:600;margin:24px 0 9px}select,input{width:100%;border:1px solid #d7e3ed;background:#fafcfd;border-radius:7px;padding:13px;color:var(--ink);outline-offset:4px}select{font-size:14px}.weight{position:relative}.weight input{font-size:25px;padding:12px 85px 12px 14px}.weight span{position:absolute;right:15px;top:22px;font-size:12px;color:var(--muted)}.presets{display:flex;gap:8px;margin-top:11px}.presets button{background:transparent;border:1px solid var(--line);border-radius:5px;padding:7px 12px;font-size:11px;color:var(--muted)}.presets button.active{background:#e5f1fa;color:var(--green);border-color:#b7d4e8}.energy{margin-top:27px;background:#e9f3fb;border-radius:8px;padding:19px;display:flex;justify-content:space-between;align-items:center}.energy span{font-size:9px;letter-spacing:1px}.energy strong{display:block;margin-top:7px;font-size:29px;font-weight:500}.energy .sun{font-size:38px;color:#79a9cc}.state{font-size:11px;line-height:1.6;color:var(--muted);margin-bottom:0}.results{padding-top:10px}.result-top{display:flex;justify-content:space-between;align-items:center}h2{font-family:'Libre Caslon Display',Georgia,serif;font-size:34px;letter-spacing:-.5px;font-weight:400;margin:10px 0}.pill{background:#e6f1fa;border-radius:20px;padding:8px 12px;font-size:10px;white-space:nowrap}.result-intro{font-size:12px;color:var(--muted);margin:7px 0 22px}.alternative{display:flex;align-items:center;gap:15px;border-bottom:1px solid var(--line);padding:14px 3px}.food-icon{width:39px;height:39px;border-radius:10px;background:#e8f2fa;display:grid;place-items:center;font-size:21px}.food-text{flex:1}.food-text strong{display:block;font-size:14px;font-weight:500}.food-text small{display:block;color:var(--muted);font-size:10px;margin-top:5px}.grams{font-size:23px;letter-spacing:-.6px}.grams small{font-size:12px;color:var(--muted);letter-spacing:0}.rounding{font-size:10px;color:#84939f;margin-top:17px}.note{display:flex;gap:14px;background:#eaf3fa;padding:20px 23px;margin-top:33px;border-radius:8px;font-size:12px}.note>span{font-size:19px}.note strong{font-weight:600}.note p{margin:6px 0 0;color:#6f8190;line-height:1.7;font-size:11px}.bottom{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:43px 0}.bottom h2{font-size:30px}.bottom p{max-width:560px;font-size:12px;line-height:1.8;color:var(--muted)}footer{padding:23px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:13px;font-weight:600}footer small{font-size:10px;font-weight:400;color:var(--muted);margin-left:15px}a{color:var(--green)}footer a{font-size:11px;font-weight:400}dialog{width:min(490px,92vw);max-height:90vh;overflow:auto;border:1px solid var(--line);border-radius:14px;padding:28px;background:var(--cream);color:var(--ink)}dialog::backdrop{background:#234a6a80;backdrop-filter:blur(3px)}dialog p{font-size:13px;line-height:1.7;color:#6f8190}.dialog-top{display:flex;align-items:center;justify-content:space-between}.dialog-top h2{font-size:30px}.close{border:0;background:transparent;font-size:28px;color:var(--green)}.primary{margin-top:22px;padding:14px;width:100%;border:0;border-radius:7px;background:var(--green);color:white}.custom-row{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:12px;padding:12px 0;border-top:1px solid var(--line)}.custom-row button{border:0;background:transparent;color:#9c4c35}button:hover{filter:brightness(.94)}:focus-visible{outline:2px solid #70a8d0;outline-offset:3px}@media(min-width:1000px){main{position:relative}main:before{content:'↔';position:absolute;right:75px;top:58px;width:175px;height:175px;display:grid;place-items:center;border:1px solid #d9dfcd;border-radius:50%;font-family:Georgia;font-size:120px;font-weight:400;color:#a8b58b;transform:rotate(-25deg);background:radial-gradient(circle,#e9eddd,transparent 70%);z-index:-1}}@media(max-width:740px){header{padding:20px}.brand{font-size:18px}header .outline{font-size:11px;padding:10px}main{padding:35px 20px}h1{font-size:59px}.workspace{grid-template-columns:1fr;gap:27px}.input-card{padding:24px}.results{padding-top:0}.bottom{display:block}.bottom button{margin-top:12px}footer small{display:block;margin:6px 0 0}.intro br{display:none}.note{padding:18px}.result-top h2{font-size:31px}}
+
+/* Logo approvato con profilo della costa. */
+header{gap:16px}.brand{display:block;min-width:0;flex:0 1 340px}.brand-logo{display:block;width:100%;height:auto;margin:-22px 0}header>.outline{flex-shrink:0}@media(max-width:740px){.brand{flex-basis:260px}.brand-logo{margin:-10px 0}}@media(max-width:400px){header{gap:8px;padding:16px 12px}header>.outline{padding:10px 8px;font-size:10px}.brand-logo{margin:0}}
+
+/* Titolo e introduzione su una riga nella vista desktop. */
+@media(min-width:741px){h1{font-size:clamp(48px,6vw,76px);white-space:nowrap}.intro{font-size:clamp(11px,1.3vw,15px);white-space:nowrap}main:before{display:none}}
+
+/* Tovaglia a quadretti azzurri, leggera e senza immagini esterne. */
+body{background-color:#fafcfd;background-image:linear-gradient(90deg,rgba(75,130,183,.055) 50%,transparent 50%),linear-gradient(rgba(75,130,183,.055) 50%,transparent 50%);background-size:48px 48px}
+header{background-color:rgba(250,251,247,.72)}
+.results{background:rgba(250,251,247,.86);border-radius:13px;padding:22px 24px}
+@media(max-width:740px){.results{padding:22px 18px}}
+
+/* Logo e titolo sulla prima riga; azione sulla seconda. */
+header{display:grid;grid-template-columns:minmax(200px,300px) minmax(0,1fr);column-gap:28px;row-gap:8px;padding-top:24px;padding-bottom:22px;align-items:center}
+header .brand{grid-column:1;grid-row:1;width:100%;min-width:0}
+header .header-title{grid-column:2;grid-row:1;font-size:clamp(26px,3.5vw,44px);line-height:1.15;letter-spacing:-1px;margin:0;white-space:nowrap}
+header #manage{grid-column:2;grid-row:2;justify-self:end}
+main{padding-top:30px}
+@media(max-width:740px){header{grid-template-columns:minmax(130px,210px) minmax(0,1fr);gap:14px;padding:18px 20px}header .header-title{font-size:clamp(21px,4vw,29px);white-space:normal;letter-spacing:-.5px}header #manage{grid-column:1/-1;grid-row:2;justify-self:end}header .brand-logo{margin:-8px 0}}
+@media(max-width:400px){header{grid-template-columns:135px minmax(0,1fr);gap:10px;padding:16px 12px}header .header-title{font-size:21px}header .brand-logo{margin:0}}
+
+/* Tovagliolo di lino: trama minuta e orlo cucito. */
+.input-card{position:relative;isolation:isolate;background-color:#f8f5ec;background-image:repeating-linear-gradient(0deg,rgba(124,110,80,.045) 0,rgba(124,110,80,.045) 1px,transparent 1px,transparent 4px),repeating-linear-gradient(90deg,rgba(255,255,255,.55) 0,rgba(255,255,255,.55) 1px,transparent 1px,transparent 3px);border:1px solid #e0dacc;border-radius:5px 9px 6px 10px;box-shadow:2px 5px 12px rgba(48,101,143,.10),inset 0 0 18px rgba(255,255,255,.65)}
+.input-card::before{content:"";position:absolute;inset:9px;border:1px dashed rgba(158,148,122,.42);border-radius:3px 5px 3px 6px;pointer-events:none;z-index:-1}
+.input-card select,.input-card input{background-color:rgba(255,255,252,.88)}
+.input-card .energy{background-color:rgba(226,240,251,.94)}
+
+/* Piatto da portata in ceramica, con tesa e incavo centrale. */
+.results{position:relative;isolation:isolate;padding:38px 40px 30px;border:1px solid #dce7ef;border-radius:72px;background:linear-gradient(135deg,#ffffff 0%,#f8fcff 48%,#edf4fa 100%);box-shadow:0 10px 20px rgba(48,101,143,.11),0 2px 4px rgba(48,101,143,.06),inset 3px 4px 7px #fff,inset -3px -4px 8px rgba(104,153,189,.10)}
+.results::before{content:"";position:absolute;inset:15px;z-index:-1;border-radius:58px;border:1px solid #dbe7f0;background:linear-gradient(145deg,#f8fcff,#ffffff);box-shadow:inset 2px 3px 7px rgba(91,145,187,.09),1px 1px 0 #fff;pointer-events:none}
+.results .alternative{border-bottom-color:#e1ebf3}
+@media(max-width:740px){.results{padding:32px 27px 25px;border-radius:48px}.results::before{inset:12px;border-radius:37px}.result-top{gap:8px}.result-top h2{font-size:29px}.results .pill{padding:7px 9px}.results .alternative{gap:10px}.results .food-text strong{font-size:13px}}
+
+/* Intestazione aperta sulla tovaglia, senza riquadro. */
+header{background:transparent;border:0;box-shadow:none}
+
+/* Introduzione e pulsante condividono la seconda riga dell’intestazione. */
+.header-actions{grid-column:1/-1;grid-row:2;display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:12px}
+.header-actions .intro{margin:0;font-size:clamp(11px,1.12vw,14px);white-space:normal;line-height:1.65;flex:1;min-width:0}
+.header-actions #manage{flex:none}
+@media(max-width:740px){.header-actions{gap:16px;margin-top:6px}.header-actions .intro{font-size:12px}.header-actions #manage{white-space:nowrap}}
+@media(max-width:420px){.header-actions{gap:10px}.header-actions .intro{font-size:11px}}
+
+/* Azioni riunite in alto e nota senza sfondo. */
+.header-buttons{display:flex;align-items:center;gap:10px;flex:none}
+.header-buttons .outline{white-space:nowrap}
+.note{background:transparent;border:0;box-shadow:none;padding:20px 0;margin-bottom:24px}
+@media(max-width:1000px){.header-actions{flex-wrap:wrap}.header-actions .intro{flex-basis:100%}.header-buttons{margin-left:auto}}
+@media(max-width:420px){.header-buttons{gap:8px;width:100%;justify-content:flex-end}.header-buttons .outline{padding:10px 8px;font-size:10px}}
+
+/* Pannelli della stessa altezza, introduzione su due frasi e posate decorative. */
+.workspace{align-items:stretch}
+.header-actions .intro br{display:block}
+.header-buttons{gap:24px}
+.header-buttons .outline{border:0;border-radius:0;background:transparent;box-shadow:none;padding:8px 0;display:flex;flex-direction:column;align-items:stretch;gap:7px;min-height:44px}
+.button-fork{display:block;width:100%;height:12px;color:#77a9cc;overflow:visible;pointer-events:none}
+.header-buttons .outline:hover .button-fork{color:#28618d}
+.input-card .energy{position:relative;background-color:#eff7fc;background-image:repeating-linear-gradient(0deg,rgba(67,128,172,.065) 0,rgba(67,128,172,.065) 1px,transparent 1px,transparent 4px),repeating-linear-gradient(90deg,rgba(255,255,255,.7) 0,rgba(255,255,255,.7) 1px,transparent 1px,transparent 3px);border:1px solid #cbdfea;border-radius:5px;box-shadow:inset 0 0 12px rgba(255,255,255,.6)}
+.input-card .energy::after{content:"";position:absolute;inset:6px;border:1px dashed rgba(113,163,196,.4);border-radius:2px;pointer-events:none}
+@media(max-width:740px){.workspace{align-items:start}.header-buttons{gap:20px}.header-actions .intro br{display:block}}
+@media(max-width:420px){.header-buttons .outline{padding:8px 0}.header-buttons{gap:16px}}
+
+/* Posate in acciaio: quattro rebbi e manico sagomato. */
+.header-buttons .button-fork{height:21px;filter:drop-shadow(0 2px 1px rgba(53,97,128,.14))}.header-buttons .outline{gap:5px}
+
+/* Tendine Ceramica: variante approvata. */
+select,.input-card select{appearance:none;-webkit-appearance:none;min-height:54px;padding:14px 44px 14px 16px;font-size:16px;color:#285e85;border:1px solid #c9dce9;border-radius:17px;background-color:#fff;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='m4 6 4 4 4-4' fill='none' stroke='%2328618d' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;box-shadow:inset 0 2px 5px #3c6b8d0b,0 3px 0 #dce9f2,0 5px 9px #3c6b8d09;cursor:pointer;max-width:100%}
+select:hover{border-color:#9cbfd6}
+select:focus-visible{outline:2px solid #28618d;outline-offset:4px}
+@media(forced-colors:active){select,.input-card select{appearance:auto;background-image:none}}
